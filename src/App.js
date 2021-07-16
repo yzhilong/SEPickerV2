@@ -8,7 +8,8 @@ function App() {
     const [ page, setPage ] = useState("Selector")
 
     // favourites should be a set of strings, where each element is "uni_name, MOD1, MOD2, ..., MODn"
-    const [ favourites, setFavourites ] = useState(new Set()) 
+    // modules must be in sorted order
+    const [ favourites, setFavourites ] = useState(new Set())
     
 
     return (

@@ -21,6 +21,7 @@ function Selector(props) {
         2. Manage onChange event for all selectors
         3. Use data to compute results
             3.1 Manage handling of results
+            3.2 Results should have the modules in sorted lexicographical order
     */
 
     return (
