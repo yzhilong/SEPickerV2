@@ -1,2 +1,2 @@
 # SEPickerV2
-Overhaul of https://github.com/tangboxuan/SEPicker
+Overhaul of https://github.com/tangboxuan/SEPicker using React
