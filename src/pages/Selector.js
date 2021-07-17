@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import EssentialModulesSelector from "./SelectorComponents/EssentialModuleSelector"
-import OptionalModulesSelector from "./SelectorComponents/OptionalModuleSelector"
-import ContinentSelector from "./SelectorComponents/ContinentSelector"
-import SchoolSelector from "./SelectorComponents/SchoolSelector"
-import CountrySelector from "./SelectorComponents/CountrySelector"
-import Results from "./SelectorComponents/Results"
+import EssentialModulesSelector from "../components/selector_components/EssentialModuleSelector"
+import OptionalModulesSelector from "../components/selector_components/OptionalModuleSelector"
+import ContinentSelector from "../components/selector_components/ContinentSelector"
+import SchoolSelector from "../components/selector_components/SchoolSelector"
+import CountrySelector from "../components/selector_components/CountrySelector"
+import Results from "../components/selector_components/Results"
 
 
 function Selector(props) {

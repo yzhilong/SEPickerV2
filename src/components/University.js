@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import ModuleMapping from "./UniversityComponents/ModuleMapping"
+import ModuleMapping from "./university_components/ModuleMapping"
 
 function University(props) {
     const modules = new Array()

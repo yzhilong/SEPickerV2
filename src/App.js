@@ -1,7 +1,8 @@
 import React, { Component, useState } from "react"
-import Favourites from "./Favourites"
-import Navbar from "./Navbar"
-import Selector from "./Selector"
+import { Route, Switch } from 'react-router-dom'
+import Favourites from "./pages/Favourites"
+import NavBar from "./components/NavBar"
+import Selector from "./pages/Selector"
 
 function App() {
 
@@ -14,8 +15,23 @@ function App() {
 
     return (
         <div>
-            <Navbar setPage={setPage}/>
-            {page === "Selector" 
+            <NavBar setPage={setPage}/>
+            <Route path="/" exact>
+                <Selector 
+                    favourites={favourites}
+                    setFavourites={setFavourites}
+                /> 
+            </Route>
+            <Route path ="/department" exact>
+                
+            </Route>
+            <Route path="/favourites" exact>
+                <Favourites
+                    favourites={favourites}
+                    setFavourites={setFavourites}
+                />
+            </Route>
+            {/* {page === "Selector" 
                 ? <Selector 
                     favourites={favourites}
                     setFavourites={setFavourites}
@@ -27,7 +43,7 @@ function App() {
                 : page === "Department"
                 ? null
                 : null
-            }
+            } */}
         </div>
     )
 }
