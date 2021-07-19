@@ -1,0 +1,12 @@
+.selected-module-card {
+    width: 20%;
+    background-color: grey;
+}
+
+/* .delete-module-button {
+    background-color: hotpink;
+} */
+
+.delete-module-button {
+    background-color: #ff0000
+  }
