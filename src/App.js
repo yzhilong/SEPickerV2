@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import Favourites from "./pages/Favourites"
 import NavBar from "./components/NavBar"
 import Selector from "./pages/Selector"
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
 
     return (
         <div>
-            <NavBar setPage={setPage}/>
+            <NavBar />
             <Route path="/" exact>
                 <Selector 
                     favourites={favourites}
