@@ -48,7 +48,7 @@ Faculty of Arts & Social Sci,"Ritsumeikan University,Kyoto",IR13718,Internationa
 Faculty of Arts & Social Sci,"Ritsumeikan University,Kyoto",IR13521,Introduction to Peace Studies,2.0,,,,PS3239,Int'l Conflict Analysis,4.0,,,,Y
 Faculty of Arts & Social Sci,"Ritsumeikan University,Kyoto",IR13031,Gender Analysis of Security and Development,2.0,,,,PS3237,Women and Politics,4.0,,,,Y
 Faculty of Arts & Social Sci,"Ritsumeikan University,Kyoto",IR10469,Introduction to Southeast Asian Studies: Challenges to Construct a Shared Community,2.0,,,,PS2245,Southeast Asian Politics,4.0,,,,Y
-Faculty of Arts & Social Sci,Tohoku University,TU001,Global Governance and Japan'tion,2.0,,,,PS3741,Department Exchange Module,4.0,,,,Y
+Faculty of Arts & Social Sci,Tohoku University,TU001,Global Governance and Japan's International Cooperation,2.0,,,,PS3741,Department Exchange Module,4.0,,,,Y
 Faculty of Arts & Social Sci,Tohoku University,PU002,"Japanese Corporate Culture, Employment Practices",2.0,,,,PS2745,Department Exchange Module,4.0,,,,Y
 Faculty of Arts & Social Sci,Kyushu University,ZXX001,Contemporary Japanese politics,2.0,,,,PS2741,Department Exchange Module,4.0,,,,Y
 Faculty of Arts & Social Sci,Waseda University,INTB122L,The War and Peace Issues in the 21st Century 2,1.0,,,,PS2711,Department Exchange Module,4.0,,,,Y
@@ -146,7 +146,7 @@ Faculty of Arts & Social Sci,Korea University,DISS338,Human Rights in a Globalis
 Faculty of Arts & Social Sci,Korea University,DISS352,Special Topics in International Law,3.0,,,,GL2103,Global Governance,4.0,,,,Y
 Faculty of Arts & Social Sci,Korea University,DISS423,International Relations of East Asia,4.0,,,,PS2238,Int'l Politics of NE Asia,4.0,,,,Y
 Faculty of Arts & Social Sci,Korea University,DISS425,Korea-US Relations,3.0,,,,PS4206,Regional Security in Asia-Pac,5.0,,,,Y
-Faculty of Arts & Social Sci,Korea University,DISS434,China',3.0,,,,PS4203,China's Foreign Policy,5.0,,,,Y
+Faculty of Arts & Social Sci,Korea University,DISS434,China's International Relations,3.0,,,,PS4203,China's Foreign Policy,5.0,,,,Y
 Faculty of Arts & Social Sci,Korea University,DISS474,International Development Cooperation and Trade,3.0,,,,PS4882F,The Politics of Int'l Trade,5.0,,,,Y
 Faculty of Arts & Social Sci,Korea University,ISC131,Introduction to Comparative Politics,3.0,,,,PS2234,Intro to Comparative Politics,4.0,,,,Y
 Faculty of Arts & Social Sci,Korea University,ISC132,Introduction to International Relations,3.0,,,,PS2237,Intro to International Relatns,4.0,,,,Y
@@ -350,7 +350,7 @@ Faculty of Arts & Social Sci,Institut d'Etudes Politiques de Grenoble,CSS1-5,Int
 Faculty of Arts & Social Sci,Institut d'Etudes Politiques de Grenoble,ZXXCIVIS2-5,"France : State, Society, Political system and Foreign Policy",5.0,,,,PS3741,Department Exchange Module,4.0,,,,Y
 Faculty of Arts & Social Sci,Institut d'Etudes Politiques de Grenoble,PUCSS2-5,Australia/New Zealand-United Kingdom Foreign Relations,5.0,,,,PS2703,POLITICAL SCIENCE EXCHANGE MOD,4.0,,,,Y
 Faculty of Arts & Social Sci,Institut d'Etudes Politiques de Grenoble,PUCSS2-5,Environmental Politics,5.0,,,,PS2701,Political Science Exchange Mod,4.0,,,,Y
-Faculty of Arts & Social Sci,Institut d'Etudes Politiques de Grenoble,IEPG004,Droit de l',6.0,,,,PS3880H,The Politics of European Integ,4.0,,,,Y
+Faculty of Arts & Social Sci,Institut d'Etudes Politiques de Grenoble,IEPG004,Droit de l'Union Europ??enne,6.0,,,,PS3880H,The Politics of European Integ,4.0,,,,Y
 Faculty of Arts & Social Sci,Institut d'Etudes Politiques de Grenoble,IEPG003,Between fiction and politics: (Mis) Representations of the United Nations,5.0,,,,PS3880D,Politics of the United Nations,4.0,,,,Y
 Faculty of Arts & Social Sci,Institut d'Etudes Politiques de Grenoble,IEPG002,Politiques publiques,6.0,,,,PS3271,Public Policy-Making,4.0,,,,Y
 Faculty of Arts & Social Sci,Institut d'Etudes Politiques de Grenoble,IEPG001,Between fiction and politics: (Mis) Representations of the United Nations,5.0,,,,GL2103,Global Governance,4.0,,,,Y
@@ -537,7 +537,7 @@ Faculty of Arts & Social Sci,University of California,GLOBL224,Research Methods,
 Faculty of Arts & Social Sci,University of California,GLOBAL173,International Human Rights,4.0,,,,PS3252,Human Rights in Int'l Politics,4.0,,,,Y
 Faculty of Arts & Social Sci,University of California,COMM130,Political Communication,4.0,,,,PS3239,Int'l Conflict Analysis,4.0,,,,Y
 Faculty of Arts & Social Sci,University of California,POLSCI41A,Introduction to International Relations,4.0,,,,PS2237,Intro to International Relatns,4.0,,,,Y
-Faculty of Arts & Social Sci,University of California,POLI130B,Politics in the People',4.0,,,,PS2248,Chinese Politics,4.0,,,,Y
+Faculty of Arts & Social Sci,University of California,POLI130B,Politics in the People's Republic of China,4.0,,,,PS2248,Chinese Politics,4.0,,,,Y
 Faculty of Arts & Social Sci,University of California,POLS126,International Security,4.0,,,,PS3240,International Security,4.0,,,,Y
 Faculty of Arts & Social Sci,University of California,POL279,Political Networks: Methods and Applications,4.0,,,,PS3258,Research Methods in Pol Sci,4.0,,,,Y
 Faculty of Arts & Social Sci,University of California,POL108,Public Sector Policy,4.0,,,,PS2745,Department Exchange Module,4.0,,,,Y
@@ -591,14 +591,11 @@ Faculty of Arts & Social Sci,Ludwig-Maximilians-University of Munich,FASS-CLS-ZX
 Faculty of Arts & Social Sci,Ludwig-Maximilians-University of Munich,FASS-CLS-ZXY1013,semesterbegleitender Sprachkurs (German A1.1),1.0,,,,LAG1201,German 1,4.0,,,,Y
 Faculty of Arts & Social Sci,Ludwig-Maximilians-University of Munich,FASS-CLS-ZXY1005,German A1.1,1.0,,,,LAG1201,German 1,4.0,,,,Y
 Faculty of Arts & Social Sci,Ludwig-Maximilians-University of Munich,LMUM001,Next Europe,4.0,,,,PS2236,European Politics,4.0,,,,Y
-Faculty of Arts & Social Sci,,15105,Populist Parties and Anti-Establishment Politics across Europe,10.0,,,,PS4202,Political Parties & Elections,5.0,,,,Y
 Faculty of Arts & Social Sci,Bremen University of Applied Sciences,15112,Analysing Policy and Institutional Change,10.0,,,,PS4210,Public Policy Analysis,5.0,,,,Y
 Faculty of Arts & Social Sci,"Justus Liebig University, Giessen",EU060,Next Europe: In search for its narrative,6.0,,,,PS3880H,The Politics of European Integ,4.0,,,,Y
 Faculty of Arts & Social Sci,University of Wurzburg,15107,European Institutions,10.0,,,,PS3741,Department Exchange Module,4.0,,,,Y
 Faculty of Arts & Social Sci,Dresden University of Technology,GSI15006,Africa's Democratisation in Comparative Perspective (in English),10.0,,,,PS3732,Department Exchange Module,4.0,,,,Y
 Faculty of Arts & Social Sci,Athens University of Economics & Business,GSI15014,The Israeli Political System in Comparative Perspective (in English),10.0,,,,PS3741,Department Exchange Module,4.0,,,,Y
-Faculty of Arts & Social Sci,,GSI15072,Personal representation in parliamentary systems (in English),10.0,,,,PS4711,Department exchange module,5.0,,,,Y
-Faculty of Arts & Social Sci,,GSI15103,Europeanization - Transforming National Political Systems? (In English),10.0,,,,PS4741,Department Exchange Module,5.0,,,,Y
 Faculty of Arts & Social Sci,Georgetown University Law Center,GSI15108,International Institutions (in English) - Single view,10.0,,,,PS4711,Department exchange module,5.0,,,,Y
 Faculty of Arts & Social Sci,Tulane University,POLA3010,"Booze, Drugs and the Courts",3.0,,,,PS3706,Political Science Exchange Mod,4.0,,,,Y
 Faculty of Arts & Social Sci,Universidad Autonoma de Madrid,ZXX19162,Issues in International Politics Today,6.0,,,,PS3701,Political Science Exchange Mod,4.0,,,,Y
@@ -8100,7 +8097,7 @@ Faculty of Engineering,Johns Hopkins University,EN530.421,Mechatronics,3.0,,,,ME
 Faculty of Engineering,Johns Hopkins University,EQ EN.625.433,Monte Carlo Methods,4.0,,,,IE4504,Exchange Elective,4.0,,,,Y
 Faculty of Engineering,Johns Hopkins University,EN EN.660.341,Business Process and Quality Management,3.0,,,,IE4994,Exchange Elective,4.0,,,,Y
 Faculty of Engineering,Johns Hopkins University,EN EN.660.361,Engineering Business and Management,3.0,,,,IE4240,Project Management,4.0,,,,Y
-Faculty of Engineering,Johns Hopkins University,EN530.417,FABRICATOLOGY ',3.0,,,,ME3661,Technical Elective,4.0,,,,Y
+Faculty of Engineering,Johns Hopkins University,EN530.417,FABRICATOLOGY ' ADVANCED MATERIALS PROCESSING,3.0,,,,ME3661,Technical Elective,4.0,,,,Y
 Faculty of Engineering,"University of Illinois, Urbana-Champaign",TAM251,INTRODUCTORY SOLID MECHANICS,3.0,,,,ME2112,Strength of Materials,4.0,,,,Y
 Faculty of Engineering,"University of Illinois, Urbana-Champaign",ME300,THERMODYNAMICS,3.0,,,,ME2121,Engineering Thermodynamics and,4.0,,,,Y
 Faculty of Engineering,"University of Illinois, Urbana-Champaign",AE323,APPLIED AEROSPACE STRUCTURES,3.0,,,,ME4212,Aircraft Structures,4.0,,,,Y
@@ -8385,19 +8382,6 @@ Faculty of Engineering,"University of California, Merced",JPN001,Elementary Japa
 Faculty of Engineering,"University of California, Merced",COGS001,Introduction to Cognitive Science,4.0,,,,EX1004,Exchange UEM,4.0,,,,N
 Faculty of Engineering,"University of California, Merced",ENGR155,Engineering Economic Analysis,3.0,,,,IE2140,Engineering Economy,4.0,,,,Y
 Faculty of Engineering,"University of California, Merced",PSY001,Introduction to Psychology,4.0,,,,EX1001,Exchange UEM,4.0,,,,N
-Faculty of Engineering,,6002,Multiculture in Germany and Europe,6.0,,,,EX1020,Exchange UEM,2.0,,,,N
-Faculty of Engineering,,2595468,Service Innovation,5.0,,,,IE4987,Exchange Elective,3.0,,,,Y
-Faculty of Engineering,,2581961,Supply Chain Management with Advanced Planning Systems,2.0,,,,IE4889,Exchange Elective,1.0,,,,Y
-Faculty of Engineering,,2579900,Management Accounting I,4.5,,,,EX4882,Exchange UEM 3,3.0,,,,N
-Faculty of Engineering,,2540460,Market Engineering: Information in Institutions,4.5,,,,IE4986,Exchange Elective,3.0,,,,Y
-Faculty of Engineering,,2511106,Nature-inspired Optimisation Methods,5.0,,,,IE4003,Department Exchange Module,3.0,,,,Y
-Faculty of Engineering,,2560550,Auction and Mechanism Design,4.5,,,,IE4123,Department Exchange Module,3.0,,,,Y
-Faculty of Engineering,,2595466,eServices,4.5,,,,EX4881,Exchange UEM 2,3.0,,,,N
-Faculty of Engineering,,2581006,Efficient Energy Systems and Electric Mobility,3.5,,,,IE4122,Department Exchange Module,2.0,,,,Y
-Faculty of Engineering,,2550484,Graph Theory and Advanced Location Models,4.5,,,,IE4887,Exchange Elective,3.0,,,,Y
-Faculty of Engineering,,2511310,Semantic Web Technologies,5.0,,,,EX3612,Exchange UEM,3.0,,,,N
-Faculty of Engineering,,2511400,Complexity Management,4.5,,,,IE4013,Department Exchange Module,3.0,,,,Y
-Faculty of Engineering,,2511308,Service Oriented Computing,5.0,,,,IE4013,Department Exchange Module,3.0,,,,Y
 Faculty of Engineering,Aalto University,25C00200,Entrepreneurship and Innovation Management,3.0,,,,MT4001,Innovation and Entrepreneurial,4.0,,,,Y
 Faculty of Engineering,Aalto University,MAT1.3601,Introduction to stochastics P,5.0,,,,EX4881,Exchange UEM 2,3.0,,,,N
 Faculty of Engineering,Aalto University,TU-53.1320,Organisation and Networks P,4.0,,,,EX4885,Exchange UEM 6,2.0,,,,N
