@@ -1,34 +1,37 @@
 import React, { useState } from "react"
 import Multiselect from "multiselect-react-dropdown"
-import SelectedModuleCard from "./SelectedModuleCard"
 import './EssentialModuleSelector.css'
+import nextId from 'react-id-generator'
+
 function EssentialModulesSelector(props) {
-    const [selectedModules, setSelectedModules] = useState([])
-    function selectEssentialModuleHandler(event) {
-        setSelectedModules(prevState => [...prevState, event.target.value])
+    const modules = [
+        {name: 'CS1101S Programming Methodology I', id: nextId()},
+        {name: 'MA1101R Linear Algebra I', id: nextId()},
+        {name: 'CS2103T Software Engineering', id: nextId()},
+        {name: 'ST2131 Probability', id: nextId()}
+    ]
+
+    const [selectedModules, setSelectedModules] = useState(new Set())
+
+    function onSelectEssentialModule(selectedList, selectedItem) {
+        setSelectedModules(prevState => new Set([...prevState, selectedItem.name]));
     }
 
-    function removeModuleHandler() {
-        console.log(this.module)
-        setSelectedModules(prevState => prevState.filter(prevSelectedMod => prevSelectedMod != this.module))
+    function onRemoveEssentialModule(selectedList, removedItem) {
+        setSelectedModules(prevState => {
+            prevState.delete(removedItem.name);
+            return new Set([...prevState]);
+        })
     }
 
     return (
         <React.Fragment>
-            <form>
-                <div class="form-group">
-                    <label for="essential-modules">Essential Modules</label>
-                    <select class="form-select" id="essentialModulesSelect" onChange={selectEssentialModuleHandler}>
-                        <option disabled="true" selected>Select Essential Modules</option>
-                        <option value="CS1101S Programming Methodology I">CS1101S Programming Methodology I</option>
-                        <option disabled="true" value="MA1101R Linear Algebra I">MA1101R Linear Algebra I</option>
-                        <option value="IS1103 Ethics in Computing">IS1103 Ethics in Computing</option>
-                        <option value="ES2660 Communication in the Information Age">ES2660 Communication in the Information Age</option>
-                    </select>
-                </div>
-            </form>
-            {selectedModules.map(module => <SelectedModuleCard onRemove={removeModuleHandler}>{module}</SelectedModuleCard>)}
-      </React.Fragment>
+            <Multiselect
+            options={modules} displayValue={"name"} onSelect={onSelectEssentialModule} 
+            onRemove={onRemoveEssentialModule} closeOnSelect={false}
+            />
+            {selectedModules}
+        </React.Fragment>
     )
 }
 
