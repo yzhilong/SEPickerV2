@@ -5,8 +5,6 @@ import pycountry_convert as pc
 
 
 mappings = pd.read_csv("cleaned_mappings.csv")
-mappings.head()
-
 
 with open('equivalentModuleMappings.json','r') as f:
     equivalent_module_mappings = json.load(f)
