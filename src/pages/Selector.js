@@ -31,6 +31,15 @@ function Selector(props) {
     // }, []);
     // const [countries, setCountries] = useState([]);
     // const partnerUniversitiesSet = new Set();
+
+
+
+    const modulesArr = require("../data/modules.json")
+    const modules = []
+    for (var i = 0; i < modulesArr.length; i++) {
+        modules.push({name: modulesArr[i], id: i})
+    }
+    /*
     const countriesSet = new Set();
     const partnerUniversitiesSet = new Set();
     async function fill_countries_and_pu() {
@@ -44,6 +53,7 @@ function Selector(props) {
     fill_countries_and_pu().then(
         data => console.log([...countriesSet].sort())
         );
+    */
     // console.log([...countriesSet]);
     // useEffect(() => {
     //     csv(school_country_continent_csv).then(data => {
@@ -60,7 +70,7 @@ function Selector(props) {
     return (
         <div className="Selector">            
             <h1>Selector</h1>
-            <EssentialModulesSelector />
+            <EssentialModulesSelector modules={modules}/>
             <OptionalModulesSelector />
             <ContinentSelector />
             <CountrySelector />

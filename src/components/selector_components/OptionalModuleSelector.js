@@ -29,7 +29,7 @@ function OptionalModuleSelector(props) {
             <h3>Optional Modules</h3>
             <Multiselect
             options={modules} displayValue={"name"} onSelect={onSelectOptionalModule} 
-            onRemove={onRemoveOptionalModule} closeOnSelect={false}
+            onRemove={onRemoveOptionalModule} closeOnSelect={false} keepSearchTerm={true}
             />
             {selectedModules}
         </React.Fragment>

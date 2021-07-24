@@ -3,13 +3,16 @@ import Multiselect from "multiselect-react-dropdown"
 import './EssentialModuleSelector.css'
 import nextId from 'react-id-generator'
 
+
 function EssentialModulesSelector(props) {
-    const modules = [
-        {name: 'CS1101S Programming Methodology I', id: nextId()},
-        {name: 'MA1101R Linear Algebra I', id: nextId()},
-        {name: 'CS2103T Software Engineering', id: nextId()},
-        {name: 'ST2131 Probability', id: nextId()}
-    ]
+
+    // const modulesArr = require("../../data/modules.json")
+    // const modules = []
+    // for (var i = 0; i < modulesArr.length; i++) {
+    //     modules.push({name: modulesArr[i], id: i})
+    // }
+    // console.log("AA")
+    console.log(props.modules)
 
     const [selectedModules, setSelectedModules] = useState(new Set())
 
@@ -28,7 +31,7 @@ function EssentialModulesSelector(props) {
         <React.Fragment>
             <h3>Essential Modules</h3>
             <Multiselect
-            options={modules} displayValue={"name"} onSelect={onSelectEssentialModule} 
+            options={props.modules} displayValue={"name"} onSelect={onSelectEssentialModule} 
             onRemove={onRemoveEssentialModule} closeOnSelect={false}
             />
             {selectedModules}
