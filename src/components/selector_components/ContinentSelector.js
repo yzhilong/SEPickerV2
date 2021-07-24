@@ -1,14 +1,31 @@
-import React from "react"
+import React, {useState} from "react"
 import Multiselect from "multiselect-react-dropdown"
 import * as Icon from "react-icons/fi"
 import Checkbox from "react-custom-checkbox"
+import nextId from 'react-id-generator'
 
 
 function ContinentSelector(props) {
-    const continents = ['Africa', 'Asia', 'Europe', 'North America', 'Oceania', 'South America']
-    function onSelectHandler(continent) {
-        console.log(continent);
+    const continents = [
+        {name: 'Africa', id: 1}, 
+        {name: 'Asia', id: 2}, 
+        {name: 'Europe', id: 3}, 
+        {name: 'North America', id: 4}, 
+        {name: 'Oceania', id: 5}, 
+        {name: 'South America', id: 6}
+    ]
+    const [selectedContinents, setSelectedContinents] = useState([])
+
+    function onClickContinentHandler(continent) {
+        setSelectedContinents(prevState => {
+            if (prevState.includes(continent)) {
+                return prevState.filter(item => item != continent);
+            } else {
+                return [...prevState, continent];
+            }
+        })
     }
+
     return (
         <React.Fragment>
             <div className="ContinentSelector">
@@ -16,7 +33,8 @@ function ContinentSelector(props) {
             </div>
             {continents.map(continent => 
                 <Checkbox
-                    onChange = {event => onSelectHandler(continent)}
+                    key= {continent.id}
+                    onChange = {event => onClickContinentHandler(continent.name)}
                     checked={false}
                     icon={
                         <div
@@ -35,8 +53,9 @@ function ContinentSelector(props) {
                     borderRadius={20}
                     style={{ overflow: "hidden" }}
                     size={20}
-                    label={continent}
+                    label={continent.name}
                 />)}
+            {selectedContinents}
         </React.Fragment>
     )
 }

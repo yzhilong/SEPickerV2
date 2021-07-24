@@ -14,7 +14,7 @@ function EssentialModulesSelector(props) {
     const [selectedModules, setSelectedModules] = useState(new Set())
 
     function onSelectEssentialModule(selectedList, selectedItem) {
-        setSelectedModules(prevState => new Set([...prevState, selectedItem.name]));
+        setSelectedModules(prevState => new Set([...prevState, selectedItem.name.split(" ")[0]]));
     }
 
     function onRemoveEssentialModule(selectedList, removedItem) {
@@ -26,6 +26,7 @@ function EssentialModulesSelector(props) {
 
     return (
         <React.Fragment>
+            <h3>Essential Modules</h3>
             <Multiselect
             options={modules} displayValue={"name"} onSelect={onSelectEssentialModule} 
             onRemove={onRemoveEssentialModule} closeOnSelect={false}
