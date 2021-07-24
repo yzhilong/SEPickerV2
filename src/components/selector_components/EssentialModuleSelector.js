@@ -19,7 +19,7 @@ function EssentialModulesSelector(props) {
 
     function onRemoveEssentialModule(selectedList, removedItem) {
         setSelectedModules(prevState => {
-            prevState.delete(removedItem.name);
+            prevState.delete(removedItem.name.split(" ")[0]);
             return new Set([...prevState]);
         })
     }

@@ -19,7 +19,7 @@ function OptionalModuleSelector(props) {
 
     function onRemoveOptionalModule(selectedList, removedItem) {
         setSelectedModules(prevState => {
-            prevState.delete(removedItem.name);
+            prevState.delete(removedItem.name.split(" ")[0]);
             return new Set([...prevState]);
         })
     }
