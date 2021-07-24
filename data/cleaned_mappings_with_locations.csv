@@ -596,7 +596,7 @@ Faculty of Arts & Social Sci,"Justus Liebig University, Giessen",EU060,Next Euro
 Faculty of Arts & Social Sci,University of Wurzburg,15107,European Institutions,10.0,,,,PS3741,Department Exchange Module,4.0,,,,Y,Germany,Europe
 Faculty of Arts & Social Sci,Dresden University of Technology,GSI15006,Africa's Democratisation in Comparative Perspective (in English),10.0,,,,PS3732,Department Exchange Module,4.0,,,,Y,Germany,Europe
 Faculty of Arts & Social Sci,Athens University of Economics & Business,GSI15014,The Israeli Political System in Comparative Perspective (in English),10.0,,,,PS3741,Department Exchange Module,4.0,,,,Y,Greece,Europe
-Faculty of Arts & Social Sci,Georgetown University,GSI15108,International Institutions (in English) - Single view,10.0,,,,PS4711,Department exchange module,5.0,,,,Y,USA,North America
+Faculty of Arts & Social Sci,Georgetown University,GSI15108,International Institutions (in English) - Single view,10.0,,,,PS4711,Department exchange module,5.0,,,,Y,United States of America,North America
 Faculty of Arts & Social Sci,Tulane University,POLA3010,"Booze, Drugs and the Courts",3.0,,,,PS3706,Political Science Exchange Mod,4.0,,,,Y,United States of America,North America
 Faculty of Arts & Social Sci,Universidad Autonoma de Madrid,ZXX19162,Issues in International Politics Today,6.0,,,,PS3701,Political Science Exchange Mod,4.0,,,,Y,Spain,Europe
 Faculty of Arts & Social Sci,University of Innsbruck,PS402134,International Relations - Enhanced Level,10.0,,,,PS3240,International Security,4.0,,,,Y,Austria,Europe
@@ -741,7 +741,7 @@ Faculty of Arts & Social Sci,"University of the Republic, Uruguay",IR3048,Peacek
 Faculty of Arts & Social Sci,La Trobe University,CHI1001,CHINESE 1,1.0,,,,LAC1201,Chinese 1,4.0,,,,Y,Australia,Oceania
 Faculty of Arts & Social Sci,Charles University in Prague,POL308,International Affairs: European Union and Asia,6.0,,,,PS2236,European Politics,4.0,,,,Y,Czech Republic,Europe
 Faculty of Arts & Social Sci,Charles University in Prague,POL316,Modern Czech Politics Across Various Political Regimes: Never-ending Transformation,6.0,,,,PS3701,Political Science Exchange Mod,4.0,,,,Y,Czech Republic,Europe
-Faculty of Arts & Social Sci,Cornell University,ANTHR3437,"Global Fantasies, Global Realities, Global Nightmares",3.0,,,,GL1741,Global Studies Exchange Dummy,4.0,,,,Y,USA,North America
+Faculty of Arts & Social Sci,Cornell University,ANTHR3437,"Global Fantasies, Global Realities, Global Nightmares",3.0,,,,GL1741,Global Studies Exchange Dummy,4.0,,,,Y,United States of America,North America
 Faculty of Arts & Social Sci,The University of British Columbia (Okanagan),POLI391F,Special Topics in Political Science - FRZ CONF UNREC,3.0,,,,PS3701,Political Science Exchange Mod,4.0,,,,Y,Canada,North America
 Faculty of Arts & Social Sci,The University of British Columbia (Okanagan),POLI364,International Organisations,3.0,,,,PS3251,International & Regional Orgs,4.0,,,,Y,Canada,North America
 NUS Business School,The Hong Kong Polytechnic University,LGT2106,Principles of Operations Management,3.0,,,,DAO2703,Operations and Technology Mana,4.0,,,,Y,Hong Kong,Asia
@@ -6649,25 +6649,25 @@ School of Computing,University of Georgia,CSCI2720,Data Structures,4.0,,,,CS2040
 School of Computing,University of Georgia,CSCI4370,Database Management,4.0,,,,CS2102,Database Systems,4.0,,,,N,United States of America,North America
 School of Computing,University of Georgia,MIST5670,Information Systems Leadership,4.0,,,,IS3103,Information Systems Leadership,4.0,,,,N,United States of America,North America
 School of Computing,University of Georgia,CSCI8050,Knowledge-Based Systems,3.0,,,,CS4244,Knowledge Representation and R,4.0,,,,N,United States of America,North America
-School of Computing,Georgetown University,COSC430,Information Assurance,3.0,,,,CS2107,Introduction to Information Se,4.0,,,,N,USA,North America
-School of Computing,Georgetown University,COSC253,Handheld Device Programming,3.0,,,,IS3261,Mobile Apps Development for En,4.0,,,,,USA,North America
-School of Computing,Georgetown University,COSC 586,Text Mining and Analysis,3.0,,,,BT4222,Mining Web Data for Business I,4.0,,,,N,USA,North America
-School of Computing,Georgetown University,COSC 282,Big Data Analytics,3.0,,,,BT4221,Big Data Techniques & Technolo,4.0,,,,N,USA,North America
-School of Computing,Georgetown University,COSC592,Health Search and Mining,3.0,,,,IS4250,IT-enabled Healthcare Solution,4.0,,,,N,USA,North America
-School of Computing,Georgetown University,MATH504,Numerical Methods,3.0,,,,BT3102,Computational Methods for Busi,4.0,,,,N,USA,North America
-School of Computing,Georgetown University,COSC488,Information Retrieval,3.0,,,,BT4212,Search Engine Optimization & A,4.0,,,,N,USA,North America
-School of Computing,Georgetown University,COSC010-01,Intro to Information Technology,3.0,,,,IS1103,Ethics in Computing,4.0,,,,Y,USA,North America
-School of Computing,Georgetown University,COSC010-02,Intro to Information Technology,3.0,,,,IS1103,Ethics in Computing,4.0,,,,Y,USA,North America
-School of Computing,Georgetown University,COSC288,Introduction to Machine Learning,3.0,,,,CS3244,Machine Learning,4.0,,,,N,USA,North America
-School of Computing,Georgetown University,MARK235,Social & Digital Media Marketing,3.0,,,,IS3150,Digital Media Marketing,4.0,,,,,USA,North America
-School of Computing,Georgetown University,COSC160,Data Structures,3.0,,,,CS2040,Data Structures and Algorithms,,,,,,USA,North America
-School of Computing,Georgetown University,COSC255,Operating Systems,3.0,,,,CS2106,Intro to Operating Systems,4.0,,,,N,USA,North America
-School of Computing,Georgetown University,COSC121,Computer Systems Fundamentals,3.0,,,,CS2100,Computer Organisation,4.0,,,,N,USA,North America
-School of Computing,Georgetown University,OPIM244,Mgmt Bus App Dvlpmt in Python,3.0,,,,IS3261,Mobile Apps Development for En,4.0,,,,N,USA,North America
-School of Computing,Georgetown University,FINC150,Fundamentals of Finance,3.0,,,,BT4016,Risk Analytics for Financial S,4.0,,,,N,USA,North America
-School of Computing,Georgetown University,FINC211,Business Financial Management,3.0,,,,BT4013,Analytics for Capital Market T,4.0,,,,N,USA,North America
-School of Computing,Georgetown University,HESY271,Strategic Planning & Marketing,3.0,,,,BT4211,Data-Driven Marketing,4.0,,,,N,USA,North America
-School of Computing,Georgetown University,COSC435,Intro to Network Security,3.0,,,,CS3235,Computer Security,4.0,,,,N,USA,North America
+School of Computing,Georgetown University,COSC430,Information Assurance,3.0,,,,CS2107,Introduction to Information Se,4.0,,,,N,United States of America,North America
+School of Computing,Georgetown University,COSC253,Handheld Device Programming,3.0,,,,IS3261,Mobile Apps Development for En,4.0,,,,,United States of America,North America
+School of Computing,Georgetown University,COSC 586,Text Mining and Analysis,3.0,,,,BT4222,Mining Web Data for Business I,4.0,,,,N,United States of America,North America
+School of Computing,Georgetown University,COSC 282,Big Data Analytics,3.0,,,,BT4221,Big Data Techniques & Technolo,4.0,,,,N,United States of America,North America
+School of Computing,Georgetown University,COSC592,Health Search and Mining,3.0,,,,IS4250,IT-enabled Healthcare Solution,4.0,,,,N,United States of America,North America
+School of Computing,Georgetown University,MATH504,Numerical Methods,3.0,,,,BT3102,Computational Methods for Busi,4.0,,,,N,United States of America,North America
+School of Computing,Georgetown University,COSC488,Information Retrieval,3.0,,,,BT4212,Search Engine Optimization & A,4.0,,,,N,United States of America,North America
+School of Computing,Georgetown University,COSC010-01,Intro to Information Technology,3.0,,,,IS1103,Ethics in Computing,4.0,,,,Y,United States of America,North America
+School of Computing,Georgetown University,COSC010-02,Intro to Information Technology,3.0,,,,IS1103,Ethics in Computing,4.0,,,,Y,United States of America,North America
+School of Computing,Georgetown University,COSC288,Introduction to Machine Learning,3.0,,,,CS3244,Machine Learning,4.0,,,,N,United States of America,North America
+School of Computing,Georgetown University,MARK235,Social & Digital Media Marketing,3.0,,,,IS3150,Digital Media Marketing,4.0,,,,,United States of America,North America
+School of Computing,Georgetown University,COSC160,Data Structures,3.0,,,,CS2040,Data Structures and Algorithms,,,,,,United States of America,North America
+School of Computing,Georgetown University,COSC255,Operating Systems,3.0,,,,CS2106,Intro to Operating Systems,4.0,,,,N,United States of America,North America
+School of Computing,Georgetown University,COSC121,Computer Systems Fundamentals,3.0,,,,CS2100,Computer Organisation,4.0,,,,N,United States of America,North America
+School of Computing,Georgetown University,OPIM244,Mgmt Bus App Dvlpmt in Python,3.0,,,,IS3261,Mobile Apps Development for En,4.0,,,,N,United States of America,North America
+School of Computing,Georgetown University,FINC150,Fundamentals of Finance,3.0,,,,BT4016,Risk Analytics for Financial S,4.0,,,,N,United States of America,North America
+School of Computing,Georgetown University,FINC211,Business Financial Management,3.0,,,,BT4013,Analytics for Capital Market T,4.0,,,,N,United States of America,North America
+School of Computing,Georgetown University,HESY271,Strategic Planning & Marketing,3.0,,,,BT4211,Data-Driven Marketing,4.0,,,,N,United States of America,North America
+School of Computing,Georgetown University,COSC435,Intro to Network Security,3.0,,,,CS3235,Computer Security,4.0,,,,N,United States of America,North America
 School of Computing,Georgia Institute of Technology,CS6220,Big Data Systems and Analytics,3.0,,,,CS4225,Big Data Systems for Data Scie,4.0,,,,N,United States of America,North America
 School of Computing,Georgia Institute of Technology,CS6260,Applied Cryptography,3.0,,,,CS4236,Cryptography Theory & Practice,4.0,,,,N,United States of America,North America
 School of Computing,Georgia Institute of Technology,CS4649,Robot Intelligence - Planning,3.0,,,,CS4246,AI Planning and Decision Makin,4.0,,,,N,United States of America,North America
@@ -6947,9 +6947,9 @@ School of Computing,Interdisciplinary Center Herzliya (IDC),201361501,"Blockchai
 School of Computing,Interdisciplinary Center Herzliya (IDC),CS3141,Machine Learning from Data (Lecture),4.0,,,,CS3244,Machine Learning,4.0,,,,N,Israel,Asia
 School of Computing,Interdisciplinary Center Herzliya (IDC),IS10342,Technology and Law (Lecture),2.0,,,,IS1103,Ethics in Computing,4.0,,,,N,Israel,Asia
 School of Computing,Interdisciplinary Center Herzliya (IDC),3153201315301,Virtual Reality Development(Elective),3.0,,,,CS4240,Interaction Design for Virtual,4.0,,,,N,Israel,Asia
-School of Computing,Cornell University,INFO4301,"Ethics in New Media, Technology, and Communication",3.0,,,,IS1103,Ethics in Computing,4.0,,,,N,USA,North America
-School of Computing,Cornell University,INFO1200,"Information Ethics, Law, and Policy",3.0,,,,IS1103,Ethics in Computing,4.0,,,,N,USA,North America
-School of Computing,Cornell University,CS2110,Object-Oriented Programming and Data Structures,3.0,,,,CS2040,Data Structures and Algorithms,4.0,,,,N,USA,North America
+School of Computing,Cornell University,INFO4301,"Ethics in New Media, Technology, and Communication",3.0,,,,IS1103,Ethics in Computing,4.0,,,,N,United States of America,North America
+School of Computing,Cornell University,INFO1200,"Information Ethics, Law, and Policy",3.0,,,,IS1103,Ethics in Computing,4.0,,,,N,United States of America,North America
+School of Computing,Cornell University,CS2110,Object-Oriented Programming and Data Structures,3.0,,,,CS2040,Data Structures and Algorithms,4.0,,,,N,United States of America,North America
 School of Computing,University of Gothenburg,DIT844,Project Management,7.5,,,,IS4100,IT Project Management,4.0,,,,,Sweden,Europe
 School of Computing,University of Gothenburg,DIT032,Data Management,7.5,,,,CS2102,Database Systems,4.0,,,,,Sweden,Europe
 School of Computing,University of Gothenburg,DIT223,Computer Graphics,7.5,,,,CS4247,Graphics Rendering Techniques,4.0,,,,N,Sweden,Europe
@@ -7133,9 +7133,9 @@ School of Design & Environment,"University of Washington, Seattle",CM313,Constru
 School of Design & Environment,"University of Washington, Seattle",CM312,Construction Accounting,3.0,,,,PF2108,Project Cost Management,4.0,,,,N,United States of America,North America
 School of Design & Environment,"University of Washington, Seattle",CM340,Sustainable Design and Construction,3.0,,,,PF4305,Green Development,4.0,,,,N,United States of America,North America
 School of Design & Environment,"University of Washington, Seattle",CM333,Construction Safety,3.0,,,,PF4202,"Safety, Health and Environment",4.0,,,,N,United States of America,North America
-School of Design & Environment,"Texas A & M University,College Station,Texas",COSC253,Construction Materials & Methods I,3.0,,,,PF2504,Materials Technology,4.0,,,,N,USA,North America
-School of Design & Environment,"Texas A & M University,College Station,Texas",COSC461,Building Information Modelling System,3.0,,,,PF4206,Building Information Modelling,4.0,,,,N,USA,North America
-School of Design & Environment,"Texas A & M University,College Station,Texas",COSC364,Construction Safety I,3.0,,,,PF4202,"Safety, Health and Environment",4.0,,,,N,USA,North America
+School of Design & Environment,"Texas A & M University,College Station,Texas",COSC253,Construction Materials & Methods I,3.0,,,,PF2504,Materials Technology,4.0,,,,N,United States of America,North America
+School of Design & Environment,"Texas A & M University,College Station,Texas",COSC461,Building Information Modelling System,3.0,,,,PF4206,Building Information Modelling,4.0,,,,N,United States of America,North America
+School of Design & Environment,"Texas A & M University,College Station,Texas",COSC364,Construction Safety I,3.0,,,,PF4202,"Safety, Health and Environment",4.0,,,,N,United States of America,North America
 School of Design & Environment,Rice University,SMGT366,Event Management and Customer Service,3.0,,,,PF4307,Event Management,4.0,,,,N,United States of America,North America
 School of Design & Environment,Rice University,EGEE412,Green Engineering & Environmental Compliance,3.0,,,,PF4305,Green Development,4.0,,,,N,United States of America,North America
 School of Design & Environment,Rice University,SDE-PFM-ZXY1000,Arts Event Planning and Project Management,3.0,,,,PF4307,Event Management,4.0,,,,N,United States of America,North America
@@ -11001,9 +11001,9 @@ Faculty of Science,University of Virginia,BIOL 3250,Introduction to Animal Behav
 Faculty of Science,University of Virginia,BIOL 3240,Introduction to Immunology,3.0,,,,LSM3223,Immunology,4.0,,,,Y,United States of America,North America
 Faculty of Science,University of Virginia,BIOL 3140,Biology of Ageing,3.0,,,,LSM3217,Human Ageing,4.0,,,,Y,United States of America,North America
 Faculty of Science,University of Virginia,BIOL 3020,Evolution and ecology,3.0,,,,LSM3252,Evolutn & Comparative Genomics,4.0,,,,Y,United States of America,North America
-Faculty of Science,"Texas A & M University,College Station,Texas",HORT 201,HORT SCIENCE & PRACTICES,3.0,,,,LSM2991,Exchange Enrichment Level 2000,4.0,,,,Y,USA,North America
-Faculty of Science,"Texas A & M University,College Station,Texas",HORT 301,GARDEN SCIENCE,3.0,,,,LSM3993,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,"Texas A & M University,College Station,Texas",APBI260,Agroecology I,6.0,,,,LSM2991,Exchange Enrichment Level 2000,4.0,,,,Y,USA,North America
+Faculty of Science,"Texas A & M University,College Station,Texas",HORT 201,HORT SCIENCE & PRACTICES,3.0,,,,LSM2991,Exchange Enrichment Level 2000,4.0,,,,Y,United States of America,North America
+Faculty of Science,"Texas A & M University,College Station,Texas",HORT 301,GARDEN SCIENCE,3.0,,,,LSM3993,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,"Texas A & M University,College Station,Texas",APBI260,Agroecology I,6.0,,,,LSM2991,Exchange Enrichment Level 2000,4.0,,,,Y,United States of America,North America
 Faculty of Science,The University of Texas at Austin,BIO 365S,Systems Physiology,3.0,,,,LSM3212,Human Physio:Cardiopulmon Syst,4.0,,,,Y,United States of America,North America
 Faculty of Science,The University of Texas at Austin,GEO 302M,The Age of Mammals,3.0,,,,LSM1303,Animal Behaviour,4.0,,,,Y,United States of America,North America
 Faculty of Science,The University of Texas at Austin,BIO 326M,INTRODUCTORY MEDICAL MICROBIOLOGY & IMMUNOLOGY,3.0,,,,LSM3225,Molecular Microbiology in HD,4.0,,,,Y,United States of America,North America
@@ -11255,10 +11255,10 @@ Faculty of Science,University of Georgia,ADSC4450,Advanced Beef Cattle Productio
 Faculty of Science,University of Georgia,FDST4120,Food Fermentations,3.0,,,,FST4201,Current Topics (Food Sci&Tech),4.0,,,,Y,United States of America,North America
 Faculty of Science,University of Georgia,AAEC3040,Agribusiness Marketing,3.0,,,,FST3105,Food Product Development and P,4.0,,,,Y,United States of America,North America
 Faculty of Science,University of Georgia,FDNS4647,Sensory Evaluation of Food,3.0,,,,FST3106,Sensory and Flavour Science,4.0,,,,Y,United States of America,North America
-Faculty of Science,Georgetown University,MATH150,Linear Algebra,4.0,,,,MA1101R,Linear Algebra I,4.0,,,,Y,USA,North America
-Faculty of Science,Georgetown University,MATH040,Probability and Statistics,4.0,,,,ST2334,Probability and Statistics,4.0,,,,Y,USA,North America
-Faculty of Science,Georgetown University,MATH036,CALCULUS II,4.0,,,,MA1521,Calculus for Computing,4.0,,,,Y,USA,North America
-Faculty of Science,Georgetown University,MATH035,Calculus I,4.0,,,,MA1521,Calculus for Computing,4.0,,,,Y,USA,North America
+Faculty of Science,Georgetown University,MATH150,Linear Algebra,4.0,,,,MA1101R,Linear Algebra I,4.0,,,,Y,United States of America,North America
+Faculty of Science,Georgetown University,MATH040,Probability and Statistics,4.0,,,,ST2334,Probability and Statistics,4.0,,,,Y,United States of America,North America
+Faculty of Science,Georgetown University,MATH036,CALCULUS II,4.0,,,,MA1521,Calculus for Computing,4.0,,,,Y,United States of America,North America
+Faculty of Science,Georgetown University,MATH035,Calculus I,4.0,,,,MA1521,Calculus for Computing,4.0,,,,Y,United States of America,North America
 Faculty of Science,Georgia Institute of Technology,BIOL 4607,Molecular Microbiology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
 Faculty of Science,Georgia Institute of Technology,BIOL 4650,Bioethics,2.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
 Faculty of Science,Georgia Institute of Technology,BIOL 4746,Signalling Molecules,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
@@ -12016,71 +12016,71 @@ Faculty of Science,Chang Gung University,MPM005,Radiation and Nuclear Physics,3.
 Faculty of Science,Chang Gung University,RS3006,Principles and Techniques of Radiation Therapy,1.0,,,,PC3294,Radiation Laboratory,4.0,,,,Y,Taiwan,Asia
 Faculty of Science,Chang Gung University,OEM150,Solid State Physics,3.0,,,,PC3235,Solid State Physics I,4.0,,,,Y,Taiwan,Asia
 Faculty of Science,Chang Gung University,TM 2128,TCM Prescription Pharmacy(?),4.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,Taiwan,Asia
-Faculty of Science,Cornell University,BIOMS 4340,Cellular and Molecular Microbial Pathogenesis: The Host/Pathogen Interplay,3.0,,,,LSM3225,Molecular Microbiology in HD,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIONB 2210,Neurobiology and Behavior I: Introduction to Behavior,3.0,,,,LSM3267,Behavioural Biology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,ENTOM 2010,Alien Empire: Bizarre Biology of Bugs,2.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,ENTOM 2011,Alien Empire: Bizarre Biology of Bugs with Discussion,3.0,,,,LSM3265,Entomology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,ENTOM 2120,Insect Biology,4.0,,,,LSM3265,Entomology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,ENTOM 4900,Toxicology of Insecticides,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,NS 3410,Human Anatomy and Physiology,4.0,,,,LSM2212,Human Anatomy,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,NTRES 2010,Environmental Conservation,3.0,,,,LSM3272,Global Change Biology,,,,,Y,USA,North America
-Faculty of Science,Cornell University,NTRES 2100,Introductory Field Biology,4.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,NTRES 3100,Applied Population Ecology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,NTRES 3220,Global Ecology and Management,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,NTRES 3260,Applied Conservation Ecology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,NTRES 4200,Forest Ecology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,PLBIO 4400,Phylogenetic Systematics,4.0,,,,LSM4254,Principles of Taxonomy & Sys,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BME 3110,Cellular Systems Biology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,NTRES 2400,Field Methods in Avian Ecology,3.0,,,,LSM3266,Avian Biology and Evolution,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,ENTOM 3200,Grape Pest Management,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOEE 2670,Introduction to Conservation Biology,2.0,,,,LSM4262,Tropical Conservation Biology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,PLBIO 4500,Light and Video Microscopy for Biologists,3.0,,,,LSM3234,Biological Imaging of Growth a,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,ENTOM 2030,Honey Bees: Their Intriguing Biology and Interactions with Humans,2.0,,,,LSM3994,Exchange Enrichment Level 3000,2.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,PLPPM 4490,Mycology,3.0,,,,LSM3259,Fungal Biology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,EAS 1600,Environmental Physics,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIEE 1540,Introductory Oceanography,3.0,,,,LSM2991,Exchange Enrichment Level 2000,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,FSDC4210,Food Engineering Principles,4.0,,,,FST3103,Advanced Food Engineering,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,FSDC4100,Sensory Evaluation of Food,3.0,,,,FST3106,Sensory and Flavour Science,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,FDSC3940,Applied and Food Microbiology,3.0,,,,FST3101,Food Enzymology & Fermentation,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,HADM3470,Consumer behaviour,3.0,,,,FST3105,Food Product Development and P,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,NBA3000,Entrepreneur & Private Equity,3.0,,,,FST3105,Food Product Development and P,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,FDSC3950,Food Microbiology Laboratory,3.0,,,,FST3101,Food Enzymology & Fermentation,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOMG 4840,Molecular Evolution,3.0,,,,LSM3252,Evolutn & Comparative Genomics,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOMG 4450,Stem Cell Biology: Basic Science and Clinical Applications,3.0,,,,LSM4227,Stem Cell Biology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOB 4310,Genes and Behavior,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOMG 4400,Laboratory in Biochemistry and Molecular Biology,4.0,,,,LSM2191,Laboratory Techniques in Life,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,NTRES 2670,Introduction to Conservation Biology,3.0,,,,LSM4262,Tropical Conservation Biology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,ANSC 2300,Introduction to Domestic Mammalian Behavior,2.0,,,,LSM1303,Animal Behaviour,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,ANSC 2400,Animal Reproduction and Development,3.0,,,,LSM4252,Reproductive Biology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,ANSC 2720,Feline Reproduction,1.0,,,,LSM2996,Exchange Enrichment Level 2000,2.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,ANSC 3800,Sheep,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,ANSC 3980,Animals in Biomedical Research,2.0,,,,LSM3994,Exchange Enrichment Level 3000,2.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOEE 1610,Introductory Biology: Ecology and The Environment,3.0,,,,LSM2251,Ecology and Environment,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOEE 1780,An Introduction to Evolutionary Biology and Diversity,4.0,,,,LSM3252,Evolutn & Comparative Genomics,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOEE 3610,Advanced Ecology,4.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOEE 3610,Advanced Ecology,4.0,,,,LSM4255,Methods in Mathematical Biolog,,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOEE 3611,Field Ecology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOEE 3690,Chemical Ecology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOEE 4780,Ecosystem Biology and Global Change,4.0,,,,LSM3272,Global Change Biology,,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOEE3690,Chemical Ecology,3.0,,,,LSM4267,Light & Vision in Animal Commu,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOMG 4380,The RNA World,3.0,,,,LSM3245,RNA Biology and Technology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOMG 4610,Development and Evolution,3.0,,,,LSM3233,Developmental Biology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOMG 4810,Population Genetics,4.0,,,,LSM3252,Evolutn & Comparative Genomics,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOMS 3310,General Parasitology,2.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOMS 4140,Principles of Pharmacology,3.0,,,,LSM3211,Fundamental Pharmacology,,,,,Y,USA,North America
-Faculty of Science,Cornell University,NTRES 2670,Introduction to Conservation Biology,3.0,,,,LSM4262,Tropical Conservation Biology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,NTRES 2400,Field Methods in Avian Ecology,3.0,,,,LSM3266,Avian Biology and Evolution,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,NS 2750,Human Biology and Evolution,3.0,,,,LSM3252,Evolutn & Comparative Genomics,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,HD 3250,Neurochemistry of Human Behavior,3.0,,,,LSM3215,Neuronal Signaling and Memory,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,ENTOM 3310,Insect Diversity and Evolution,3.0,,,,LSM3265,Entomology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIONB 4320,Neural Circuits for Motor Control in Health and Disease,3.0,,,,LSM4213,System Neurobiology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOMI 3210,Human Microbes and Health,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIONB 2210,Neurobiology and Behavior I: Introduction to Behavior,3.0,,,,LSM3267,Behavioural Biology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOMS 3190,Laboratory in Physiology,4.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOMI 4090,Principles of Virology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOEE 2670,Introduction to Conservation Biology,3.0,,,,LSM4262,Tropical Conservation Biology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIOEE 2070,Evolution,3.0,,,,LSM1105,Evolutionary Biology,4.0,,,,Y,USA,North America
-Faculty of Science,Cornell University,BIONB 3950,Molecular and Genetic Approaches to Neuroscience,3.0,,,,LSM3215,Neuronal Signaling and Memory,4.0,,,,Y,USA,North America
+Faculty of Science,Cornell University,BIOMS 4340,Cellular and Molecular Microbial Pathogenesis: The Host/Pathogen Interplay,3.0,,,,LSM3225,Molecular Microbiology in HD,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIONB 2210,Neurobiology and Behavior I: Introduction to Behavior,3.0,,,,LSM3267,Behavioural Biology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,ENTOM 2010,Alien Empire: Bizarre Biology of Bugs,2.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,ENTOM 2011,Alien Empire: Bizarre Biology of Bugs with Discussion,3.0,,,,LSM3265,Entomology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,ENTOM 2120,Insect Biology,4.0,,,,LSM3265,Entomology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,ENTOM 4900,Toxicology of Insecticides,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,NS 3410,Human Anatomy and Physiology,4.0,,,,LSM2212,Human Anatomy,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,NTRES 2010,Environmental Conservation,3.0,,,,LSM3272,Global Change Biology,,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,NTRES 2100,Introductory Field Biology,4.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,NTRES 3100,Applied Population Ecology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,NTRES 3220,Global Ecology and Management,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,NTRES 3260,Applied Conservation Ecology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,NTRES 4200,Forest Ecology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,PLBIO 4400,Phylogenetic Systematics,4.0,,,,LSM4254,Principles of Taxonomy & Sys,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BME 3110,Cellular Systems Biology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,NTRES 2400,Field Methods in Avian Ecology,3.0,,,,LSM3266,Avian Biology and Evolution,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,ENTOM 3200,Grape Pest Management,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOEE 2670,Introduction to Conservation Biology,2.0,,,,LSM4262,Tropical Conservation Biology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,PLBIO 4500,Light and Video Microscopy for Biologists,3.0,,,,LSM3234,Biological Imaging of Growth a,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,ENTOM 2030,Honey Bees: Their Intriguing Biology and Interactions with Humans,2.0,,,,LSM3994,Exchange Enrichment Level 3000,2.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,PLPPM 4490,Mycology,3.0,,,,LSM3259,Fungal Biology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,EAS 1600,Environmental Physics,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIEE 1540,Introductory Oceanography,3.0,,,,LSM2991,Exchange Enrichment Level 2000,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,FSDC4210,Food Engineering Principles,4.0,,,,FST3103,Advanced Food Engineering,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,FSDC4100,Sensory Evaluation of Food,3.0,,,,FST3106,Sensory and Flavour Science,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,FDSC3940,Applied and Food Microbiology,3.0,,,,FST3101,Food Enzymology & Fermentation,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,HADM3470,Consumer behaviour,3.0,,,,FST3105,Food Product Development and P,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,NBA3000,Entrepreneur & Private Equity,3.0,,,,FST3105,Food Product Development and P,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,FDSC3950,Food Microbiology Laboratory,3.0,,,,FST3101,Food Enzymology & Fermentation,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOMG 4840,Molecular Evolution,3.0,,,,LSM3252,Evolutn & Comparative Genomics,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOMG 4450,Stem Cell Biology: Basic Science and Clinical Applications,3.0,,,,LSM4227,Stem Cell Biology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOB 4310,Genes and Behavior,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOMG 4400,Laboratory in Biochemistry and Molecular Biology,4.0,,,,LSM2191,Laboratory Techniques in Life,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,NTRES 2670,Introduction to Conservation Biology,3.0,,,,LSM4262,Tropical Conservation Biology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,ANSC 2300,Introduction to Domestic Mammalian Behavior,2.0,,,,LSM1303,Animal Behaviour,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,ANSC 2400,Animal Reproduction and Development,3.0,,,,LSM4252,Reproductive Biology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,ANSC 2720,Feline Reproduction,1.0,,,,LSM2996,Exchange Enrichment Level 2000,2.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,ANSC 3800,Sheep,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,ANSC 3980,Animals in Biomedical Research,2.0,,,,LSM3994,Exchange Enrichment Level 3000,2.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOEE 1610,Introductory Biology: Ecology and The Environment,3.0,,,,LSM2251,Ecology and Environment,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOEE 1780,An Introduction to Evolutionary Biology and Diversity,4.0,,,,LSM3252,Evolutn & Comparative Genomics,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOEE 3610,Advanced Ecology,4.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOEE 3610,Advanced Ecology,4.0,,,,LSM4255,Methods in Mathematical Biolog,,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOEE 3611,Field Ecology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOEE 3690,Chemical Ecology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOEE 4780,Ecosystem Biology and Global Change,4.0,,,,LSM3272,Global Change Biology,,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOEE3690,Chemical Ecology,3.0,,,,LSM4267,Light & Vision in Animal Commu,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOMG 4380,The RNA World,3.0,,,,LSM3245,RNA Biology and Technology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOMG 4610,Development and Evolution,3.0,,,,LSM3233,Developmental Biology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOMG 4810,Population Genetics,4.0,,,,LSM3252,Evolutn & Comparative Genomics,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOMS 3310,General Parasitology,2.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOMS 4140,Principles of Pharmacology,3.0,,,,LSM3211,Fundamental Pharmacology,,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,NTRES 2670,Introduction to Conservation Biology,3.0,,,,LSM4262,Tropical Conservation Biology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,NTRES 2400,Field Methods in Avian Ecology,3.0,,,,LSM3266,Avian Biology and Evolution,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,NS 2750,Human Biology and Evolution,3.0,,,,LSM3252,Evolutn & Comparative Genomics,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,HD 3250,Neurochemistry of Human Behavior,3.0,,,,LSM3215,Neuronal Signaling and Memory,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,ENTOM 3310,Insect Diversity and Evolution,3.0,,,,LSM3265,Entomology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIONB 4320,Neural Circuits for Motor Control in Health and Disease,3.0,,,,LSM4213,System Neurobiology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOMI 3210,Human Microbes and Health,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIONB 2210,Neurobiology and Behavior I: Introduction to Behavior,3.0,,,,LSM3267,Behavioural Biology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOMS 3190,Laboratory in Physiology,4.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOMI 4090,Principles of Virology,3.0,,,,LSM3991,Exchange Enrichment Module,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOEE 2670,Introduction to Conservation Biology,3.0,,,,LSM4262,Tropical Conservation Biology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIOEE 2070,Evolution,3.0,,,,LSM1105,Evolutionary Biology,4.0,,,,Y,United States of America,North America
+Faculty of Science,Cornell University,BIONB 3950,Molecular and Genetic Approaches to Neuroscience,3.0,,,,LSM3215,Neuronal Signaling and Memory,4.0,,,,Y,United States of America,North America
 Faculty of Science,University of Gothenburg,BIO 217,Evolutionary Biology,15.0,,,,LSM3252,Evolutn & Comparative Genomics,4.0,,,,Y,Sweden,Europe
 Faculty of Science,University of Gothenburg,BIO 232,Human Physiology,15.0,,,,LSM3214,Human Physio-Hormones & Hlth,4.0,,,,Y,Sweden,Europe
 Faculty of Science,University of Gothenburg,BIO 235,Immunology,15.0,,,,LSM3223,Immunology,4.0,,,,Y,Sweden,Europe

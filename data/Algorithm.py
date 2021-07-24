@@ -1,8 +1,10 @@
 import pandas as pd
 import numpy as np
-import json, requests
-
+import json, requests, time
 import pycountry_convert as pc
+
+
+mappings = pd.read_csv("cleaned_mappings.csv")
 
 with open('equivalentModuleMappings.json','r') as f:
     equivalent_module_mappings = json.load(f)
@@ -12,6 +14,7 @@ def get_equivalent_modules(modules, equivalent_module_mappings=equivalent_module
     for module in modules:
         output.update(set(equivalent_module_mappings[module]))
     return output
+
 
 modified_mappings = pd.read_csv('cleaned_mappings_with_locations.csv')
 
@@ -63,6 +66,7 @@ def optional_module_filter(modules, mappings=modified_mappings):
     output = module_filter(modules,school_filter(schools,mappings=mappings))
     output.sort_values('Partner University',inplace=True)
     return output
+
 
 def algorithm(essential_modules,optional_modules=[],schools=[],countries=[],continents=[],mappings=modified_mappings):
     """
