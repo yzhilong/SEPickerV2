@@ -17,6 +17,31 @@ function Selector(props) {
 
     const [selectedEssentialModules, setSelectedEssentialModules] = useState([])
     const [selectedOptionalModules, setSelectedOptionalModules] = useState([])
+    const [selectedContinents, setSelectedContinents] = useState([])
+    const [selectedCountries, setSelectedCountries] = useState([])
+    const [selectedSchools, setSelectedSchools] = useState([])
+
+
+    const [result, setResult] = useState({});
+    const body = {
+        essential_modules: selectedEssentialModules,
+        optional_modules: selectedOptionalModules,
+        schools: selectedContinents,
+        countries: selectedCountries,
+        continents: selectedSchools
+      }
+    useEffect(() => {
+      fetch('http://127.0.0.1:5000/selector', {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(body)
+      }).then(res => res.json())
+        .then(data => setResult(data))
+        .catch(err => console.log(err))
+    }, [])
+
 
 
     /*
@@ -67,8 +92,10 @@ function Selector(props) {
     // const countriesSet = new Set(countries);
     // console.log([...countriesSet].sort())
 
+    // The result output is simply for diagnostic purposes
     return (
-        <div className="Selector">            
+        <div className="Selector">   
+            {JSON.stringify(result)}       
             <h1>Selector</h1>
             <EssentialModulesSelector/>
             <OptionalModulesSelector />
