@@ -1,42 +1,57 @@
 import React, { useState } from "react"
-import Multiselect from "multiselect-react-dropdown"
 import './EssentialModuleSelector.css'
 import nextId from 'react-id-generator'
+import SelectedModuleCard from "./SelectedModuleCard"
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+// import Multiselect from "multiselect-react-dropdown"
+// import Multiselect from 'vue-multiselect'
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        width: 500,
+        '& > * + *': {
+        marginTop: theme.spacing(3),
+        },
+    },
+    }));
+
+const modulesArr = require("../../data/modules.json")
+const modules = []
+for (var i = 0; i < modulesArr.length; i++) {
+    modules.push({module: modulesArr[i], modCode: modulesArr[i].split(" ")[0]})
+}
 
 function EssentialModulesSelector(props) {
 
-    // const modulesArr = require("../../data/modules.json")
-    // const modules = []
-    // for (var i = 0; i < modulesArr.length; i++) {
-    //     modules.push({name: modulesArr[i], id: i})
-    // }
-    // console.log("AA")
-    console.log(props.modules)
-
-    const [selectedModules, setSelectedModules] = useState(new Set())
-
-    function onSelectEssentialModule(selectedList, selectedItem) {
-        setSelectedModules(prevState => new Set([...prevState, selectedItem.name.split(" ")[0]]));
-    }
-
-    function onRemoveEssentialModule(selectedList, removedItem) {
-        setSelectedModules(prevState => {
-            prevState.delete(removedItem.name.split(" ")[0]);
-            return new Set([...prevState]);
-        })
+    const classes = useStyles();
+    const [selectedEssentialModules, setSelectedEssentialModules] = useState([])
+    function onClickModule(event, val) {
+        setSelectedEssentialModules(val.map(mod => mod.modCode))
     }
 
     return (
         <React.Fragment>
-            <h3>Essential Modules</h3>
-            <Multiselect
-            options={props.modules} displayValue={"name"} onSelect={onSelectEssentialModule} 
-            onRemove={onRemoveEssentialModule} closeOnSelect={false}
-            />
-            {selectedModules}
+            <div className={classes.root}>
+                <Autocomplete
+                onChange={onClickModule}
+                multiple
+                limitTags={2}
+                id="multiple-limit-tags"
+                options={modules}
+                getOptionLabel={(options) => options.module}
+                defaultValue={[]}
+                renderInput={(params) => (
+                    <TextField {...params} variant="outlined" label="Essential Modules" placeholder="Continuous Typing Supported" />
+                )}
+                />
+            </div>
+            {selectedEssentialModules}
         </React.Fragment>
-    )
+    );
+
+      
 }
 
 export default EssentialModulesSelector

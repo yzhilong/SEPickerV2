@@ -5,8 +5,6 @@ import ContinentSelector from "../components/selector_components/ContinentSelect
 import SchoolSelector from "../components/selector_components/SchoolSelector"
 import CountrySelector from "../components/selector_components/CountrySelector"
 import Results from "../components/selector_components/Results"
-import school_country_continent_csv from "./trial.csv"
-import { csv } from 'd3'
 
 
 function Selector(props) {
@@ -16,6 +14,10 @@ function Selector(props) {
     // const [continents, setContinents] = useState(new Set())
     // const [countries, setCountries] = useState(new Set())
     // const [schools, setSchools] = useState(new Set())
+
+    const [selectedEssentialModules, setSelectedEssentialModules] = useState([])
+    const [selectedOptionalModules, setSelectedOptionalModules] = useState([])
+
 
     /*
     TODO:
@@ -32,13 +34,11 @@ function Selector(props) {
     // const [countries, setCountries] = useState([]);
     // const partnerUniversitiesSet = new Set();
 
-
-
-    const modulesArr = require("../data/modules.json")
-    const modules = []
-    for (var i = 0; i < modulesArr.length; i++) {
-        modules.push({name: modulesArr[i], id: i})
-    }
+    // const modulesArr = require("../data/modules.json")
+    // const modules = []
+    // for (var i = 0; i < modulesArr.length; i++) {
+    //     modules.push({name: modulesArr[i], id: i})
+    // }
     /*
     const countriesSet = new Set();
     const partnerUniversitiesSet = new Set();
@@ -70,12 +70,11 @@ function Selector(props) {
     return (
         <div className="Selector">            
             <h1>Selector</h1>
-            <EssentialModulesSelector modules={modules}/>
+            <EssentialModulesSelector/>
             <OptionalModulesSelector />
             <ContinentSelector />
             <CountrySelector />
             <SchoolSelector />
-
             <Results />
 
         </div>
