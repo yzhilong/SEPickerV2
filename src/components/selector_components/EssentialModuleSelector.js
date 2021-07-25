@@ -26,16 +26,12 @@ function EssentialModulesSelector(props) {
         props.stateSetter(val.map(mod => mod.modCode))
     }
 
-    const [inputValue, setInputValue] = useState("");
-
     return (
         <React.Fragment>
             <h2>Essential Modules</h2>
             <div className={classes.root}>
-                <Autocomplete
-                inputValue={inputValue}
-                onInputChange={(e) => e!== null ? setInputValue(e.target.value) : setInputValue("")}
-                open={inputValue.length > 1}
+            <Autocomplete
+                autoHighlight={true}
                 onChange={onClickModule}
                 multiple
                 limitTags={2}
@@ -46,7 +42,7 @@ function EssentialModulesSelector(props) {
                 renderInput={(params) => (
                     <TextField {...params} variant="outlined" label="Essential Modules" placeholder="Continuous Typing Supported" />
                 )}
-                />
+            />
             </div>
         </React.Fragment>
     );

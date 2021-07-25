@@ -23,7 +23,7 @@ function Selector(props) {
 
     const [result, setResult] = useState({});
     const body = {
-        essential_modules: ['CS1010'],
+        essential_modules: selectedEssentialModules,
         optional_modules: selectedOptionalModules,
         schools: selectedContinents,
         countries: selectedCountries,
@@ -39,7 +39,7 @@ function Selector(props) {
       }).then(res => res.json())
         .then(data => setResult(data))
         .catch(err => console.log(err))
-    }, [])
+    }, [selectedEssentialModules, selectedOptionalModules, selectedContinents, selectedCountries, selectedSchools])
 
     return (
         <div className="Selector">

@@ -31,16 +31,17 @@ function OptionalModulesSelector(props) {
             <h2>Optional Modules</h2>
             <div className={classes.root}>
                 <Autocomplete
-                onChange={onClickModule}
-                multiple
-                limitTags={2}
-                id="multiple-limit-tags"
-                options={modules}
-                getOptionLabel={(options) => options.module}
-                defaultValue={[]}
-                renderInput={(params) => (
-                    <TextField {...params} variant="outlined" label="Optional Modules" placeholder="Continuous Typing Supported" />
-                )}
+                    autoHighlight={true}
+                    onChange={onClickModule}
+                    multiple
+                    limitTags={2}
+                    id="multiple-limit-tags"
+                    options={modules}
+                    getOptionLabel={(options) => options.module}
+                    defaultValue={[]}
+                    renderInput={(params) => (
+                        <TextField {...params} variant="outlined" label="Optional Modules" placeholder="Continuous Typing Supported" />
+                    )}
                 />
             </div>
         </React.Fragment>

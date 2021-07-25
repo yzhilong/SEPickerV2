@@ -31,6 +31,7 @@ function CountrySelector(props) {
             <h2>Countries</h2>
             <div className={classes.root}>
                 <Autocomplete
+                autoHighlight={true}
                 onChange={onClickCountry}
                 multiple
                 limitTags={2}

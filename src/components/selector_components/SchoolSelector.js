@@ -31,16 +31,17 @@ function SchoolSelector(props) {
             <h2>Schools</h2>
             <div className={classes.root}>
                 <Autocomplete
-                onChange={onClickSchool}
-                multiple
-                limitTags={2}
-                id="multiple-limit-tags"
-                options={schools}
-                getOptionLabel={(option) => option.school}
-                defaultValue={[]}
-                renderInput={(params) => (
-                    <TextField {...params} variant="outlined" label="Schools" placeholder="Continuous Typing Supported" />
-                )}
+                    autoHighlight={true}
+                    onChange={onClickSchool}
+                    multiple
+                    limitTags={2}
+                    id="multiple-limit-tags"
+                    options={schools}
+                    getOptionLabel={(option) => option.school}
+                    defaultValue={[]}
+                    renderInput={(params) => (
+                        <TextField {...params} variant="outlined" label="Schools" placeholder="Continuous Typing Supported" />
+                    )}
                 />
             </div>
         </React.Fragment>
