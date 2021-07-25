@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     },
     }));
 
-const modulesArr = require("../../data/modules.json")
+const modulesArr = require("../../data/reducedModules.json")
 const modules = []
 for (var i = 0; i < modulesArr.length; i++) {
     modules.push({module: modulesArr[i], modCode: modulesArr[i].split(" ")[0]})

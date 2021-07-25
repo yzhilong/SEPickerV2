@@ -23,7 +23,7 @@ function Selector(props) {
 
     const [result, setResult] = useState({});
     const body = {
-        essential_modules: selectedEssentialModules,
+        essential_modules: ['CS1010'],
         optional_modules: selectedOptionalModules,
         schools: selectedContinents,
         countries: selectedCountries,
