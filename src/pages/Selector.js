@@ -53,45 +53,6 @@ function Selector(props) {
             3.2 Results should have the modules in sorted lexicographical order
     */
 
-    // useEffect(() => {
-    //     fetch("http://127.0.0.1:5000/").then(response => response.text().then(data => {console.log(data)}))
-    // }, []);
-    // const [countries, setCountries] = useState([]);
-    // const partnerUniversitiesSet = new Set();
-
-    // const modulesArr = require("../data/modules.json")
-    // const modules = []
-    // for (var i = 0; i < modulesArr.length; i++) {
-    //     modules.push({name: modulesArr[i], id: i})
-    // }
-    /*
-    const countriesSet = new Set();
-    const partnerUniversitiesSet = new Set();
-    async function fill_countries_and_pu() {
-        const data = await csv(school_country_continent_csv);
-        // console.log(data);
-        for (var i = 0; i < data.length; i++) {
-            countriesSet.add(data[i]["Country"]);
-            partnerUniversitiesSet.add(data[i]["Partner University"]);
-        }
-    }
-    fill_countries_and_pu().then(
-        data => console.log([...countriesSet].sort())
-        );
-    */
-    // console.log([...countriesSet]);
-    // useEffect(() => {
-    //     csv(school_country_continent_csv).then(data => {
-    //         console.log(data[10])
-    //         for (var i = 0; i < data.length; i++) {
-    //             setCountries(prevState => [...prevState, data[i]["Country"]])
-    //             partnerUniversitiesSet.add(data[i]["Partner University"])
-    //         }
-    //     });
-    // }, [])
-    // const countriesSet = new Set(countries);
-    // console.log([...countriesSet].sort())
-
     // The result output is simply for diagnostic purposes
     return (
         <div className="Selector">   
@@ -102,7 +63,7 @@ function Selector(props) {
             <ContinentSelector />
             <CountrySelector />
             <SchoolSelector />
-            <Results />
+            <Results result={result}/>
 
         </div>
     )
