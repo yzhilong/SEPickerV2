@@ -21,7 +21,6 @@ function Selector(props) {
     const [selectedCountries, setSelectedCountries] = useState([])
     const [selectedSchools, setSelectedSchools] = useState([])
 
-
     const [result, setResult] = useState({});
     const body = {
         essential_modules: selectedEssentialModules,
@@ -42,28 +41,23 @@ function Selector(props) {
         .catch(err => console.log(err))
     }, [])
 
-
-
-    /*
-    TODO:
-        1. Figure out how Multiselect works
-        2. Manage onChange event for all selectors
-        3. Use data to compute results
-            3.1 Manage handling of results
-            3.2 Results should have the modules in sorted lexicographical order
-    */
-
-    // The result output is simply for diagnostic purposes
     return (
-        <div className="Selector">   
+        <div className="Selector">
+            <h2>Delete these arrays later</h2>
+            <strong>EM:</strong>{selectedEssentialModules} <br/>
+            <strong>OM:</strong>{selectedOptionalModules} <br/> 
+            <strong>Countries:</strong>{selectedCountries} <br/>
+            <strong>Schools:</strong>{selectedSchools} <br/>
+            <strong>Continents:</strong>{selectedContinents} <br/>
+
             {JSON.stringify(result)}       
             <h1>Selector</h1>
-            <EssentialModulesSelector/>
-            <OptionalModulesSelector />
-            <ContinentSelector />
-            <CountrySelector />
-            <SchoolSelector />
-            <Results result={result}/>
+            <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
+            <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
+            <ContinentSelector stateSetter={setSelectedContinents}/>
+            <CountrySelector stateSetter={setSelectedCountries}/>
+            <SchoolSelector stateSetter={setSelectedSchools}/>
+            <Results />
 
         </div>
     )

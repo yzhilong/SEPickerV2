@@ -1,38 +1,52 @@
-import React, {useState} from "react"
-import Multiselect from "multiselect-react-dropdown"
-import nextId from 'react-id-generator'
+import React, { useState } from "react"
+// import './CountrySelector.css'
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        width: 500,
+        '& > * + *': {
+        marginTop: theme.spacing(3),
+        },
+    },
+    }));
+
+const countriesArr = require("../../data/countries.json")
+const countries = []
+for (var i = 0; i < countriesArr.length; i++) {
+    countries.push({country: countriesArr[i]})
+}
 
 function CountrySelector(props) {
-    const countries = [
-        {name: 'Australia', id: nextId()},
-        {name: 'England', id: nextId()},
-        {name: 'Singapore', id: nextId()},
-        {name: 'New Zealand', id: nextId()}
-    ]
 
-    const [selectedCountries, setSelectedCountries] = useState(new Set())
-
-    function onSelectCountry(selectedList, selectedItem) {
-        setSelectedCountries(prevState => new Set([...prevState, selectedItem.name]));
-    }
-
-    function onRemoveCountry(selectedList, removedItem) {
-        setSelectedCountries(prevState => {
-            prevState.delete(removedItem.name);
-            return new Set([...prevState]);
-        })
+    const classes = useStyles();
+    function onClickCountry(event, val) {
+        props.stateSetter(val.map(country => country.country))
     }
 
     return (
         <React.Fragment>
-            <h3>Country</h3>
-            <Multiselect
-            options={countries} displayValue={"name"} onSelect={onSelectCountry} 
-            onRemove={onRemoveCountry} closeOnSelect={false}
-            />
-            {selectedCountries}
+            <h2>Countries</h2>
+            <div className={classes.root}>
+                <Autocomplete
+                onChange={onClickCountry}
+                multiple
+                limitTags={2}
+                id="multiple-limit-tags"
+                options={countries}
+                getOptionLabel={(options) => options.country}
+                defaultValue={[]}
+                renderInput={(params) => (
+                    <TextField {...params} variant="outlined" label="Countries" placeholder="Continuous Typing Supported" />
+                )}
+                />
+            </div>
         </React.Fragment>
-    )
+    );
+
+      
 }
 
 export default CountrySelector

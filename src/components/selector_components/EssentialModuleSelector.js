@@ -1,12 +1,8 @@
 import React, { useState } from "react"
 import './EssentialModuleSelector.css'
-import nextId from 'react-id-generator'
-import SelectedModuleCard from "./SelectedModuleCard"
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-// import Multiselect from "multiselect-react-dropdown"
-// import Multiselect from 'vue-multiselect'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -26,15 +22,20 @@ for (var i = 0; i < modulesArr.length; i++) {
 function EssentialModulesSelector(props) {
 
     const classes = useStyles();
-    const [selectedEssentialModules, setSelectedEssentialModules] = useState([])
     function onClickModule(event, val) {
-        setSelectedEssentialModules(val.map(mod => mod.modCode))
+        props.stateSetter(val.map(mod => mod.modCode))
     }
+
+    const [inputValue, setInputValue] = useState("");
 
     return (
         <React.Fragment>
+            <h2>Essential Modules</h2>
             <div className={classes.root}>
                 <Autocomplete
+                inputValue={inputValue}
+                onInputChange={(e) => e!== null ? setInputValue(e.target.value) : setInputValue("")}
+                open={inputValue.length > 1}
                 onChange={onClickModule}
                 multiple
                 limitTags={2}
@@ -47,7 +48,6 @@ function EssentialModulesSelector(props) {
                 )}
                 />
             </div>
-            {selectedEssentialModules}
         </React.Fragment>
     );
 

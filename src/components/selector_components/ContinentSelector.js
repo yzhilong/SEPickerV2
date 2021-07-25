@@ -14,10 +14,11 @@ function ContinentSelector(props) {
         {name: 'Oceania', id: 5}, 
         {name: 'South America', id: 6}
     ]
-    const [selectedContinents, setSelectedContinents] = useState([])
+    // const [selectedContinents, setSelectedContinents] = useState([])
+    const selectedContinents = []
 
     function onClickContinentHandler(continent) {
-        setSelectedContinents(prevState => {
+        props.stateSetter(prevState => {
             if (prevState.includes(continent)) {
                 return prevState.filter(item => item != continent);
             } else {
