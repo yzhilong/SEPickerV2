@@ -1,12 +1,8 @@
 import React, { useState } from "react"
 import './EssentialModuleSelector.css'
-import nextId from 'react-id-generator'
-import SelectedModuleCard from "./SelectedModuleCard"
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-// import Multiselect from "multiselect-react-dropdown"
-// import Multiselect from 'vue-multiselect'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,6 +29,7 @@ function EssentialModulesSelector(props) {
 
     return (
         <React.Fragment>
+            <h2>Essential Modules</h2>
             <div className={classes.root}>
                 <Autocomplete
                 onChange={onClickModule}

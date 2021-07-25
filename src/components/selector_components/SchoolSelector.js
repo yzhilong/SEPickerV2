@@ -1,38 +1,54 @@
 import React, { useState } from "react"
-import Multiselect from "multiselect-react-dropdown"
-import nextId from 'react-id-generator'
+// import './SchoolSelector.css'
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        width: 500,
+        '& > * + *': {
+        marginTop: theme.spacing(3),
+        },
+    },
+    }));
+
+const schoolsArr = require("../../data/countries.json")
+const schools = []
+for (var i = 0; i < schoolsArr.length; i++) {
+    schools.push({school: schoolsArr[i]})
+}
 
 function SchoolSelector(props) {
-    const schools = [
-        {name: 'NTU', id: nextId()},
-        {name: 'Tsinghua University', id: nextId()},
-        {name: 'UCL', id: nextId()},
-        {name: 'Harvard University', id: nextId()}
-    ]
 
-    const [selectedSchools, setSelectedSchools] = useState(new Set())
-
-    function onSelectSchool(selectedList, selectedItem) {
-        setSelectedSchools(prevState => new Set([...prevState, selectedItem.name]));
-    }
-
-    function onRemoveSchool(selectedList, removedItem) {
-        setSelectedSchools(prevState => {
-            prevState.delete(removedItem.name);
-            return new Set([...prevState]);
-        })
+    const classes = useStyles();
+    const [selectedSchools, setSelectedSchools] = useState([])
+    function onClickSchool(event, val) {
+        setSelectedSchools(val.map(school => school.school))
     }
 
     return (
         <React.Fragment>
-            <h3>School</h3>
-            <Multiselect
-            options={schools} displayValue={"name"} onSelect={onSelectSchool} 
-            onRemove={onRemoveSchool} closeOnSelect={false}
-            />
+            <h2>Schools</h2>
+            <div className={classes.root}>
+                <Autocomplete
+                onChange={onClickSchool}
+                multiple
+                limitTags={2}
+                id="multiple-limit-tags"
+                options={schools}
+                getOptionLabel={(option) => option.school}
+                defaultValue={[]}
+                renderInput={(params) => (
+                    <TextField {...params} variant="outlined" label="Schools" placeholder="Continuous Typing Supported" />
+                )}
+                />
+            </div>
             {selectedSchools}
         </React.Fragment>
-    )
+    );
+
+      
 }
 
 export default SchoolSelector
