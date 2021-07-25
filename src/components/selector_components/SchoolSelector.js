@@ -22,9 +22,8 @@ for (var i = 0; i < schoolsArr.length; i++) {
 function SchoolSelector(props) {
 
     const classes = useStyles();
-    const [selectedSchools, setSelectedSchools] = useState([])
     function onClickSchool(event, val) {
-        setSelectedSchools(val.map(school => school.school))
+        props.stateSetter(val.map(school => school.school))
     }
 
     return (
@@ -44,7 +43,6 @@ function SchoolSelector(props) {
                 )}
                 />
             </div>
-            {selectedSchools}
         </React.Fragment>
     );
 

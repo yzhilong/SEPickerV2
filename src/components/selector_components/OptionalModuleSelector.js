@@ -22,9 +22,8 @@ for (var i = 0; i < modulesArr.length; i++) {
 function OptionalModulesSelector(props) {
 
     const classes = useStyles();
-    const [selectedOptionalModules, setSelectedOptionalModules] = useState([])
     function onClickModule(event, val) {
-        setSelectedOptionalModules(val.map(mod => mod.modCode))
+        props.stateSetter(val.map(mod => mod.modCode));
     }
 
     return (
@@ -44,7 +43,6 @@ function OptionalModulesSelector(props) {
                 )}
                 />
             </div>
-            {selectedOptionalModules}
         </React.Fragment>
     );
 

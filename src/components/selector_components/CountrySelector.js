@@ -22,9 +22,8 @@ for (var i = 0; i < countriesArr.length; i++) {
 function CountrySelector(props) {
 
     const classes = useStyles();
-    const [selectedCountries, setSelectedCountries] = useState([])
     function onClickCountry(event, val) {
-        setSelectedCountries(val.map(country => country.country))
+        props.stateSetter(val.map(country => country.country))
     }
 
     return (
@@ -44,7 +43,6 @@ function CountrySelector(props) {
                 )}
                 />
             </div>
-            {selectedCountries}
         </React.Fragment>
     );
 

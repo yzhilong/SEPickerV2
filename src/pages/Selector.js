@@ -21,7 +21,6 @@ function Selector(props) {
     const [selectedCountries, setSelectedCountries] = useState([])
     const [selectedSchools, setSelectedSchools] = useState([])
 
-
     const [result, setResult] = useState({});
     const body = {
         essential_modules: selectedEssentialModules,
@@ -42,66 +41,22 @@ function Selector(props) {
         .catch(err => console.log(err))
     }, [])
 
-
-
-    /*
-    TODO:
-        1. Figure out how Multiselect works
-        2. Manage onChange event for all selectors
-        3. Use data to compute results
-            3.1 Manage handling of results
-            3.2 Results should have the modules in sorted lexicographical order
-    */
-
-    // useEffect(() => {
-    //     fetch("http://127.0.0.1:5000/").then(response => response.text().then(data => {console.log(data)}))
-    // }, []);
-    // const [countries, setCountries] = useState([]);
-    // const partnerUniversitiesSet = new Set();
-
-    // const modulesArr = require("../data/modules.json")
-    // const modules = []
-    // for (var i = 0; i < modulesArr.length; i++) {
-    //     modules.push({name: modulesArr[i], id: i})
-    // }
-    /*
-    const countriesSet = new Set();
-    const partnerUniversitiesSet = new Set();
-    async function fill_countries_and_pu() {
-        const data = await csv(school_country_continent_csv);
-        // console.log(data);
-        for (var i = 0; i < data.length; i++) {
-            countriesSet.add(data[i]["Country"]);
-            partnerUniversitiesSet.add(data[i]["Partner University"]);
-        }
-    }
-    fill_countries_and_pu().then(
-        data => console.log([...countriesSet].sort())
-        );
-    */
-    // console.log([...countriesSet]);
-    // useEffect(() => {
-    //     csv(school_country_continent_csv).then(data => {
-    //         console.log(data[10])
-    //         for (var i = 0; i < data.length; i++) {
-    //             setCountries(prevState => [...prevState, data[i]["Country"]])
-    //             partnerUniversitiesSet.add(data[i]["Partner University"])
-    //         }
-    //     });
-    // }, [])
-    // const countriesSet = new Set(countries);
-    // console.log([...countriesSet].sort())
-
-    // The result output is simply for diagnostic purposes
     return (
-        <div className="Selector">   
+        <div className="Selector">
+            <h2>Delete these arrays later</h2>
+            <strong>EM:</strong>{selectedEssentialModules} <br/>
+            <strong>OM:</strong>{selectedOptionalModules} <br/> 
+            <strong>Countries:</strong>{selectedCountries} <br/>
+            <strong>Schools:</strong>{selectedSchools} <br/>
+            <strong>Continents:</strong>{selectedContinents} <br/>
+
             {JSON.stringify(result)}       
             <h1>Selector</h1>
-            <EssentialModulesSelector/>
-            <OptionalModulesSelector />
-            <ContinentSelector />
-            <CountrySelector />
-            <SchoolSelector />
+            <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
+            <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
+            <ContinentSelector stateSetter={setSelectedContinents}/>
+            <CountrySelector stateSetter={setSelectedCountries}/>
+            <SchoolSelector stateSetter={setSelectedSchools}/>
             <Results />
 
         </div>
