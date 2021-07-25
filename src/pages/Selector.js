@@ -17,6 +17,10 @@ function Selector(props) {
 
     const [selectedEssentialModules, setSelectedEssentialModules] = useState([])
     const [selectedOptionalModules, setSelectedOptionalModules] = useState([])
+    const [selectedContinents, setSelectedContinents] = useState([])
+    const [selectedCountries, setSelectedCountries] = useState([])
+    const [selectedSchools, setSelectedSchools] = useState([])
+
 
 
     /*

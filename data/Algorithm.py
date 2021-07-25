@@ -50,6 +50,12 @@ def school_filter(schools, mappings=modified_mappings):
     return mappings[mappings['Partner University'].map(filter_function)]
 
 def essential_module_filter(modules, mappings=modified_mappings):
+    if modules == []:
+        output = mappings.to_dict()
+        for key in output:
+            output[key] = []
+        return pd.DataFrame(output)
+    
     schools = set(mappings['Partner University'])
     for module in modules:
         schools_with_mod = set(module_filter([module],mappings=mappings)['Partner University'])
