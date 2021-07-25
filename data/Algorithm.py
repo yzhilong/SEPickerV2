@@ -60,8 +60,14 @@ def essential_module_filter(modules, mappings=modified_mappings):
     for module in modules:
         schools_with_mod = set(module_filter([module],mappings=mappings)['Partner University'])
         schools.intersection_update(schools_with_mod)
-    output = module_filter(modules,school_filter(schools,mappings=mappings))
-    output.sort_values('Partner University',inplace=True)
+    if len(schools) != 0:
+        output = module_filter(modules,school_filter(schools,mappings=mappings))
+        output.sort_values('Partner University',inplace=True)
+    else:
+        output = mappings.to_dict()
+        for key in output:
+            output[key] = []
+        output = pd.DataFrame(output)
     return output
 
 def optional_module_filter(modules, mappings=modified_mappings):
