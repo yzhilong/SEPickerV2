@@ -176,9 +176,9 @@ def algorithm(essential_modules,optional_modules=[],schools=[],countries=[],cont
         for country in sorted(output_dict[continent].keys()):
             tmp_dict[continent][country] = {}
             for school in sorted(output_dict[continent][country].keys()):
-                tmp_dict[continent][country][school] = {"num_mappable": 0}
+                tmp_dict[continent][country][school] = {"num_mappable": 0, "mappings": {}}
                 for module in sorted(output_dict[continent][country][school].keys()):
-                    tmp_dict[continent][country][school][module] = output_dict[continent][country][school][module]
+                    tmp_dict[continent][country][school]["mappings"][module] = output_dict[continent][country][school][module]
                     if tmp_dict[continent][country][school][module] != []:
                         tmp_dict[continent][country][school]["num_mappable"] += 1
     
