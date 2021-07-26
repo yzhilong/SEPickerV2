@@ -2,24 +2,25 @@ import React, { useState } from "react"
 import ModuleMapping from "./university_components/ModuleMapping"
 
 function University(props) {
-    const modules = new Array()
-    for (let i = 0; i < props.essentialModules.length + props.optionalModules.length; i++) {
-        if (i < props.essentialModules.length) {
-            modules[i] = props.essentialModules[i]
-        } else {
-            modules[i] = props.optionalModules[i + props.essentialModules.length]
-        }
+
+    const module_mappings = new Array()
+
+    let i = 0
+    for (const module in props.mappings) {
+        module_mappings[i] = [module, props.mappings[module]]
     }
+
 
     const [ notes, setNotes ] = useState("")
 
     return (
         <div className="University">
-            <p>{props.name}</p>
-            <ModuleMapping 
-                essentialModules={props.essentialModules} 
-                optionalModules={props.optionalModules}
-            />
+            <p>{props.name} {props.num_mappable}</p>
+            
+{/* {            <ModuleMapping 
+                nus_module_code = 
+                modules={modules} 
+            />} */}
             <input type="text" onChange={event => setNotes(event.target.value)} value={notes} />
         </div>
     )

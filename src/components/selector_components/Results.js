@@ -14,15 +14,17 @@ function Results(props) {
     const universities = []
     let i = 0
     for (const continent in result) {
-        for (const country in continent) {
-            for (const school in country) {
-                let j = 0
-                const modules = []
-                for (const module in school) {
-                    modules[j] = module
-                    j++
-                }
-                universities[i] = <University essentialModules={modules} optionalModules={[]} name={school} />
+        // console.log(continent)
+        for (const country in result[continent]) {
+            // console.log("    " + country)
+            for (const school in result[continent][country]) {
+                // console.log("        " + school)
+                universities[i] = <University 
+                    mappings={result[continent][country][school]["mappings"]} 
+                    name={school}
+                    num_mappable={result[continent][country][school]["num_mappable"]}
+                />
+                i++;
             }
         }
     }

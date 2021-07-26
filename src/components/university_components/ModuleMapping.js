@@ -3,15 +3,27 @@ import React from "react"
 //TODO display partner university module
 
 function ModuleMapping(props) {
+    const module = props.module
+    const equivalent_modules = props.equivalent_modules
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const modules = new Array()
-    for (let i = 0; i < props.essentialModules.length; i++) {
+    for (let i = 0; i < props.modules.length; i++) {
         // const partnerUniversityModule = (...)
-        modules[i] = <p>{props.essentialModules[i]}</p>
-    }
-    const n = modules.length
-    for (let i = 0; i < props.optionalModules.length; i++) {
-        // const partnerUniversityModule = (...)
-        modules[i+n] = <p>{props.optionalModules[i]}</p>
+        modules[i] = <p>{props.modules[i]}</p>
     }
 
     return (

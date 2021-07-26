@@ -41,11 +41,6 @@ function Selector(props) {
         .catch(err => console.log(err))
     }, [selectedEssentialModules, selectedOptionalModules, selectedContinents, selectedCountries, selectedSchools])
 
-    for (const c in result) {
-        console.log(c)
-        console.log(result[c])
-    }
-
     return (
         <div className="Selector">
             <h2>Delete these arrays later</h2>
@@ -61,7 +56,7 @@ function Selector(props) {
             <ContinentSelector stateSetter={setSelectedContinents}/>
             <CountrySelector stateSetter={setSelectedCountries}/>
             <SchoolSelector stateSetter={setSelectedSchools}/>
-            <Results results={result}/>
+            <Results result={result}/>
 
         </div>
     )
