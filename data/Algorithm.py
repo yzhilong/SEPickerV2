@@ -179,7 +179,7 @@ def algorithm(essential_modules,optional_modules=[],schools=[],countries=[],cont
                 tmp_dict[continent][country][school] = {"num_mappable": 0, "mappings": {}}
                 for module in sorted(output_dict[continent][country][school].keys()):
                     tmp_dict[continent][country][school]["mappings"][module] = output_dict[continent][country][school][module]
-                    if tmp_dict[continent][country][school][module] != []:
+                    if tmp_dict[continent][country][school]["mappings"][module] != []:
                         tmp_dict[continent][country][school]["num_mappable"] += 1
     
     return tmp_dict
@@ -192,11 +192,9 @@ def display_result(result):
             print(tab + country)
             for school in result[continent][country]:
                 print(f"{2*tab}{school}, {result[continent][country][school]['num_mappable']}")
-                for module in result[continent][country][school]:
-                    if module == "num_mappable":
-                        continue
+                for module in result[continent][country][school]["mappings"]:
                     print(3*tab+module)
-                    for equivalent in result[continent][country][school][module]:
+                    for equivalent in result[continent][country][school]["mappings"][module]:
                         print(4*tab + str(equivalent))
-                        for mapping in result[continent][country][school][module][equivalent]:
+                        for mapping in result[continent][country][school]["mappings"][module][equivalent]:
                             print(5*tab + str(mapping))
