@@ -15,6 +15,14 @@ def get_equivalent_modules(modules, equivalent_module_mappings=equivalent_module
         output.update(set(equivalent_module_mappings[module]))
     return output
 
+def get_equivalent_modules_inverse(modules, equivalent_module_mappings=equivalent_module_mappings):
+    equivalent_modules = {module: get_equivalent_modules([module]) for module in modules}
+    output = {}
+    for module in equivalent_modules:
+        for equiv in equivalent_modules[module]:
+            output[equiv] = module
+    return output
+
 
 modified_mappings = pd.read_csv('cleaned_mappings_with_locations.csv')
 
@@ -123,6 +131,7 @@ def algorithm(essential_modules,optional_modules=[],schools=[],countries=[],cont
         'OC': 'Oceania',
         'SA': 'South America'
     }
+    inverse_module_mappings = get_equivalent_modules_inverse(essential_modules + optional_modules)
     for i in range(len(output_df)):
         row = output_df.iloc[i]
         country_code = pc.country_name_to_country_alpha2(row['Country'], cn_name_format="default")
@@ -144,19 +153,34 @@ def algorithm(essential_modules,optional_modules=[],schools=[],countries=[],cont
             module_title = row['NUS Module 2 Title']
 
         uni_dict = country_dict[row['Partner University']]
-        if module_name not in uni_dict:
-            uni_dict[module_name] = {'NUS Module Title': module_title, 'mappings': []}
+        if inverse_module_mappings[module_name] not in uni_dict:
+            uni_dict[inverse_module_mappings[module_name]] = {module_name: []}
+        elif module_name not in uni_dict[inverse_module_mappings[module_name]]:
+            uni_dict[inverse_module_mappings[module_name]][module_name] = [] # This array should be a list of mappings
+        
 
         if row['PU Module 1'] is not np.nan:
+            relevant_dict = uni_dict[inverse_module_mappings[module_name]][module_name]
             pu_module_name = row['PU Module 1']
             pu_module_title = row['PU Module 1 Title']
-            uni_dict[module_name]['mappings'].append({'PU Module Code': pu_module_name, 'PU Module Title': pu_module_title})
+            relevant_dict.append({'PU Module Code': pu_module_name, 'PU Module Title': pu_module_title})
         if row['PU Module 2'] is not np.nan:
+            relevant_dict = uni_dict[inverse_module_mappings[module_name]][module_name]
             pu_module_name = row['PU Module 2']
             pu_module_title = row['PU Module 2 Title']
-            uni_dict[module_name]['mappings'].append({'PU Module Code': pu_module_name, 'PU Module Title': pu_module_title})
+            relevant_dict.append({'PU Module Code': pu_module_name, 'PU Module Title': pu_module_title})
     
-    return output_dict
+    tmp_dict = {}
+    for continent in sorted(output_dict.keys()):
+        tmp_dict[continent] = {}
+        for country in sorted(output_dict[continent].keys()):
+            tmp_dict[continent][country] = {}
+            for school in sorted(output_dict[continent][country].keys()):
+                tmp_dict[continent][country][school] = {}
+                for module in sorted(output_dict[continent][country][school].keys()):
+                    tmp_dict[continent][country][school][module] = output_dict[continent][country][school][module]
+    
+    return tmp_dict
 
 def display_result(result):
     tab = '    '
@@ -168,7 +192,7 @@ def display_result(result):
                 print(2*tab + school)
                 for module in result[continent][country][school]:
                     print(3*tab+module)
-                    print(4*tab+'NUS Module Title'+': ' + result[continent][country][school][module]['NUS Module Title'])
-                    print(4*tab+'Mappings:')
-                    for mapped in result[continent][country][school][module]['mappings']:
-                        print(5*tab+f"{mapped['PU Module Code']}: {mapped['PU Module Title']}")
+                    for equivalent in result[continent][country][school][module]:
+                        print(4*tab + str(equivalent))
+                        for mapping in result[continent][country][school][module][equivalent]:
+                            print(5*tab + str(mapping))

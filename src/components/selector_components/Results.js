@@ -9,12 +9,33 @@ TODO
 */
 
 function Results(props) {
+
+    const result = props.result
+    const universities = []
+    let i = 0
+    for (const continent in result) {
+        for (const country in continent) {
+            for (const school in country) {
+                let j = 0
+                const modules = []
+                for (const module in school) {
+                    modules[j] = module
+                    j++
+                }
+                universities[i] = <University essentialModules={modules} optionalModules={[]} name={school} />
+            }
+        }
+    }
+
+
     return (
         <div className="Results">
-            <University 
+            {JSON.stringify(props.results)}
+            {universities}
+            {/* {<University 
                 essentialModules={["ESSENTIALMOD1", "ESSENTIALMOD2"]} 
                 optionalModules={["OPTIONALMOD1","OPTIONALMOD2"]} 
-                name="PLACEHOLDER_UNI_NAME"/>
+                name="PLACEHOLDER_UNI_NAME"/>} */}
         </div>
     )
 }

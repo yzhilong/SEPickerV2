@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     },
     }));
 
-const schoolsArr = require("../../data/countries.json")
+const schoolsArr = require("../../data/schools.json")
 const schools = []
 for (var i = 0; i < schoolsArr.length; i++) {
     schools.push({school: schoolsArr[i]})

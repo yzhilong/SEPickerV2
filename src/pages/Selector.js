@@ -25,9 +25,9 @@ function Selector(props) {
     const body = {
         essential_modules: selectedEssentialModules,
         optional_modules: selectedOptionalModules,
-        schools: selectedContinents,
+        schools: selectedSchools,
         countries: selectedCountries,
-        continents: selectedSchools
+        continents: selectedContinents
       }
     useEffect(() => {
       fetch('http://127.0.0.1:5000/selector', {
@@ -37,9 +37,14 @@ function Selector(props) {
           },
           body: JSON.stringify(body)
       }).then(res => res.json())
-        .then(data => setResult(data))
+        .then(data => {console.log(data); setResult(data)})
         .catch(err => console.log(err))
     }, [selectedEssentialModules, selectedOptionalModules, selectedContinents, selectedCountries, selectedSchools])
+
+    for (const c in result) {
+        console.log(c)
+        console.log(result[c])
+    }
 
     return (
         <div className="Selector">
@@ -49,15 +54,14 @@ function Selector(props) {
             <strong>Countries:</strong>{selectedCountries} <br/>
             <strong>Schools:</strong>{selectedSchools} <br/>
             <strong>Continents:</strong>{selectedContinents} <br/>
-
-            {JSON.stringify(result)}       
+     
             <h1>Selector</h1>
             <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
             <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
             <ContinentSelector stateSetter={setSelectedContinents}/>
             <CountrySelector stateSetter={setSelectedCountries}/>
             <SchoolSelector stateSetter={setSelectedSchools}/>
-            <Results />
+            <Results results={result}/>
 
         </div>
     )
