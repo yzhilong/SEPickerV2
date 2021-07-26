@@ -97,6 +97,9 @@ def algorithm(essential_modules,optional_modules=[],schools=[],countries=[],cont
         uni1: {NUS_mod1: [NUS_mod1_title, [[PU_mod1, PU_mod1_title], [PU_mod1, PU_mod1_title], ...]]},
     }
     """
+    if essential_modules == optional_modules == []:
+        return {}
+    
     if continents != []:
         is_valids = [continent in continents for continent in mappings['Continent']]
         mappings = mappings[is_valids]
@@ -111,15 +114,19 @@ def algorithm(essential_modules,optional_modules=[],schools=[],countries=[],cont
     else:
         restricted_by_school = mappings
     
-    restricted_by_essential_modules = essential_module_filter(essential_modules, restricted_by_school)
-    schools_with_essential_modules = restricted_by_essential_modules['Partner University'].unique()
-    truth_series = [school in schools_with_essential_modules for school in mappings['Partner University']]
-    valid_schools_with_optional_modules = mappings[truth_series]
-    
-    output_df = restricted_by_essential_modules
-    if optional_modules != []:
-        tmp_df = optional_module_filter(optional_modules, valid_schools_with_optional_modules)
-        output_df = output_df.append(tmp_df)
+    if essential_modules != []:
+        restricted_by_essential_modules = essential_module_filter(essential_modules, restricted_by_school)
+        schools_with_essential_modules = restricted_by_essential_modules['Partner University'].unique()
+        truth_series = [school in schools_with_essential_modules for school in mappings['Partner University']]
+        valid_schools_with_optional_modules = mappings[truth_series]
+
+        output_df = restricted_by_essential_modules
+        if optional_modules != []:
+            tmp_df = optional_module_filter(optional_modules, valid_schools_with_optional_modules)
+            output_df = output_df.append(tmp_df)
+    else:
+        output_df = optional_module_filter(optional_modules, restricted_by_school)
+
     output_df.sort_values('Partner University',inplace=True)
     
     output_dict = {continent: {} for continent in output_df['Continent'].unique()}

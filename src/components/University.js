@@ -3,11 +3,12 @@ import ModuleMapping from "./university_components/ModuleMapping"
 
 function University(props) {
 
-    const module_mappings = new Array()
+    const moduleMappings = new Array()
 
     let i = 0
     for (const module in props.mappings) {
-        module_mappings[i] = [module, props.mappings[module]]
+        moduleMappings[i] = <ModuleMapping module={module} equivalentModules={props.mappings[module]} />
+        i++
     }
 
 
@@ -15,13 +16,11 @@ function University(props) {
 
     return (
         <div className="University">
-            <p>{props.name} {props.num_mappable}</p>
-            
-{/* {            <ModuleMapping 
-                nus_module_code = 
-                modules={modules} 
-            />} */}
-            <input type="text" onChange={event => setNotes(event.target.value)} value={notes} />
+            <p>
+                {props.name}, {props.numMappable}
+                {moduleMappings}
+                <input type="text" onChange={event => setNotes(event.target.value)} value={notes} />
+            </p>
         </div>
     )
 }

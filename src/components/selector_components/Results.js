@@ -22,7 +22,7 @@ function Results(props) {
                 universities[i] = <University 
                     mappings={result[continent][country][school]["mappings"]} 
                     name={school}
-                    num_mappable={result[continent][country][school]["num_mappable"]}
+                    numMappable={result[continent][country][school]["num_mappable"]}
                 />
                 i++;
             }
@@ -32,7 +32,6 @@ function Results(props) {
 
     return (
         <div className="Results">
-            {JSON.stringify(props.results)}
             {universities}
             {/* {<University 
                 essentialModules={["ESSENTIALMOD1", "ESSENTIALMOD2"]} 
