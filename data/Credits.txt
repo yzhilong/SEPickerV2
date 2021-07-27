@@ -1,0 +1,1 @@
+All module details are retrieved from NUSMods using the NUSMods API

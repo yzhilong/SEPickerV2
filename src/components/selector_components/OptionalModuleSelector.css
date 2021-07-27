@@ -1,0 +1,7 @@
+.multiselect-container {
+    width: 45%;
+}
+
+option[disabled] {
+    background-color: rgb(231, 231, 231);
+}
