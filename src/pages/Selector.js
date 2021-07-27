@@ -30,7 +30,7 @@ function Selector(props) {
         continents: selectedContinents
       }
     useEffect(() => {
-      fetch('http://127.0.0.1:5000/backend', {
+      fetch('https://sepickerv2.herokuapp.com/backend', {
           method: "POST",
           headers: {
             'Content-Type': 'application/json'
