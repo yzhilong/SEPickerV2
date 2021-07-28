@@ -6,6 +6,8 @@ import SchoolSelector from "../components/selector_components/SchoolSelector"
 import CountrySelector from "../components/selector_components/CountrySelector"
 import Results from "../components/selector_components/Results"
 
+import { Collapse, Table, TableCell } from '@material-ui/core'
+
 
 function Selector(props) {
 
@@ -37,12 +39,16 @@ function Selector(props) {
           },
           body: JSON.stringify(body)
       }).then(res => res.json())
-        .then(data => {console.log(data); setResult(data)})
+        .then(data => setResult(data))
         .catch(err => console.log(err))
     }, [selectedEssentialModules, selectedOptionalModules, selectedContinents, selectedCountries, selectedSchools])
 
     return (
         <div className="Selector">
+          
+
+
+
             <h2>Delete these arrays later</h2>
             <strong>EM:</strong>{selectedEssentialModules} <br/>
             <strong>OM:</strong>{selectedOptionalModules} <br/> 

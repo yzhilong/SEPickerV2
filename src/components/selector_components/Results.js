@@ -1,5 +1,18 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import University from "../University"
+import PropTypes from 'prop-types';
+import Box from '@material-ui/core/Box';
+import Collapse from '@material-ui/core/Collapse';
+import IconButton from '@material-ui/core/IconButton';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
+import Continent from "./Continent";
 
 /*
 TODO
@@ -10,34 +23,21 @@ TODO
 
 function Results(props) {
 
-    const result = props.result
-    const universities = []
+    const { result } = props
+    const continents = []
     let i = 0
     for (const continent in result) {
-        // console.log(continent)
-        for (const country in result[continent]) {
-            // console.log("    " + country)
-            for (const school in result[continent][country]) {
-                // console.log("        " + school)
-                universities[i] = <University 
-                    mappings={result[continent][country][school]["mappings"]} 
-                    name={school}
-                    numMappable={result[continent][country][school]["num_mappable"]}
-                />
-                i++;
-            }
-        }
+        console.log(continent)
+        continents[i] = continent
+        i++
     }
 
+    const [ open, setOpen ] = useState(false)
 
     return (
-        <div className="Results">
-            {universities}
-            {/* {<University 
-                essentialModules={["ESSENTIALMOD1", "ESSENTIALMOD2"]} 
-                optionalModules={["OPTIONALMOD1","OPTIONALMOD2"]} 
-                name="PLACEHOLDER_UNI_NAME"/>} */}
-        </div>
+        <React.Fragment>
+            {continents.map(continent => <Continent continentName={continent} result={result[continent]}/>)}
+        </React.Fragment>
     )
 }
 
