@@ -2,25 +2,25 @@ import React, { useState } from "react"
 import ModuleMapping from "./university_components/ModuleMapping"
 
 function University(props) {
-    const modules = new Array()
-    for (let i = 0; i < props.essentialModules.length + props.optionalModules.length; i++) {
-        if (i < props.essentialModules.length) {
-            modules[i] = props.essentialModules[i]
-        } else {
-            modules[i] = props.optionalModules[i + props.essentialModules.length]
-        }
+
+    const moduleMappings = new Array()
+
+    let i = 0
+    for (const module in props.mappings) {
+        moduleMappings[i] = <ModuleMapping module={module} equivalentModules={props.mappings[module]} />
+        i++
     }
+
 
     const [ notes, setNotes ] = useState("")
 
     return (
         <div className="University">
-            <p>{props.name}</p>
-            <ModuleMapping 
-                essentialModules={props.essentialModules} 
-                optionalModules={props.optionalModules}
-            />
-            <input type="text" onChange={event => setNotes(event.target.value)} value={notes} />
+            <p>
+                {props.name}, {props.numMappable}
+                {moduleMappings}
+                <input type="text" onChange={event => setNotes(event.target.value)} value={notes} />
+            </p>
         </div>
     )
 }
