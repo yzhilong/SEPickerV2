@@ -1,18 +1,10 @@
 import React, { useState, useEffect } from "react"
-import University from "../University"
-import PropTypes from 'prop-types';
-import Box from '@material-ui/core/Box';
-import Collapse from '@material-ui/core/Collapse';
-import IconButton from '@material-ui/core/IconButton';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
+
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import Continent from "./Continent";
+import makeStyles from '@material-ui/core/styles/makeStyles';
+
+import Country from "./Country"
 
 /*
 TODO
@@ -21,24 +13,59 @@ TODO
         2.1 Results will be our point of entry into our algorithm to select universities
 */
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        width: '80%',
+        minWidth: 500,
+        color: "red"
+    },
+    heading: {
+        fontSize: theme.typography.pxToRem(15),
+    },
+    secondaryHeading: {
+        fontSize: theme.typography.pxToRem(15),
+        color: theme.palette.text.secondary,
+    },
+    icon: {
+        verticalAlign: 'bottom',
+        height: 20,
+        width: 20,
+    },
+    details: {
+        alignItems: 'center',
+    },
+    column: {
+        flexBasis: '33.33%',
+        width: '100%'
+    },
+    helper: {
+        borderLeft: `2px solid ${theme.palette.divider}`,
+        padding: theme.spacing(1, 2),
+    },
+    link: {
+        color: theme.palette.primary.main,
+        textDecoration: 'none',
+        '&:hover': {
+        textDecoration: 'underline',
+        },
+    },
+    }));
+
 function Results(props) {
 
     const { result } = props
-    const continents = []
+    const countryDetails = []
     let i = 0
     for (const continent in result) {
-        console.log(continent)
-        continents[i] = continent
-        i++
+        for (const country in result[continent]) {
+            countryDetails[i] = {"countryName": country, "result": result[continent][country]}
+            console.log(countryDetails[i])
+            i++
+        }
     }
 
-    const [ open, setOpen ] = useState(false)
-
-    return (
-        <React.Fragment>
-            {continents.map(continent => <Continent continentName={continent} result={result[continent]}/>)}
-        </React.Fragment>
-    )
+    
+    return countryDetails.map(countryDetail => <Country countryName={countryDetail["countryName"]} result={countryDetail["result"]} useStyles={useStyles}/>)
 }
 
 export default Results

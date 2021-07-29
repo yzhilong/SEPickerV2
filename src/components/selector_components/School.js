@@ -1,21 +1,18 @@
 import React, { useState, useEffect } from "react"
-import University from "../University"
-import PropTypes from 'prop-types';
-import Box from '@material-ui/core/Box';
-import Collapse from '@material-ui/core/Collapse';
-import IconButton from '@material-ui/core/IconButton';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
 import ModuleMapping from "./ModuleMapping"
 
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Typography from '@material-ui/core/Typography';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+
 function School(props) {
-    const { schoolName, result } = props
+    const { schoolName, result, useStyles } = props
     // result = {"mappings": {...}, "num_mappable": int}
 
     const [ open, setOpen ] = useState(false)
@@ -27,28 +24,34 @@ function School(props) {
     }
     console.log(result["mappings"])
 
-
+    const classes = useStyles();
 
     return (
-        <React.Fragment>
-            <TableHead onClick={() => setOpen(!open)}>
-                <TableRow>
-                    <TableCell align="left">{schoolName}</TableCell>
-                    <TableCell alight="right">{result["num_mappable"]} Modules mapped!</TableCell>
-                </TableRow>
-            </TableHead>
-            <TableBody>
-                <TableCell>
-                    <Collapse in={open}>
-                        <Box margin={1}>
-                            {modules.map(module => <ModuleMapping 
-                                moduleName={module} 
-                                result={result["mappings"][module]}
-                            />)}
-                        </Box>
-                    </Collapse>
-                </TableCell>
-            </TableBody>
+        <React.Fragment className={classes.root}>
+            <AccordionDetails>
+                <Accordion>
+                    <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    >
+                        <div>
+                            <Typography>{schoolName}</Typography>
+                            <Typography>{result['num_mappable']} module(s) available!</Typography>
+                        </div>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Card>
+                            <CardContent>
+                                TESTagyhuihhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+                            </CardContent>
+                            <CardContent>
+                                TESTagyhuihhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+                            </CardContent>
+                        </Card>
+                    </AccordionDetails>
+                </Accordion>
+            </AccordionDetails>
         </React.Fragment>
     )
 
