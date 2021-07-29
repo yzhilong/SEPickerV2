@@ -10,6 +10,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
+import Table from "@material-ui/core/Table"
+import { TableHead, TableRow, TableCell, TableContainer, Paper } from "@material-ui/core";
 
 function School(props) {
     const { schoolName, result, useStyles } = props
@@ -24,12 +26,12 @@ function School(props) {
     }
     console.log(result["mappings"])
 
-    const classes = useStyles();
+    const classes = useStyles(); 
 
     return (
-        <React.Fragment className={classes.root}>
+        <React.Fragment>
             <AccordionDetails>
-                <Accordion>
+                <Accordion className={classes.innerRoot}>
                     <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
@@ -40,16 +42,21 @@ function School(props) {
                             <Typography>{result['num_mappable']} module(s) available!</Typography>
                         </div>
                     </AccordionSummary>
-                    <AccordionDetails>
-                        <Card>
-                            <CardContent>
-                                TESTagyhuihhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-                            </CardContent>
-                            <CardContent>
-                                TESTagyhuihhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-                            </CardContent>
-                        </Card>
-                    </AccordionDetails>
+                        <TableContainer component={Paper}>
+                            <Table className={classes.innerRoot} aria-label="simple table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell>
+                                            <Typography>NUS Module</Typography>
+                                        </TableCell>
+                                        <TableCell>
+                                            <Typography>Partner University Module</Typography>
+                                        </TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                {modules.map(module => <ModuleMapping moduleName={module} result={result["mappings"][module]} useStyles={useStyles}/>)}
+                            </Table>
+                        </TableContainer>
                 </Accordion>
             </AccordionDetails>
         </React.Fragment>

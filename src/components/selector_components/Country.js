@@ -40,25 +40,23 @@ function Country(props) {
       
 
     return (
-        <div className={classes.root}>
-            <Accordion>
-                <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                >
-                    <div className={classes.column}>
-                        <Typography>{countryName}</Typography>
-                        <Typography>{schools.length} school(s) available!</Typography>
-                    </div>
-                </AccordionSummary>
-                    {schools.map(school => {return (
-                            // <AccordionDetails className={classes.root}>
-                                <School schoolName={school} result={result[school]} useStyles={useStyles}/>
-                            // </AccordionDetails>
-                        )})}
-            </Accordion>
-        </div>
+        <Accordion className={classes.root}>
+            <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+            >
+                <div className={classes.column}>
+                    <Typography>{countryName}</Typography>
+                    <Typography>{schools.length} school(s) available!</Typography>
+                </div>
+            </AccordionSummary>
+                {schools.map(school => {return (
+                        // <AccordionDetails className={classes.root}>
+                            <School schoolName={school} result={result[school]} useStyles={useStyles}/>
+                        // </AccordionDetails>
+                    )})}
+        </Accordion>
     )
 
 }

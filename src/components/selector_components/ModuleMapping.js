@@ -1,26 +1,18 @@
 import React, { useState, useEffect } from "react"
-import University from "../University"
-import PropTypes from 'prop-types';
-import Box from '@material-ui/core/Box';
-import Collapse from '@material-ui/core/Collapse';
-import IconButton from '@material-ui/core/IconButton';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
+
+
 import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import { Table, TableRow, TableCell, TableHead } from "@material-ui/core";
 
 function ModuleMapping(props) {
-    const { moduleName, result } = props
+    const { moduleName, result, useStyles } = props
     // result = {
     //     "EquivalentNUSModule1": [{"PU Module Code": "PU123", "PU Module Title": "DUMMY NAME"}, ...],
     //     "EquivalentNUSModule2": [...],
     // }
 
-    const [ open, setOpen ] = useState(true)
     const equivalentNUSModules = []
     let i = 0
     for (const module in result) {
@@ -29,6 +21,56 @@ function ModuleMapping(props) {
     }
     console.log(equivalentNUSModules)
 
+    const classes = useStyles()
+
+    function getPUMap(moduleCode) {
+        return result[moduleCode].map(mod => {
+                return (
+                    <Table>
+                        <TableRow>
+                            <Typography>{mod["PU Module Code"]}</Typography>
+                        </TableRow>
+                        <TableRow>
+                        <Typography>{mod["PU Module Title"]}</Typography>
+                        </TableRow>
+                    </Table>
+                )
+            }
+        )
+    }
+
+    if (equivalentNUSModules.length == 1) {
+        return (
+            <TableRow>
+                <TableCell>
+                    <Typography>{moduleName}</Typography>
+                </TableCell>
+                <TableCell>
+                    {getPUMap(equivalentNUSModules[0])}
+                </TableCell>
+            </TableRow>
+            )
+    } else {
+        return (
+            <Table>
+                <TableHead>
+                    <TableCell>
+                        <Typography>Modules equivalent to {moduleName}</Typography>
+                    </TableCell>
+                </TableHead>
+                {equivalentNUSModules.map(mod => { return (
+                    <TableRow>
+                        <TableCell>
+                            <Typography>{mod}</Typography>
+                        </TableCell>
+                        <TableCell>
+                            {getPUMap(mod)}
+                        </TableCell>
+                    </TableRow>)
+                })}
+            </Table>
+        )
+    }
     // // THIS SHOULD BE CARD! TEMPORARY PLACEHOLDER
     // function createMapping(NUSModuleCode) {
     //     const innerDisplay = mapping => 
