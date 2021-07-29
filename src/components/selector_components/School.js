@@ -24,7 +24,27 @@ function School(props) {
         modules[i] = module
         i++;
     }
-    console.log(result["mappings"])
+    // console.log(result["mappings"])
+    function toString(props) {
+        return props.schoolName + Object.keys(props.result.mappings).join();
+    }
+
+    function onFavHandler(event) {
+        event.stopPropagation();
+        // favourited = localStorage.getItem("favourited");
+        // console.log(favourited)
+        if ("fav" in localStorage) {
+            const existing = JSON.parse(localStorage.getItem("fav"))
+            // console.log(existing)
+            existing[schoolName] = result
+            localStorage.setItem("fav", JSON.stringify(existing))
+        } else {
+            const newEntry = {}
+            newEntry[schoolName] = result
+            localStorage.setItem("fav", JSON.stringify(newEntry));
+            // console.log(localStorage.getItem("fav"));
+        }
+    }
 
     const classes = useStyles(); 
 
@@ -39,6 +59,7 @@ function School(props) {
                     >
                         <div>
                             <Typography>{schoolName}</Typography>
+                            <button onClick={onFavHandler}>button</button>
                             <Typography>{result['num_mappable']} module(s) available!</Typography>
                         </div>
                     </AccordionSummary>

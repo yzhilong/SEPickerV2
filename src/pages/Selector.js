@@ -6,8 +6,8 @@ import SchoolSelector from "../components/selector_components/SchoolSelector"
 import CountrySelector from "../components/selector_components/CountrySelector"
 import Results from "../components/selector_components/Results"
 
-import { Collapse, Table, TableCell } from '@material-ui/core'
-
+import { Collapse, Table, TableCell, Paper, Grid } from '@material-ui/core'
+import './Selector.css'
 
 function Selector(props) {
 
@@ -45,25 +45,27 @@ function Selector(props) {
 
     return (
         <div className="Selector">
-          
-
-
-
-            <h2>Delete these arrays later</h2>
+            {/* <h2>Delete these arrays later</h2>
             <strong>EM:</strong>{selectedEssentialModules} <br/>
             <strong>OM:</strong>{selectedOptionalModules} <br/> 
             <strong>Countries:</strong>{selectedCountries} <br/>
             <strong>Schools:</strong>{selectedSchools} <br/>
-            <strong>Continents:</strong>{selectedContinents} <br/>
-     
+            <strong>Continents:</strong>{selectedContinents} <br/> */}
+            <div class="wrap">
+            <div class="box">
             <h1>Selector</h1>
-            <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
-            <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
-            <ContinentSelector stateSetter={setSelectedContinents}/>
-            <CountrySelector stateSetter={setSelectedCountries}/>
-            <SchoolSelector stateSetter={setSelectedSchools}/>
-            <Results result={result}/>
-
+              <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
+              <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
+              <ContinentSelector stateSetter={setSelectedContinents}/>
+              <CountrySelector stateSetter={setSelectedCountries}/>
+              <SchoolSelector stateSetter={setSelectedSchools}/>
+            </div>
+            <div class="box">
+              <h1>Results</h1>
+              {Object.keys(result).length == 0 && <h3>No Module Selected Yet</h3>}
+              <Results result={result}/>
+            </div>
+            </div>
         </div>
     )
 }
