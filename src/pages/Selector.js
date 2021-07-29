@@ -32,7 +32,7 @@ function Selector(props) {
         continents: selectedContinents
       }
     useEffect(() => {
-      fetch('http://127.0.0.1:5000/selector', {
+      fetch('http://127.0.0.1:5000/backend', {
           method: "POST",
           headers: {
             'Content-Type': 'application/json'
