@@ -29,70 +29,70 @@ function ModuleMapping(props) {
     }
     console.log(equivalentNUSModules)
 
-    // THIS SHOULD BE CARD! TEMPORARY PLACEHOLDER
-    function createMapping(NUSModuleCode) {
-        const innerDisplay = mapping => 
-            (<TableRow>
-                <TableCell>
-                    {mapping["PU Module Code"]}
-                </TableCell>
-                <TableCell>
-                    {mapping["PU Module Title"]}
-                </TableCell>
-            </TableRow>)
+    // // THIS SHOULD BE CARD! TEMPORARY PLACEHOLDER
+    // function createMapping(NUSModuleCode) {
+    //     const innerDisplay = mapping => 
+    //         (<TableRow>
+    //             <TableCell>
+    //                 {mapping["PU Module Code"]}
+    //             </TableCell>
+    //             <TableCell>
+    //                 {mapping["PU Module Title"]}
+    //             </TableCell>
+    //         </TableRow>)
         
-        if (equivalentNUSModules.length == 1) {
-            return (
-                <TableRow>
-                    <TableCell>
-                        {result[NUSModuleCode][0]["PU Module Code"]}
-                    </TableCell>
-                    <TableCell>
-                        {result[NUSModuleCode][0]["PU Module Title"]}
-                    </TableCell>
-                </TableRow>
-            )
-        }
+    //     if (equivalentNUSModules.length == 1) {
+    //         return (
+    //             <TableRow>
+    //                 <TableCell>
+    //                     {result[NUSModuleCode][0]["PU Module Code"]}
+    //                 </TableCell>
+    //                 <TableCell>
+    //                     {result[NUSModuleCode][0]["PU Module Title"]}
+    //                 </TableCell>
+    //             </TableRow>
+    //         )
+    //     }
 
 
-        return (
-            <TableRow>
-                <TableCell>
-                    <b>{NUSModuleCode}</b>
-                </TableCell>
-                <TableCell>
-                    {result[NUSModuleCode].map(innerDisplay)}
-                </TableCell> 
-            </TableRow>
-        )
-    }
+    //     return (
+    //         <TableRow>
+    //             <TableCell>
+    //                 <b>{NUSModuleCode}</b>
+    //             </TableCell>
+    //             <TableCell>
+    //                 {result[NUSModuleCode].map(innerDisplay)}
+    //             </TableCell> 
+    //         </TableRow>
+    //     )
+    // }
 
 
 
-    return (
-        <React.Fragment>
-            <TableHead onClick={() => setOpen(!open)}>
-                <TableRow>
-                    <TableCell align="left">
-                        <p align="left">{moduleName}</p>
-                        {equivalentNUSModules.length > 1
-                            ? "equivalent to " + equivalentNUSModules.toString()
-                            : ""
-                        }
-                    </TableCell>
-                </TableRow>
-            </TableHead>
-            <TableBody>
-                <TableCell>
-                    <Collapse in={open}>
-                        <Box margin={1}>
-                            {equivalentNUSModules.map(createMapping)}
-                        </Box>
-                    </Collapse>
-                </TableCell>
-            </TableBody>
-        </React.Fragment>
-    )
+    // return (
+    //     <React.Fragment>
+    //         <TableHead onClick={() => setOpen(!open)}>
+    //             <TableRow>
+    //                 <TableCell align="left">
+    //                     <p align="left">{moduleName}</p>
+    //                     {equivalentNUSModules.length > 1
+    //                         ? "equivalent to " + equivalentNUSModules.toString()
+    //                         : ""
+    //                     }
+    //                 </TableCell>
+    //             </TableRow>
+    //         </TableHead>
+    //         <TableBody>
+    //             <TableCell>
+    //                 <Collapse in={open}>
+    //                     <Box margin={1}>
+    //                         {equivalentNUSModules.map(createMapping)}
+    //                     </Box>
+    //                 </Collapse>
+    //             </TableCell>
+    //         </TableBody>
+    //     </React.Fragment>
+    // )
 
 }
 
