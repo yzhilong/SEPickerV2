@@ -6,7 +6,9 @@ import SchoolSelector from "../components/selector_components/SchoolSelector"
 import CountrySelector from "../components/selector_components/CountrySelector"
 import Results from "../components/selector_components/Results"
 
-import { Collapse, Table, TableCell, Paper, Grid } from '@material-ui/core'
+import { Collapse, Table, TableCell, Paper, Grid, Card, Typography } from '@material-ui/core'
+import { sizing } from '@material-ui/system';
+
 import './Selector.css'
 
 function Selector(props) {
@@ -51,21 +53,40 @@ function Selector(props) {
             <strong>Countries:</strong>{selectedCountries} <br/>
             <strong>Schools:</strong>{selectedSchools} <br/>
             <strong>Continents:</strong>{selectedContinents} <br/> */}
-            <div class="wrap">
-            <div class="box">
-            <h1>Selector</h1>
-              <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
-              <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
-              <ContinentSelector stateSetter={setSelectedContinents}/>
-              <CountrySelector stateSetter={setSelectedCountries}/>
-              <SchoolSelector stateSetter={setSelectedSchools}/>
-            </div>
-            <div class="box">
-              <h1>Results</h1>
-              {Object.keys(result).length == 0 && <h3>No Module Selected Yet</h3>}
-              <Results result={result}/>
-            </div>
-            </div>
+            {/* <div class="wrap"> */}
+            <Grid container spacing={3} xs={12}>
+              <Grid item xs={12} lg={6}>
+                <Card style={{height:"100vh", overflow:"auto"}}>
+                  <h1>Selector</h1>
+                  <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
+                  <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
+                  <ContinentSelector stateSetter={setSelectedContinents} state={selectedContinents}/>
+                  <CountrySelector stateSetter={setSelectedCountries}/>
+                  <SchoolSelector stateSetter={setSelectedSchools}/>
+                </Card>
+              </Grid>
+
+              <Grid item xs={12} lg={6}>
+                <Card style={{height:"100vh", overflow:"auto"}}>
+                  {/* <Typography style={{flex: 1}}>Results</Typography>
+                    {Object.keys(result).length == 0 
+                      && <h2>No Module Selected Yet</h2>}
+                    <Results result={result}/> */}
+                  <Grid container justifyContent="center">
+                    <Typography variant="h3">Results</Typography>
+                  </Grid>
+
+                  {/* <Card style={{height:"50vh", width:"20vw"}}>
+
+                  </Card> */}
+                  <Grid container justifyContent="center">
+                    {Object.keys(result).length == 0 
+                      && <h2>No Module Selected Yet</h2>}
+                  </Grid>
+                </Card>
+              </Grid>
+
+            </Grid>
         </div>
     )
 }
