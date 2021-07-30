@@ -11,38 +11,37 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Table from "@material-ui/core/Table"
-import { TableHead, TableRow, TableCell, TableContainer, Paper } from "@material-ui/core";
+import { TableHead, TableRow, TableCell, TableContainer, Paper, TextField } from "@material-ui/core";
 
 function School(props) {
-    const { schoolName, result, useStyles } = props
+    const { schoolName, result, useStyles, modulesCodeTitleMappings } = props
     // result = {"mappings": {...}, "num_mappable": int}
 
+    function toString() {
+        return schoolName + Object.keys(result.mappings).join();
+    }
+
     const [ open, setOpen ] = useState(false)
+
+    const defaultNote = (toString() in localStorage) ? localStorage.getItem(toString()) : ""
+    // console.log(toString() in localStorage)
+    const [ notes, setNotes ] = useState(defaultNote)
+
     const modules = []
     let i = 0
     for (const module in result["mappings"]) {
         modules[i] = module
         i++;
     }
-    // console.log(result["mappings"])
-    function toString(props) {
-        return props.schoolName + Object.keys(props.result.mappings).join();
-    }
 
     function onFavHandler(event) {
         event.stopPropagation();
-        // favourited = localStorage.getItem("favourited");
-        // console.log(favourited)
-        if ("fav" in localStorage) {
-            const existing = JSON.parse(localStorage.getItem("fav"))
-            // console.log(existing)
-            existing[schoolName] = result
-            localStorage.setItem("fav", JSON.stringify(existing))
+        const cookieName = toString()
+        if (cookieName in localStorage) {
+            // const existing = JSON.parse(localStorage.getItem(cookieName))
+            localStorage.setItem(cookieName, notes)
         } else {
-            const newEntry = {}
-            newEntry[schoolName] = result
-            localStorage.setItem("fav", JSON.stringify(newEntry));
-            // console.log(localStorage.getItem("fav"));
+            localStorage.setItem(cookieName, notes);
         }
     }
 
@@ -63,21 +62,38 @@ function School(props) {
                             <Typography>{result['num_mappable']} module(s) available!</Typography>
                         </div>
                     </AccordionSummary>
-                        <TableContainer component={Paper}>
-                            <Table className={classes.innerRoot} aria-label="simple table">
-                                <TableHead>
-                                    <TableRow>
-                                        <TableCell>
-                                            <Typography>NUS Module</Typography>
-                                        </TableCell>
-                                        <TableCell>
-                                            <Typography>Partner University Module</Typography>
-                                        </TableCell>
-                                    </TableRow>
-                                </TableHead>
-                                {modules.map(module => <ModuleMapping moduleName={module} result={result["mappings"][module]} useStyles={useStyles}/>)}
-                            </Table>
-                        </TableContainer>
+                        <div>
+                            <TableContainer component={Paper}>
+                                <Table className={classes.innerRoot} aria-label="simple table">
+                                    <TableHead>
+                                        <TableRow>
+                                            <TableCell>
+                                                <Typography>NUS Module</Typography>
+                                            </TableCell>
+                                            <TableCell>
+                                                <Typography>Partner University Module</Typography>
+                                            </TableCell>
+                                        </TableRow>
+                                    </TableHead>
+                                    {modules.map(module => <ModuleMapping 
+                                        moduleName={module} 
+                                        result={result["mappings"][module]} 
+                                        useStyles={useStyles}
+                                        modulesCodeTitleMappings={modulesCodeTitleMappings}/>)}
+                                </Table>
+                            </TableContainer>
+                        </div>
+                        <TextField 
+                            label="Notes" 
+                            multiline={true}
+                            className={classes.innerRoot}
+                            maxRows={6}
+                            value={notes}
+                            onChange={event => {
+                                setNotes(event.target.value)
+                                localStorage.setItem(toString(), event.target.value)
+                            }}
+                            />
                 </Accordion>
             </AccordionDetails>
         </React.Fragment>

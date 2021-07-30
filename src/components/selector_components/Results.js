@@ -53,6 +53,8 @@ const useStyles = makeStyles((theme) => ({
     },
     }));
 
+const modulesCodeTitleMappings = require("../../data/moduleCodeTitleMappings.json")
+
 function Results(props) {
 
     const { result } = props
@@ -61,13 +63,19 @@ function Results(props) {
     for (const continent in result) {
         for (const country in result[continent]) {
             countryDetails[i] = {"countryName": country, "result": result[continent][country]}
-            console.log(countryDetails[i])
             i++
         }
     }
 
+    // Display countries in lexicographical order
+    countryDetails.sort((countryA, countryB) => countryA["countryName"].localeCompare(countryB["countryName"]))
+
     
-    return countryDetails.map(countryDetail => <Country countryName={countryDetail["countryName"]} result={countryDetail["result"]} useStyles={useStyles}/>)
+    return countryDetails.map(countryDetail => <Country 
+            countryName={countryDetail["countryName"]} 
+            result={countryDetail["result"] } 
+            useStyles={useStyles}
+            modulesCodeTitleMappings={modulesCodeTitleMappings}/>)
 }
 
 export default Results

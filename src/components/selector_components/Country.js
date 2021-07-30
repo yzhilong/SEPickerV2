@@ -11,7 +11,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Divider from '@material-ui/core/Divider';
 
 function Country(props) {
-    const { countryName, result, useStyles } = props
+    const { countryName, result, useStyles, modulesCodeTitleMappings } = props
 
     const [ open, setOpen ] = useState(false)
     let schools = []
@@ -53,7 +53,11 @@ function Country(props) {
             </AccordionSummary>
                 {schools.map(school => {return (
                         // <AccordionDetails className={classes.root}>
-                            <School schoolName={school} result={result[school]} useStyles={useStyles}/>
+                            <School 
+                                schoolName={school} 
+                                result={result[school]} 
+                                useStyles={useStyles}
+                                modulesCodeTitleMappings={modulesCodeTitleMappings}/>
                         // </AccordionDetails>
                     )})}
         </Accordion>

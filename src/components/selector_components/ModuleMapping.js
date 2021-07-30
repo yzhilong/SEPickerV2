@@ -7,7 +7,8 @@ import CardContent from "@material-ui/core/CardContent";
 import { Table, TableRow, TableCell, TableHead } from "@material-ui/core";
 
 function ModuleMapping(props) {
-    const { moduleName, result, useStyles } = props
+    const { moduleName, result, useStyles, modulesCodeTitleMappings } = props
+    const moduleTitle = modulesCodeTitleMappings[moduleName]
     // result = {
     //     "EquivalentNUSModule1": [{"PU Module Code": "PU123", "PU Module Title": "DUMMY NAME"}, ...],
     //     "EquivalentNUSModule2": [...],
@@ -19,7 +20,6 @@ function ModuleMapping(props) {
         equivalentNUSModules[i] = module
         i++;
     }
-    console.log(equivalentNUSModules)
 
     const classes = useStyles()
 
@@ -44,6 +44,7 @@ function ModuleMapping(props) {
             <TableRow>
                 <TableCell>
                     <Typography>{moduleName}</Typography>
+                    <Typography>{moduleTitle}</Typography>
                 </TableCell>
                 <TableCell>
                     {getPUMap(equivalentNUSModules[0])}
@@ -62,6 +63,7 @@ function ModuleMapping(props) {
                     <TableHead>
                         <TableCell>
                             <Typography>{mod}</Typography>
+                            <Typography>{moduleTitle}</Typography>
                         </TableCell>
                         <TableCell>
                             {getPUMap(mod)}
