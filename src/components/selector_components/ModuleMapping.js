@@ -52,23 +52,23 @@ function ModuleMapping(props) {
             )
     } else {
         return (
-            <Table>
+            <React.Fragment>
                 <TableHead>
                     <TableCell>
                         <Typography>Modules equivalent to {moduleName}</Typography>
                     </TableCell>
                 </TableHead>
                 {equivalentNUSModules.map(mod => { return (
-                    <TableRow>
+                    <TableHead>
                         <TableCell>
                             <Typography>{mod}</Typography>
                         </TableCell>
                         <TableCell>
                             {getPUMap(mod)}
                         </TableCell>
-                    </TableRow>)
+                    </TableHead>)
                 })}
-            </Table>
+            </React.Fragment>
         )
     }
     // // THIS SHOULD BE CARD! TEMPORARY PLACEHOLDER
