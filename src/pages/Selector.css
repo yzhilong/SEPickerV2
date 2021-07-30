@@ -4,12 +4,8 @@
     /* border:1px solid blue; */
 }
 
-.left-box {
-    position:absolute;
-    left: 1vw;
-    /* border:1px solid red; */
-    border-radius: 1%;
-    width:48vw;
+#left-box {
+    border:1px solid red;
     height:100vh;
 }
 

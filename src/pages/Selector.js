@@ -54,37 +54,25 @@ function Selector(props) {
             <strong>Schools:</strong>{selectedSchools} <br/>
             <strong>Continents:</strong>{selectedContinents} <br/> */}
             {/* <div class="wrap"> */}
-            <Grid container spacing={3} xs={12}>
+            <Grid container spacing={3}>
               <Grid item xs={12} lg={6}>
-                <Card style={{height:"100vh", overflow:"auto"}}>
+                <div id="left-box">
                   <h1>Selector</h1>
                   <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
                   <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
                   <ContinentSelector stateSetter={setSelectedContinents} state={selectedContinents}/>
                   <CountrySelector stateSetter={setSelectedCountries}/>
                   <SchoolSelector stateSetter={setSelectedSchools}/>
-                </Card>
+                </div>
               </Grid>
 
-              <Grid item xs={12} lg={6}>
-                <Card style={{height:"100vh", overflow:"auto"}}>
-                  {/* <Typography style={{flex: 1}}>Results</Typography>
+              <Grid item xs={12} lg={6} style={{height:"100vh"}}>
+                    <h1>Results</h1>
                     {Object.keys(result).length == 0 
                       && <h2>No Module Selected Yet</h2>}
-                    <Results result={result}/> */}
-                  <Grid container justifyContent="center">
-                    <Typography variant="h3">Results</Typography>
-                  </Grid>
-
-                  {/* <Card style={{height:"50vh", width:"20vw"}}>
-
-                  </Card> */}
-                  <Grid container justifyContent="center">
-                    {Object.keys(result).length == 0 
-                      && <h2>No Module Selected Yet</h2>}
-                  </Grid>
-                </Card>
+                    <Results result={result}/>
               </Grid>
+
 
             </Grid>
         </div>
