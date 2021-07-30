@@ -6,7 +6,9 @@ import SchoolSelector from "../components/selector_components/SchoolSelector"
 import CountrySelector from "../components/selector_components/CountrySelector"
 import Results from "../components/selector_components/Results"
 
-import { Collapse, Table, TableCell, Paper, Grid } from '@material-ui/core'
+import { Collapse, Table, TableCell, Paper, Grid, Card, Typography } from '@material-ui/core'
+import { sizing } from '@material-ui/system';
+
 import './Selector.css'
 
 function Selector(props) {
@@ -51,21 +53,28 @@ function Selector(props) {
             <strong>Countries:</strong>{selectedCountries} <br/>
             <strong>Schools:</strong>{selectedSchools} <br/>
             <strong>Continents:</strong>{selectedContinents} <br/> */}
-            <div class="wrap">
-            <div class="box">
-            <h1>Selector</h1>
-              <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
-              <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
-              <ContinentSelector stateSetter={setSelectedContinents}/>
-              <CountrySelector stateSetter={setSelectedCountries}/>
-              <SchoolSelector stateSetter={setSelectedSchools}/>
-            </div>
-            <div class="box">
-              <h1>Results</h1>
-              {Object.keys(result).length == 0 && <h3>No Module Selected Yet</h3>}
-              <Results result={result}/>
-            </div>
-            </div>
+            {/* <div class="wrap"> */}
+            <Grid container spacing={3}>
+              <Grid item xs={12} lg={6}>
+                <div id="left-box">
+                  <h1>Selector</h1>
+                  <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
+                  <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
+                  <ContinentSelector stateSetter={setSelectedContinents} state={selectedContinents}/>
+                  <CountrySelector stateSetter={setSelectedCountries}/>
+                  <SchoolSelector stateSetter={setSelectedSchools}/>
+                </div>
+              </Grid>
+
+              <Grid item xs={12} lg={6} style={{height:"100vh"}}>
+                    <h1>Results</h1>
+                    {Object.keys(result).length == 0 
+                      && <h2>No Module Selected Yet</h2>}
+                    <Results result={result}/>
+              </Grid>
+
+
+            </Grid>
         </div>
     )
 }

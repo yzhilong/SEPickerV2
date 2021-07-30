@@ -11,7 +11,7 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Table from "@material-ui/core/Table"
-import { TableHead, TableRow, TableCell, TableContainer, Paper, TextField } from "@material-ui/core";
+import { TableHead, TableRow, TableCell, TableContainer, Paper, TextField, Grid } from "@material-ui/core";
 
 function School(props) {
     const { schoolName, result, useStyles, modulesCodeTitleMappings } = props
@@ -62,38 +62,31 @@ function School(props) {
                             <Typography>{result['num_mappable']} module(s) available!</Typography>
                         </div>
                     </AccordionSummary>
-                        <div>
-                            <TableContainer component={Paper}>
-                                <Table className={classes.innerRoot} aria-label="simple table">
-                                    <TableHead>
-                                        <TableRow>
-                                            <TableCell>
-                                                <Typography>NUS Module</Typography>
-                                            </TableCell>
-                                            <TableCell>
-                                                <Typography>Partner University Module</Typography>
-                                            </TableCell>
-                                        </TableRow>
-                                    </TableHead>
-                                    {modules.map(module => <ModuleMapping 
+
+                    <Grid container spacing={0} justifyContent="center" alignContent="center">
+                        <Grid item xs={6}>
+                            <div style={{border: "solid 1px blue"}}>NUS Module</div>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <div style={{border: "solid 1px blue"}}>Partner University Module</div>
+                        </Grid>
+                    </Grid>
+                    {modules.map(module => <ModuleMapping 
                                         moduleName={module} 
                                         result={result["mappings"][module]} 
                                         useStyles={useStyles}
                                         modulesCodeTitleMappings={modulesCodeTitleMappings}/>)}
-                                </Table>
-                            </TableContainer>
-                        </div>
-                        <TextField 
-                            label="Notes" 
-                            multiline={true}
-                            className={classes.innerRoot}
-                            maxRows={6}
-                            value={notes}
-                            onChange={event => {
-                                setNotes(event.target.value)
-                                localStorage.setItem(toString(), event.target.value)
-                            }}
-                            />
+                    <TextField 
+                        label="Notes" 
+                        multiline={true}
+                        className={classes.innerRoot}
+                        maxRows={6}
+                        value={notes}
+                        onChange={event => {
+                            setNotes(event.target.value)
+                            localStorage.setItem(toString(), event.target.value)
+                        }}
+                        />
                 </Accordion>
             </AccordionDetails>
         </React.Fragment>
