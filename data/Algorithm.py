@@ -111,7 +111,10 @@ def algorithm(essential_modules,optional_modules=[],schools=[],countries=[],cont
         valid_indices = set(mappings.index)
     
     if schools != []:
-        valid_indices.update(school_filter(schools,mappings).index)
+        if continents == countries == []:
+            valid_indices = set(school_filter(schools, mappings).index)
+        else:
+            valid_indices.update(school_filter(schools,mappings).index)
         
     restricted_by_school = mappings.iloc[list(valid_indices)]
     
