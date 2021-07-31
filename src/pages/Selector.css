@@ -5,17 +5,15 @@
 }
 
 #left-box {
-    border:1px solid red;
+    /* border:1px solid red; */
     height:100vh;
+    overflow: auto;
 }
 
-.right-box {
-    position:absolute;
-    left: 50vw;
+#right-box {
     /* border:1px solid red; */
-    border-radius: 1%;
-    width:48vw;
     height:100vh;
+    overflow: auto;
 }
 /* .left-box{
     height: 100vh;

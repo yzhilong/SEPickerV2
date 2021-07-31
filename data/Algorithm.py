@@ -111,7 +111,10 @@ def algorithm(essential_modules,optional_modules=[],schools=[],countries=[],cont
         valid_indices = set(mappings.index)
     
     if schools != []:
-        valid_indices.update(school_filter(schools,mappings).index)
+        if continents == countries == []:
+            valid_indices = set(school_filter(schools, mappings).index)
+        else:
+            valid_indices.update(school_filter(schools,mappings).index)
         
     restricted_by_school = mappings.iloc[list(valid_indices)]
     
@@ -143,8 +146,11 @@ def algorithm(essential_modules,optional_modules=[],schools=[],countries=[],cont
     inverse_module_mappings = get_equivalent_modules_inverse(essential_modules + optional_modules)
     for i in range(len(output_df)):
         row = output_df.iloc[i]
-        country_code = pc.country_name_to_country_alpha2(row['Country'], cn_name_format="default")
-        continent = pc.country_alpha2_to_continent_code(country_code)
+        if row['Country'] != 'UNKNOWN':
+            country_code = pc.country_name_to_country_alpha2(row['Country'], cn_name_format="default")
+            continent = pc.country_alpha2_to_continent_code(country_code)
+        else:
+            continent = 'EU'
 
         continent_dict = output_dict[full_continent_name[continent]]
         if row['Country'] not in output_dict[full_continent_name[continent]]:

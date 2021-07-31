@@ -6,7 +6,7 @@ import SchoolSelector from "../components/selector_components/SchoolSelector"
 import CountrySelector from "../components/selector_components/CountrySelector"
 import Results from "../components/selector_components/Results"
 
-import { Collapse, Table, TableCell, Paper, Grid, Card, Typography } from '@material-ui/core'
+import { Collapse, Table, TableCell, Paper, Grid, Card, Typograph, CircularProgress } from '@material-ui/core'
 import { sizing } from '@material-ui/system';
 
 import './Selector.css'
@@ -26,6 +26,7 @@ function Selector(props) {
     const [selectedSchools, setSelectedSchools] = useState([])
 
     const [result, setResult] = useState({});
+    const [loading, setLoading] = useState(false);
     const body = {
         essential_modules: selectedEssentialModules,
         optional_modules: selectedOptionalModules,
@@ -33,15 +34,20 @@ function Selector(props) {
         countries: selectedCountries,
         continents: selectedContinents
       }
+
+
+
+
     useEffect(() => {
-      fetch('https://sepickerv2.herokuapp.com/backend', {
+      setLoading(true)
+      fetch('http://127.0.0.1:5000/backend', {
           method: "POST",
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify(body)
       }).then(res => res.json())
-        .then(data => setResult(data))
+        .then(data => {setLoading(false); setResult(data)})
         .catch(err => console.log(err))
     }, [selectedEssentialModules, selectedOptionalModules, selectedContinents, selectedCountries, selectedSchools])
 
@@ -56,21 +62,28 @@ function Selector(props) {
             {/* <div class="wrap"> */}
             <Grid container spacing={3}>
               <Grid item xs={12} lg={6}>
-                <div id="left-box">
+                <Paper id="left-box">
                   <h1>Selector</h1>
                   <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
                   <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
                   <ContinentSelector stateSetter={setSelectedContinents} state={selectedContinents}/>
                   <CountrySelector stateSetter={setSelectedCountries}/>
                   <SchoolSelector stateSetter={setSelectedSchools}/>
-                </div>
+                </Paper>
               </Grid>
 
               <Grid item xs={12} lg={6} style={{height:"100vh"}}>
+                <Paper id="right-box">
                     <h1>Results</h1>
-                    {Object.keys(result).length == 0 
-                      && <h2>No Module Selected Yet</h2>}
+                    {loading
+                      ? <h2>Loading...</h2>
+                      : selectedEssentialModules.length + selectedOptionalModules.length === 0
+                      ? <h2>No Module Selected Yet</h2>
+                      : Object.keys(result).length === 0 
+                      ? <h2>No mappings found :(</h2>
+                      : <p></p>}
                     <Results result={result}/>
+                </Paper>
               </Grid>
 
 

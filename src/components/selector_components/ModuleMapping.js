@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react"
 import Typography from '@material-ui/core/Typography';
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import { Table, TableRow, TableCell, TableHead, Box, Grid } from "@material-ui/core";
+import { Table, TableRow, TableCell, TableHead, Box, Grid, Paper } from "@material-ui/core";
 
 function ModuleMapping(props) {
     const { moduleName, result, useStyles, modulesCodeTitleMappings } = props
@@ -43,8 +43,7 @@ function ModuleMapping(props) {
 
     function getMapping(moduleCode) {
         return (
-
-            <Grid container xs={12} spacing={3}>
+            <Grid container item xs={12} spacing={0} component={Paper}>
                 <Grid item container xs={6} alignItems="center">
                     <Grid item>
                         <Box textAlign="left" fontWeight="fontWeightBold">
@@ -65,24 +64,22 @@ function ModuleMapping(props) {
     }
 
     if (equivalentNUSModules.length == 1 && equivalentNUSModules[0] === moduleName) {
-        return <div style={{border: "1px solid black"}}>{getMapping(equivalentNUSModules[0])}</div>
+        return getMapping(equivalentNUSModules[0])
     }
 
     return (
-        <div style={{border: "1px solid black"}}>
-        <Grid container xs={12} spacing={0} justifyContent="center">
+        <Grid container item xs={12} spacing={0} justifyContent="center" component={Paper}>
             <Grid item xs={12}>
-                <Typography style={{fontSize: "12px"}}>Module(s) equivalent to {moduleName}</Typography>
+                <Typography style={{fontStyle: "italic"}}>Module(s) with similar content to {moduleName} {moduleTitle}</Typography>
             </Grid>
             {equivalentNUSModules.map(mod => {
                 return (
-                    <Grid item xs={12}>
+                    <Grid container item xs={11} justifyContent="center">
                         {getMapping(mod)}
                     </Grid>
                 )
             })}
         </Grid>
-        </div>  
     )
 
     // if (equivalentNUSModules.length == 1) {
