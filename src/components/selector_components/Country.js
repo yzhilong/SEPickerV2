@@ -39,7 +39,7 @@ function Country(props) {
       
 
     return (
-        <Accordion className={classes.country}>
+        <Accordion className={classes.country} TransitionProps={{ unmountOnExit: true }}>
             <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
