@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import University from "../University"
 import School from "./School"
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
@@ -40,13 +39,13 @@ function Country(props) {
       
 
     return (
-        <Accordion className={classes.root}>
+        <Accordion className={classes.country}>
             <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
             >
-                <div className={classes.column}>
+                <div>
                     <Typography>{countryName}</Typography>
                     <Typography>{schools.length} school(s) available!</Typography>
                 </div>

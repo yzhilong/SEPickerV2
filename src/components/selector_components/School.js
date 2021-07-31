@@ -54,11 +54,12 @@ function School(props) {
     return (
         <React.Fragment>
             <AccordionDetails>
-                <Accordion className={classes.innerRoot}>
+                <Accordion >
                     <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
+                    className={classes.school}
                     >
                         <FormControlLabel
                             aria-label="Acknowledge"
@@ -81,10 +82,10 @@ function School(props) {
                     <Grid container xs={12} spacing={0}>
                         <Grid container item xs={12} spacing={0} justifyContent="center" alignContent="center">
                             <Grid item xs={6}>
-                                <div style={{border: "solid 0px blue"}}>NUS Module</div>
+                                <div style={{border: "solid 0px blue", padding: 5, fontWeight:"bold"}}>NUS Module</div>
                             </Grid>
                             <Grid item xs={6}>
-                                <div style={{border: "solid 0px blue"}}>Partner University Module</div>
+                                <div style={{border: "solid 0px blue", padding: 5, fontWeight:"bold"}}>Partner University Module</div>
                             </Grid>
                         </Grid>
                         {modules.map(module => <ModuleMapping 
@@ -94,6 +95,8 @@ function School(props) {
                                             modulesCodeTitleMappings={modulesCodeTitleMappings}/>)}
                     </Grid>
                     <TextField 
+                        className={classes.tmp}
+                        style={{padding: 5}}
                         label="Notes" 
                         multiline={true}
                         className={classes.innerRoot}

@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
+
 import Country from "./Country"
 
 /*
@@ -14,42 +15,36 @@ TODO
 */
 
 const useStyles = makeStyles((theme) => ({
+    country: {
+        width: '80%',
+        justifyContent: "center",
+        padding: theme.spacing(2),
+        minWidth: 500,
+        background: "#42a7f5",
+    },
+    tmp: {
+        padding: theme.spacing(1),
+    },
+    school: {
+        width: '100%',
+        background: "#42f5a4",
+    },
+    moduleMappingTitle: {
+        width: '100%',
+        background: "red"
+    },
+    moduleMappingPaper: {
+        width: "100%",
+        background: "orange",
+        padding: theme.spacing(1),
+    },
     root: {
         width: '80%',
         minWidth: 500,
+        background: 'blue',
     },
     innerRoot: {
         width: "100%",
-    },
-    heading: {
-        fontSize: theme.typography.pxToRem(15),
-    },
-    secondaryHeading: {
-        fontSize: theme.typography.pxToRem(15),
-        color: theme.palette.text.secondary,
-    },
-    icon: {
-        verticalAlign: 'bottom',
-        height: 20,
-        width: 20,
-    },
-    details: {
-        alignItems: 'center',
-    },
-    column: {
-        flexBasis: '33.33%',
-        width: '100%'
-    },
-    helper: {
-        borderLeft: `2px solid ${theme.palette.divider}`,
-        padding: theme.spacing(1, 2),
-    },
-    link: {
-        color: theme.palette.primary.main,
-        textDecoration: 'none',
-        '&:hover': {
-        textDecoration: 'underline',
-        },
     },
     }));
 
@@ -67,8 +62,13 @@ function Results(props) {
         }
     }
 
-    // Display countries in lexicographical order
-    countryDetails.sort((countryA, countryB) => countryA["countryName"].localeCompare(countryB["countryName"]))
+    // Display countries in order of how many schools are available, followed by lexicographic order
+    countryDetails.sort((countryA, countryB) => {
+        const lengthDiff = Object.keys(countryB.result).length - Object.keys(countryA.result).length
+        return lengthDiff !== 0
+            ? lengthDiff
+            : countryA["countryName"].localeCompare(countryB["countryName"])
+    })
 
     
     return countryDetails.map(countryDetail => <Country 

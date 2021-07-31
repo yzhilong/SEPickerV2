@@ -60,7 +60,7 @@ function Selector(props) {
             <strong>Schools:</strong>{selectedSchools} <br/>
             <strong>Continents:</strong>{selectedContinents} <br/> */}
             {/* <div class="wrap"> */}
-            <Grid container spacing={3}>
+            <Grid container spacing={3} justifyContent="center">
               <Grid item xs={12} lg={6}>
                 <Paper id="left-box">
                   <h1>Selector</h1>
