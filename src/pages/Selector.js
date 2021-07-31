@@ -75,7 +75,7 @@ function Selector(props) {
               <Grid item xs={12} lg={6} style={{height:"100vh"}}>
                     <h1>Results</h1>
                     {loading
-                      ? <CircularProgress />
+                      ? <h2>Loading...</h2>
                       : selectedEssentialModules.length + selectedOptionalModules.length == 0
                       ? <h2>No Module Selected Yet</h2>
                       : Object.keys(result).length == 0 
