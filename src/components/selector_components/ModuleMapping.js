@@ -70,7 +70,7 @@ function ModuleMapping(props) {
     return (
         <Grid container item xs={12} spacing={0} justifyContent="center" component={Paper}>
             <Grid item xs={12}>
-                <Typography style={{fontStyle: "italic"}}>Module(s) similar content to {moduleName} {moduleTitle}</Typography>
+                <Typography style={{fontStyle: "italic"}}>Module(s) with similar content to {moduleName} {moduleTitle}</Typography>
             </Grid>
             {equivalentNUSModules.map(mod => {
                 return (
