@@ -1,6 +1,9 @@
 # SEPickerV2
 Overhaul of https://github.com/tangboxuan/SEPicker using React
 
+Website available here: https://sepickerv2.herokuapp.com/
+WORK IN PROGRESS
+
 
 For Future Maintenance/Upgrades:
 1. Add notebook for updating of mappings (modules, universities, countries etc)

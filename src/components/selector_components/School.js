@@ -11,7 +11,11 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Table from "@material-ui/core/Table"
-import { TableHead, TableRow, TableCell, TableContainer, Paper, TextField } from "@material-ui/core";
+import { TableHead, TableRow, TableCell, TableContainer, Paper, TextField, Grid, Checkbox, FormControlLabel } from "@material-ui/core";
+
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import { LocalSeeOutlined } from "@material-ui/icons";
 
 function School(props) {
     const { schoolName, result, useStyles, modulesCodeTitleMappings } = props
@@ -23,26 +27,26 @@ function School(props) {
 
     const [ open, setOpen ] = useState(false)
 
-    const defaultNote = (toString() in localStorage) ? localStorage.getItem(toString()) : ""
-    // console.log(toString() in localStorage)
+    const defaultNote = (toString()+"notes" in localStorage) ? localStorage.getItem(toString()+"notes") : ""
     const [ notes, setNotes ] = useState(defaultNote)
+
+    const [ favourited, setFavourited ] = useState(toString() in localStorage)
+    function onFavHandler(event) {
+        if (event.target.checked) {
+            setFavourited(true)
+            setNotes(notes)
+            localStorage.setItem(toString(),JSON.stringify(result))
+        } else {
+            setFavourited(false)
+            localStorage.removeItem(toString())
+        }
+    }
 
     const modules = []
     let i = 0
     for (const module in result["mappings"]) {
         modules[i] = module
         i++;
-    }
-
-    function onFavHandler(event) {
-        event.stopPropagation();
-        const cookieName = toString()
-        if (cookieName in localStorage) {
-            // const existing = JSON.parse(localStorage.getItem(cookieName))
-            localStorage.setItem(cookieName, notes)
-        } else {
-            localStorage.setItem(cookieName, notes);
-        }
     }
 
     const classes = useStyles(); 
@@ -56,44 +60,51 @@ function School(props) {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
+                        <FormControlLabel
+                            aria-label="Acknowledge"
+                            onClick={(event) => event.stopPropagation()}
+                            onFocus={(event) => event.stopPropagation()}
+                            control={<Checkbox 
+                                checkedIcon={<FavoriteIcon />} 
+                                icon={<FavoriteBorderIcon />}
+                                checked={favourited}
+                                onChange={onFavHandler}
+                                />}
+                            label=""
+                        />
                         <div>
                             <Typography>{schoolName}</Typography>
-                            <button onClick={onFavHandler}>button</button>
                             <Typography>{result['num_mappable']} module(s) available!</Typography>
                         </div>
                     </AccordionSummary>
-                        <div>
-                            <TableContainer component={Paper}>
-                                <Table className={classes.innerRoot} aria-label="simple table">
-                                    <TableHead>
-                                        <TableRow>
-                                            <TableCell>
-                                                <Typography>NUS Module</Typography>
-                                            </TableCell>
-                                            <TableCell>
-                                                <Typography>Partner University Module</Typography>
-                                            </TableCell>
-                                        </TableRow>
-                                    </TableHead>
-                                    {modules.map(module => <ModuleMapping 
-                                        moduleName={module} 
-                                        result={result["mappings"][module]} 
-                                        useStyles={useStyles}
-                                        modulesCodeTitleMappings={modulesCodeTitleMappings}/>)}
-                                </Table>
-                            </TableContainer>
-                        </div>
-                        <TextField 
-                            label="Notes" 
-                            multiline={true}
-                            className={classes.innerRoot}
-                            maxRows={6}
-                            value={notes}
-                            onChange={event => {
-                                setNotes(event.target.value)
-                                localStorage.setItem(toString(), event.target.value)
-                            }}
-                            />
+
+                    <Grid container xs={12} spacing={0}>
+                        <Grid container item xs={12} spacing={0} justifyContent="center" alignContent="center">
+                            <Grid item xs={6}>
+                                <div style={{border: "solid 0px blue"}}>NUS Module</div>
+                            </Grid>
+                            <Grid item xs={6}>
+                                <div style={{border: "solid 0px blue"}}>Partner University Module</div>
+                            </Grid>
+                        </Grid>
+                        {modules.map(module => <ModuleMapping 
+                                            moduleName={module} 
+                                            result={result["mappings"][module]} 
+                                            useStyles={useStyles}
+                                            modulesCodeTitleMappings={modulesCodeTitleMappings}/>)}
+                    </Grid>
+                    <TextField 
+                        label="Notes" 
+                        multiline={true}
+                        className={classes.innerRoot}
+                        maxRows={6}
+                        value={notes}
+                        component={Paper}
+                        onChange={event => {
+                            setNotes(event.target.value)
+                            localStorage.setItem(toString()+"notes", event.target.value)
+                        }}
+                        />
                 </Accordion>
             </AccordionDetails>
         </React.Fragment>

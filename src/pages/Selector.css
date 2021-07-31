@@ -1,11 +1,41 @@
-.wrap{display:flex;}
-.box{
+.wrap{
+    display:flex;
+    width:100vw;
+    /* border:1px solid blue; */
+}
+
+#left-box {
+    /* border:1px solid red; */
+    height:100vh;
+    overflow: auto;
+}
+
+#right-box {
+    /* border:1px solid red; */
+    height:100vh;
+    overflow: auto;
+}
+/* .left-box{
     height: 100vh;
     width: 50vw;
     background-color: white;
     overflow: auto;
-    /* border:1px solid red */
+    border:1px solid red;
+    border-radius: 1%;
+    position:absolute;
+    float:right;
 }
+
+.right-box{
+    height: 100vh;
+    width: 50vw;
+    background-color: white;
+    overflow: auto;
+    border:1px solid red;
+    border-radius: 1%;
+    position:absolute;
+    float:right;
+} */
 
 /* div.box {
     border-color: ;
