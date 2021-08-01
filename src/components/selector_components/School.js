@@ -50,66 +50,60 @@ function School(props) {
     }
 
     const classes = useStyles(); 
+    const moduleMappings = modules.map(module => <ModuleMapping 
+        moduleName={module} 
+        result={result["mappings"][module]} 
+        useStyles={useStyles}
+        modulesCodeTitleMappings={modulesCodeTitleMappings}/>)
 
     return (
         <React.Fragment>
-            <AccordionDetails>
-                <Accordion >
-                    <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                    className={classes.school}
-                    >
-                        <FormControlLabel
-                            aria-label="Acknowledge"
-                            onClick={(event) => event.stopPropagation()}
-                            onFocus={(event) => event.stopPropagation()}
-                            control={<Checkbox 
-                                checkedIcon={<FavoriteIcon />} 
-                                icon={<FavoriteBorderIcon />}
-                                checked={favourited}
-                                onChange={onFavHandler}
-                                />}
-                            label=""
-                        />
-                        <div>
-                            <Typography>{schoolName}</Typography>
-                            <Typography>{result['num_mappable']} module(s) available!</Typography>
-                        </div>
-                    </AccordionSummary>
+            <Accordion 
+                className={classes.school} 
+                TransitionProps={{ unmountOnExit: true }}
+                square={true}
+                >
+                <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                >
+                    <FormControlLabel
+                        aria-label="Acknowledge"
+                        onClick={(event) => event.stopPropagation()}
+                        onFocus={(event) => event.stopPropagation()}
+                        control={<Checkbox 
+                            checkedIcon={<FavoriteIcon />} 
+                            icon={<FavoriteBorderIcon />}
+                            checked={favourited}
+                            onChange={onFavHandler}
+                            />}
+                        label=""
+                    />
+                    <div>
+                        <Typography>{schoolName}</Typography>
+                        <Typography>{result['num_mappable']} module(s) available!</Typography>
+                    </div>
+                </AccordionSummary>
 
-                    <Grid container xs={12} spacing={0}>
-                        {/* <Grid container item xs={12} spacing={0} justifyContent="center" alignContent="center">
-                            <Grid item xs={6}>
-                                <div style={{border: "solid 0px blue", padding: 5, fontWeight:"bold"}}>NUS Module</div>
-                            </Grid>
-                            <Grid item xs={6}>
-                                <div style={{border: "solid 0px blue", padding: 5, fontWeight:"bold"}}>Partner University Module</div>
-                            </Grid>
-                        </Grid> */}
-                        {modules.map(module => <ModuleMapping 
-                                            moduleName={module} 
-                                            result={result["mappings"][module]} 
-                                            useStyles={useStyles}
-                                            modulesCodeTitleMappings={modulesCodeTitleMappings}/>)}
-                    </Grid>
-                    <TextField 
-                        className={classes.tmp}
-                        style={{padding: 5}}
-                        label="Notes" 
-                        multiline={true}
-                        className={classes.innerRoot}
-                        maxRows={6}
-                        value={notes}
-                        component={Paper}
-                        onChange={event => {
-                            setNotes(event.target.value)
-                            localStorage.setItem(toString()+"notes", event.target.value)
-                        }}
-                        />
-                </Accordion>
-            </AccordionDetails>
+                <Grid container xs={12} spacing={0}>
+                    {moduleMappings}
+                </Grid>
+                <TextField 
+                    className={classes.tmp}
+                    style={{padding: 5}}
+                    label="Notes" 
+                    multiline={true}
+                    className={classes.innerRoot}
+                    maxRows={6}
+                    value={notes}
+                    component={Paper}
+                    onChange={event => {
+                        setNotes(event.target.value)
+                        localStorage.setItem(toString()+"notes", event.target.value)
+                    }}
+                    />
+            </Accordion>
         </React.Fragment>
     )
 

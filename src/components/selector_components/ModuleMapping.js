@@ -46,12 +46,12 @@ function ModuleMapping(props) {
             <Grid container item xs={12} spacing={0} component={Paper} className={classes.moduleMappingPaper} elevation={2}>
                 <Grid item container xs={6} alignItems="center">
                     <Grid item>
-                        <Box textAlign="left" fontWeight="fontWeightBold"  style={{padding: 5}}>
+                        <div style={{padding: 5, textAlign: "left", fontWeight: "bold"}}>
                             {moduleCode}
-                        </Box>
-                        <Box textAlign="left"  style={{padding: 5}}>
+                        </div>
+                        <div style={{padding: 5, textAlign: "left"}}>
                             {modulesCodeTitleMappings[moduleCode]}
-                        </Box>
+                        </div>
                     </Grid>
                 </Grid>
 
