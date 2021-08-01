@@ -50,10 +50,19 @@ function School(props) {
     }
 
     const classes = useStyles(); 
+    const moduleMappings = modules.map(module => <ModuleMapping 
+        moduleName={module} 
+        result={result["mappings"][module]} 
+        useStyles={useStyles}
+        modulesCodeTitleMappings={modulesCodeTitleMappings}/>)
 
     return (
         <React.Fragment>
-            <Accordion className={classes.school} TransitionProps={{ unmountOnExit: true }}>
+            <Accordion 
+                className={classes.school} 
+                TransitionProps={{ unmountOnExit: true }}
+                square={true}
+                >
                 <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
@@ -78,11 +87,7 @@ function School(props) {
                 </AccordionSummary>
 
                 <Grid container xs={12} spacing={0}>
-                    {modules.map(module => <ModuleMapping 
-                                        moduleName={module} 
-                                        result={result["mappings"][module]} 
-                                        useStyles={useStyles}
-                                        modulesCodeTitleMappings={modulesCodeTitleMappings}/>)}
+                    {moduleMappings}
                 </Grid>
                 <TextField 
                     className={classes.tmp}

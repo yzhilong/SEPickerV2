@@ -8,6 +8,8 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Divider from '@material-ui/core/Divider';
+import Paper from '@material-ui/core/Paper';
+
 
 function Country(props) {
     const { countryName, result, useStyles, modulesCodeTitleMappings } = props
@@ -16,30 +18,30 @@ function Country(props) {
     let schools = []
     let i = 0
     for (const school in result) {
-        schools[i] = [school, result[school]["num_mappable"]]
+        schools[i] = school
         i++;
     }
 
     schools.sort((schl1, schl2) => {
-        const numMappableDiff = schl2[1] - schl1[1]
+        const numMappableDiff = result[schl2]["num_mappable"] - result[schl1]["num_mappable"]
         if (numMappableDiff != 0) {
             return numMappableDiff
         } else {
-            return schl1[0].localeCompare(schl2[0])
+            return schl1.localeCompare(schl2)
         }
     })
-
-    const tmp = []
-    for (let i = 0; i < schools.length; i++) {
-        tmp[i] = schools[i][0]
-    }
-    schools = tmp
 
     const classes = useStyles();
       
 
     return (
-        <Accordion className={classes.country} TransitionProps={{ unmountOnExit: true }}>
+        // square={true} is bugged! We require this setting to get ROUNDED corners
+        <Accordion 
+            className={classes.country} 
+            TransitionProps={{ unmountOnExit: true}} 
+            component={Paper} 
+            square={true}
+        >
             <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -51,13 +53,11 @@ function Country(props) {
                 </div>
             </AccordionSummary>
                 {schools.map(school => {return (
-                        // <AccordionDetails className={classes.root}>
                             <School 
                                 schoolName={school} 
                                 result={result[school]} 
                                 useStyles={useStyles}
                                 modulesCodeTitleMappings={modulesCodeTitleMappings}/>
-                        // </AccordionDetails>
                     )})}
         </Accordion>
     )
