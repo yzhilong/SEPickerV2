@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     school: {
         width: '100%',
         background: "#42f5a4",
+        padding: theme.spacing(1),
     },
     moduleMappingTitle: {
         width: '100%',
