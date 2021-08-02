@@ -14,7 +14,7 @@ function NavBar(props) {
                 SEPicker
             </Typography>
             </span>
-            <Typography>
+            {/* <Typography> */}
                 <nav>
                     <ul>
                         <li id="navbar-selector">
@@ -28,7 +28,7 @@ function NavBar(props) {
                         </li>
                     </ul>
                 </nav>
-            </Typography>
+            {/* </Typography> */}
         </header>
     )
 }
