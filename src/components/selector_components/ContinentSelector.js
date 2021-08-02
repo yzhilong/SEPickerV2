@@ -3,17 +3,17 @@ import Multiselect from "multiselect-react-dropdown"
 import * as Icon from "react-icons/fi"
 // import Checkbox from "react-custom-checkbox"
 import nextId from 'react-id-generator'
-import { FormGroup, FormControlLabel, Checkbox } from '@material-ui/core'
+import { FormGroup, FormControlLabel, Checkbox, Grid, Typography } from '@material-ui/core'
 
 
 function ContinentSelector(props) {
     const continents = [
-        {name: 'Africa', id: 1}, 
-        {name: 'Asia', id: 2}, 
-        {name: 'Europe', id: 3}, 
-        {name: 'North America', id: 4}, 
-        {name: 'Oceania', id: 5}, 
-        {name: 'South America', id: 6}
+        {name: 'Africa', label: 'Africa', id: 1}, 
+        {name: 'Asia', label: 'Asia', id: 2}, 
+        {name: 'Europe', label: 'Europe', id: 3}, 
+        {name: 'North America', label: 'N. America', id: 4}, 
+        {name: 'Oceania', label: 'Oceania', id: 5}, 
+        {name: 'South America', label: 'S. America', id: 6}
     ]
     // const [selectedContinents, setSelectedContinents] = useState([])
     const selectedContinents = []
@@ -30,22 +30,14 @@ function ContinentSelector(props) {
 
     return (
         <React.Fragment>
-            <FormGroup row='true'>
-                {continents.slice(0, 3).map(continent =>
+            {continents.slice(0, 6).map(continent =>
+                <Grid item xs={4}>
                     <FormControlLabel
                         control={<Checkbox checked={props.state.includes(continent.name)} onChange={(event)=>(onClickContinentHandler(event.target.name))} name={continent.name} />}
-                        label={continent.name}
+                        label={continent.label}
                     />
-                )}
-            </FormGroup>
-            <FormGroup row='true'>
-                {continents.slice(3, 6).map(continent =>
-                    <FormControlLabel
-                        control={<Checkbox checked={props.state.includes(continent.name)} onChange={(event)=>(onClickContinentHandler(event.target.name))} name={continent.name} />}
-                        label={continent.name}
-                    />
-                )}
-            </FormGroup>
+                </Grid>
+            )}
         </React.Fragment>
         // <React.Fragment>
         //     <div className="ContinentSelector">

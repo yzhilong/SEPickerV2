@@ -82,7 +82,9 @@ function Selector(props) {
 
               <Grid item xs={11} lg={5} style={{height:"100vh"}}>
                 <Paper id="right-box">
-                    <Grid container justifyContent="center" xs={12}><Typography variant="h3">Results</Typography></Grid>
+                    <Grid container justifyContent="center" xs={12}>
+                      <Typography variant="h3">Results</Typography>
+                    </Grid>
                     <Grid container justifyContent="center" xs={12}>
                       {loading
                         ? <h2>Loading...</h2>
