@@ -59,14 +59,15 @@ function Selector(props) {
             <strong>Schools:</strong>{selectedSchools} <br/>
             <strong>Continents:</strong>{selectedContinents} <br/> */}
             {/* <div class="wrap"> */}
-            <Grid container spacing={3} justifyContent="center">
+            <Grid container xs={12} spacing={3} justifyContent="center">
 
-              <Grid container item xs={12} lg={6}>
+              <Grid container item xs={11} lg={5}>
 
                 <Grid container component={Paper} xs={12} id="left-box">
                   <Grid item xs={2}></Grid>
                   <Grid spacing={0} item xs={8}>
                     <Grid container item>
+                      <Grid container item xs={12} justifyContent="center"><Typography variant="h3">Preferences</Typography></Grid>
                       <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
                       <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
                       <ContinentSelector stateSetter={setSelectedContinents} state={selectedContinents}/>
@@ -79,7 +80,7 @@ function Selector(props) {
                 
               </Grid>
 
-              <Grid item xs={12} lg={6} style={{height:"100vh"}}>
+              <Grid item xs={11} lg={5} style={{height:"100vh"}}>
                 <Paper id="right-box">
                     <Grid container justifyContent="center" xs={12}><Typography variant="h3">Results</Typography></Grid>
                     <Grid container justifyContent="center" xs={12}>
@@ -91,7 +92,9 @@ function Selector(props) {
                         ? <h2>No mappings found :(</h2>
                         : <p></p>}
                       </Grid>
-                    <Results result={result}/>
+                    <Grid container justifyContent="center" xs={12}>
+                      <Results result={result}/>
+                    </Grid>
                 </Paper>
               </Grid>
 
