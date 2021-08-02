@@ -3,13 +3,12 @@ import './OptionalModuleSelector.css'
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import { Grid } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     root: {
         width: 500,
-        '& > * + *': {
-        marginTop: theme.spacing(3),
-        },
+        marginTop: 10,
     },
     }));
 
@@ -27,24 +26,21 @@ function OptionalModulesSelector(props) {
     }
 
     return (
-        <React.Fragment>
-            <h2>Optional Modules</h2>
-            <div className={classes.root}>
-                <Autocomplete
-                    autoHighlight={true}
-                    onChange={onClickModule}
-                    multiple
-                    limitTags={2}
-                    id="multiple-limit-tags"
-                    options={modules}
-                    getOptionLabel={(options) => options.module}
-                    defaultValue={[]}
-                    renderInput={(params) => (
-                        <TextField {...params} variant="outlined" label="Optional Modules" placeholder="Continuous Typing Supported" />
-                    )}
-                />
-            </div>
-        </React.Fragment>
+        <Grid item xs={12} className={classes.root}>
+            <Autocomplete
+                autoHighlight={true}
+                onChange={onClickModule}
+                multiple
+                limitTags={2}
+                id="multiple-limit-tags"
+                options={modules}
+                getOptionLabel={(options) => options.module}
+                defaultValue={[]}
+                renderInput={(params) => (
+                    <TextField {...params} variant="outlined" label="Optional Modules" placeholder="Continuous Typing Supported" />
+                )}
+            />
+        </Grid>
     );
 
       
