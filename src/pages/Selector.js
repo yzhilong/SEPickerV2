@@ -62,17 +62,21 @@ function Selector(props) {
             <Grid container spacing={3} justifyContent="center">
 
               <Grid container item xs={12} lg={6}>
+
                 <Grid container component={Paper} xs={12} id="left-box">
                   <Grid item xs={2}></Grid>
                   <Grid spacing={0} item xs={8}>
-                    <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
-                    <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
-                    <ContinentSelector stateSetter={setSelectedContinents} state={selectedContinents}/>
-                    <CountrySelector stateSetter={setSelectedCountries}/>
-                    <SchoolSelector stateSetter={setSelectedSchools}/>
+                    <Grid container item>
+                      <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
+                      <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
+                      <ContinentSelector stateSetter={setSelectedContinents} state={selectedContinents}/>
+                      <CountrySelector stateSetter={setSelectedCountries}/>
+                      <SchoolSelector stateSetter={setSelectedSchools}/>
+                    </Grid>
                   </Grid> 
                   <Grid item xs={2}></Grid>
                 </Grid>
+                
               </Grid>
 
               <Grid item xs={12} lg={6} style={{height:"100vh"}}>
@@ -94,6 +98,36 @@ function Selector(props) {
 
             </Grid>
         </div>
+
+
+
+
+
+      // <Grid container xs={12}>
+      //   <Grid container component={Paper} item xs={6}>
+      //     <Grid container xs={12}>
+      //       <Grid item xs={2}></Grid>
+      //       <Grid container spacing={1} item xs={8}>
+      //           <Grid item xs={12}>
+      //             <Paper style={{textAlign: 'center'}}>sxs=3</Paper>
+      //           </Grid>
+      //           <Grid item xs={12}>
+      //             <Paper style={{textAlign: 'center'}}>xs=3</Paper>
+      //           </Grid>
+      //           <Grid item xs={12}>
+      //             <Paper style={{textAlign: 'center'}}>xs=3</Paper>
+      //           </Grid>
+      //           <Grid item xs={3}>
+      //             <Paper style={{textAlign: 'center'}}>xs=3</Paper>
+      //           </Grid>
+      //           <Grid item xs={8}>
+      //             <Paper style={{textAlign: 'center'}}>xs=8</Paper>
+      //           </Grid>
+      //       </Grid>
+      //     </Grid>
+      //   </Grid>
+
+      // </Grid>
     )
 }
 
