@@ -91,8 +91,8 @@ function School(props) {
                 <Grid container xs={12} spacing={0}>
                     {moduleMappings}
                 </Grid>
-                <TextField 
-                    className={classes.tmp}
+                <Grid container item xs={12} spacing={0} justifyContent="center" className={classes.tmp}>
+                    <TextField 
                     style={{padding: 5}}
                     label="Notes" 
                     multiline={true}
@@ -105,6 +105,7 @@ function School(props) {
                         localStorage.setItem(toString()+"notes", event.target.value)
                     }}
                     />
+                </Grid>
             </Accordion>
         </Grid>
     )
