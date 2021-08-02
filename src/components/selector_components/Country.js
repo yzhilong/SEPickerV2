@@ -9,6 +9,8 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid'
+
 
 
 function Country(props) {
@@ -36,30 +38,35 @@ function Country(props) {
 
     return (
         // square={true} is bugged! We require this setting to get ROUNDED corners
-        <Accordion 
-            className={classes.country} 
-            TransitionProps={{ unmountOnExit: true}} 
-            component={Paper} 
-            square={true}
-        >
-            <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
+        <Grid item container justifyContent="center">
+                <Accordion 
+                className={classes.country} 
+                TransitionProps={{ unmountOnExit: true}} 
+                component={Paper}
+                elevation={3}
+                square={true}
             >
-                <div>
-                    <Typography>{countryName}</Typography>
-                    <Typography>{schools.length} school(s) available!</Typography>
-                </div>
-            </AccordionSummary>
-                {schools.map(school => {return (
-                            <School 
-                                schoolName={school} 
-                                result={result[school]} 
-                                useStyles={useStyles}
-                                modulesCodeTitleMappings={modulesCodeTitleMappings}/>
-                    )})}
-        </Accordion>
+                <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                >
+                    <div>
+                        <Typography>{countryName}</Typography>
+                        <Typography>{schools.length} school(s) available!</Typography>
+                    </div>
+                </AccordionSummary>
+                    <Grid item container justifyContent="center" spacing={1} xs={12}>
+                        {schools.map(school => {return (
+                                    <School 
+                                        schoolName={school} 
+                                        result={result[school]} 
+                                        useStyles={useStyles}
+                                        modulesCodeTitleMappings={modulesCodeTitleMappings}/>
+                            )})}
+                    </Grid>
+            </Accordion>
+        </Grid>
     )
 
 }

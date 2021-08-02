@@ -43,7 +43,7 @@ function ModuleMapping(props) {
 
     function getMapping(moduleCode) {
         return (
-            <Grid container item xs={12} spacing={0} component={Paper} className={classes.moduleMappingPaper} elevation={2}>
+            <Grid container item xs={12} spacing={0} component={Paper} className={classes.moduleMappingPaper} elevation={1}>
                 <Grid item container xs={6} alignItems="center">
                     <Grid item>
                         <div style={{padding: 5, textAlign: "left", fontWeight: "bold"}}>
@@ -69,7 +69,7 @@ function ModuleMapping(props) {
 
     return (
         <Grid container item xs={12} spacing={0} justifyContent="center" className={classes.tmp}>
-            <Paper elevation={2}>
+            <Paper elevation={1}>
                 <Grid container item xs={12} justifyContent="center">
                     <Grid item xs={12}  style={{padding: 5}}>
                         <Typography style={{fontStyle: "italic"}}>Module(s) with similar content to {moduleName} {moduleTitle}</Typography>

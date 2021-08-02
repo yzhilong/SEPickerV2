@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react"
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-
+import Grid from '@material-ui/core/Grid'
 
 import Country from "./Country"
 
@@ -72,11 +72,15 @@ function Results(props) {
     })
 
     
-    return countryDetails.map(countryDetail => <Country 
-            countryName={countryDetail["countryName"]} 
-            result={countryDetail["result"] } 
-            useStyles={useStyles}
-            modulesCodeTitleMappings={modulesCodeTitleMappings}/>)
+    return (
+        <Grid container xs={12} justifyContent="center" spacing={1}>
+            {countryDetails.map(countryDetail => <Country 
+                countryName={countryDetail["countryName"]} 
+                result={countryDetail["result"] } 
+                useStyles={useStyles}
+                modulesCodeTitleMappings={modulesCodeTitleMappings}/>)}
+        </Grid>
+    )
 }
 
 export default Results

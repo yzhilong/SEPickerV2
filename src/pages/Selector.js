@@ -74,14 +74,16 @@ function Selector(props) {
 
               <Grid item xs={12} lg={6} style={{height:"100vh"}}>
                 <Paper id="right-box">
-                    <h1>Results</h1>
-                    {loading
-                      ? <h2>Loading...</h2>
-                      : selectedEssentialModules.length + selectedOptionalModules.length === 0
-                      ? <h2>No Module Selected Yet</h2>
-                      : Object.keys(result).length === 0 
-                      ? <h2>No mappings found :(</h2>
-                      : <p></p>}
+                    <Grid container justifyContent="center" xs={12}><h1>Results</h1></Grid>
+                    <Grid container justifyContent="center" xs={12}>
+                      {loading
+                        ? <h2>Loading...</h2>
+                        : selectedEssentialModules.length + selectedOptionalModules.length === 0
+                        ? <h2>No Module Selected Yet</h2>
+                        : Object.keys(result).length === 0 
+                        ? <h2>No mappings found :(</h2>
+                        : <p></p>}
+                      </Grid>
                     <Results result={result}/>
                 </Paper>
               </Grid>

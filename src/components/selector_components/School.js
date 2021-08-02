@@ -57,10 +57,12 @@ function School(props) {
         modulesCodeTitleMappings={modulesCodeTitleMappings}/>)
 
     return (
-        <React.Fragment>
+        <Grid item xs={12}>
             <Accordion 
                 className={classes.school} 
                 TransitionProps={{ unmountOnExit: true }}
+                component={Paper}
+                elevation={2}
                 square={true}
                 >
                 <AccordionSummary
@@ -104,7 +106,7 @@ function School(props) {
                     }}
                     />
             </Accordion>
-        </React.Fragment>
+        </Grid>
     )
 
 }
