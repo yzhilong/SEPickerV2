@@ -4,6 +4,7 @@
   background-color: #044599;
   padding: 0 8.33%;
   margin-bottom: 2rem;
+  box-shadow: 0 2.5px 5px 0 rgba(0,0,0,1);
 }
 
 #navbar-icon-title {
