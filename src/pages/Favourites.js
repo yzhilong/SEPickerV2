@@ -7,24 +7,33 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         justifyContent: "center",
         padding: theme.spacing(2),
-        minWidth: 100,
+        minWidth: 400,
         background: "#42a7f5",
     },
     tmp: {
         padding: theme.spacing(1),
+        minWidth: 300
+    },
+    favourites: {
+        padding: theme.spacing(1),
+        minWidth: 600,
+        maxWidth: "70%"
     },
     school: {
         width: '100%',
         background: "#42f5a4",
+        minWidth: 350,
         padding: theme.spacing(1),
     },
     moduleMappingTitle: {
         width: '100%',
+        minWidth: 200,
         background: "red"
     },
     moduleMappingPaper: {
         width: "100%",
         background: "orange",
+        minWidth: 200,
         padding: theme.spacing(1),
     },
     root: {
@@ -40,10 +49,14 @@ const useStyles = makeStyles((theme) => ({
 const modulesCodeTitleMappings = require("../data/moduleCodeTitleMappings.json")
 
 
+
 function Favourites(props) {
 
     // REQUIRE LOGIC FOR SHOWING HOW TO HANDLE ELEMENTS IN props.favoruites
     const [ schools, setSchools ] = useState(JSON.parse(localStorage.getItem("favouriteNames")))
+
+    const classes = useStyles()
+
 
 
     function func(school) {
@@ -72,7 +85,7 @@ function Favourites(props) {
     
     return (
         <Grid container xs={12} justifyContent="center" spacing={3}>
-            <Grid container item xs={11} justifyContent="center" spacing={3}>
+            <Grid container item xs={11} justifyContent="center" spacing={3} component={Paper} className={classes.favourites}>
                 {schools.map(func)}
             </Grid>
         </Grid>

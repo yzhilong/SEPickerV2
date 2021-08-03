@@ -26,6 +26,11 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(1),
         minWidth: 300
     },
+    favourites: {
+        padding: theme.spacing(1),
+        minWidth: 300,
+        maxWidth: 720
+    },
     school: {
         width: '100%',
         background: "#42f5a4",

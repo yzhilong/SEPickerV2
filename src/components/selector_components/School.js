@@ -29,11 +29,12 @@ function School(props) {
 
     const defaultNote = (toString()+"notes" in localStorage) ? localStorage.getItem(toString()+"notes") : ""
     const [ notes, setNotes ] = useState(defaultNote)
-
-    const [ favourited, setFavourited ] = useState(toString() in localStorage)
-    console.log(toString())
-    console.log(favourited ? "yes" : "no")
+    
+    const [ favourited , setFavourited ] = useState(toString() in localStorage)
+    console.log(favourited + " " + toString())
+    
     function onFavHandler(event) {
+        console.log(toString() + favourited.toString())
         if (event.target.checked) {
             setFavourited(true)
             setNotes(notes)
@@ -47,6 +48,7 @@ function School(props) {
             )
 
         } else {
+            console.log(toString() + "FAV REMOVAL TRIGGERED")
             setFavourited(false)
             localStorage.removeItem(toString())
 
@@ -75,6 +77,8 @@ function School(props) {
         useStyles={useStyles}
         modulesCodeTitleMappings={modulesCodeTitleMappings}/>)
 
+    console.log(favourited + " " + toString())
+    
     return (
         <Grid item xs={12}>
             <Accordion 
