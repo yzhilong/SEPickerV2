@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         justifyContent: "center",
         padding: theme.spacing(2),
-        minWidth: 500,
+        minWidth: 100,
         background: "#42a7f5",
     },
     tmp: {

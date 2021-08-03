@@ -18,7 +18,7 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { LocalSeeOutlined } from "@material-ui/icons";
 
 function School(props) {
-    const { schoolName, result, useStyles, modulesCodeTitleMappings } = props
+    const { schoolName, result, useStyles, modulesCodeTitleMappings, setSchools } = props
     // result = {"mappings": {...}, "num_mappable": int}
 
     function toString() {
@@ -31,14 +31,33 @@ function School(props) {
     const [ notes, setNotes ] = useState(defaultNote)
 
     const [ favourited, setFavourited ] = useState(toString() in localStorage)
+    console.log(toString())
+    console.log(favourited ? "yes" : "no")
     function onFavHandler(event) {
         if (event.target.checked) {
             setFavourited(true)
             setNotes(notes)
             localStorage.setItem(toString(),JSON.stringify(result))
+            const favouriteNames = JSON.parse(localStorage.getItem("favouriteNames"))
+            favouriteNames[favouriteNames.length] = toString()
+            console.log(favouriteNames)
+            localStorage.setItem(
+                "favouriteNames", 
+                JSON.stringify(favouriteNames)
+            )
+
         } else {
             setFavourited(false)
             localStorage.removeItem(toString())
+
+            const newFavouriteNames = JSON.parse(localStorage.getItem("favouriteNames")).filter(name => name != toString())
+            localStorage.setItem(
+                "favouriteNames", 
+                JSON.stringify(newFavouriteNames)
+            )
+            if (setSchools !== undefined) {
+                setSchools(newFavouriteNames)
+            }
         }
     }
 
