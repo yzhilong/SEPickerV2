@@ -40,6 +40,7 @@ function School(props) {
     // console.log(favourited ? "yes2" : "no2") // 2
 
     function onFavHandler(event) {
+        console.log(toString() + favourited.toString())
         if (event.target.checked) {
             setFavourited(true)
             setNotes(notes)
@@ -82,6 +83,8 @@ function School(props) {
         useStyles={useStyles}
         modulesCodeTitleMappings={modulesCodeTitleMappings}/>)
 
+    console.log(favourited + " " + toString())
+    
     return (
         <Grid item xs={12}>
             <Accordion 
