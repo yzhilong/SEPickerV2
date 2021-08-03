@@ -19,24 +19,28 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         justifyContent: "center",
         padding: theme.spacing(2),
-        minWidth: 100,
+        minWidth: 400,
         background: "#42a7f5",
     },
     tmp: {
         padding: theme.spacing(1),
+        minWidth: 300
     },
     school: {
         width: '100%',
         background: "#42f5a4",
+        minWidth: 350,
         padding: theme.spacing(1),
     },
     moduleMappingTitle: {
         width: '100%',
+        minWidth: 200,
         background: "red"
     },
     moduleMappingPaper: {
         width: "100%",
         background: "orange",
+        minWidth: 200,
         padding: theme.spacing(1),
     },
     root: {
