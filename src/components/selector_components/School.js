@@ -30,9 +30,15 @@ function School(props) {
     const defaultNote = (toString()+"notes" in localStorage) ? localStorage.getItem(toString()+"notes") : ""
     const [ notes, setNotes ] = useState(defaultNote)
 
-    const [ favourited, setFavourited ] = useState(toString() in localStorage)
-    console.log(toString())
-    console.log(favourited ? "yes" : "no")
+
+    // Not very sure why this fixes the bug
+    let [ favourited, setFavourited ] = useState(toString() in localStorage)
+    favourited = toString() in localStorage
+
+    // console.log(toString())
+    // console.log(toString() in localStorage ? "yes" : "no") // 1
+    // console.log(favourited ? "yes2" : "no2") // 2
+
     function onFavHandler(event) {
         if (event.target.checked) {
             setFavourited(true)
@@ -40,13 +46,14 @@ function School(props) {
             localStorage.setItem(toString(),JSON.stringify(result))
             const favouriteNames = JSON.parse(localStorage.getItem("favouriteNames"))
             favouriteNames[favouriteNames.length] = toString()
-            console.log(favouriteNames)
+            // console.log(favouriteNames)
             localStorage.setItem(
                 "favouriteNames", 
                 JSON.stringify(favouriteNames)
             )
 
         } else {
+            // console.log(toString() + favourited.toString())
             setFavourited(false)
             localStorage.removeItem(toString())
 
