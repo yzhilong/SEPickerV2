@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import Favourites from "./pages/Favourites"
 import NavBar from "./components/NavBar"
 import Selector from "./pages/Selector"
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
 
