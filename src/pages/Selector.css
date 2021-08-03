@@ -6,13 +6,13 @@
 
 #left-box {
     /* border:1px solid red; */
-    height:100vh;
+    height:90vh;
     overflow: auto;
 }
 
 #right-box {
     /* border:1px solid red; */
-    height:100vh;
+    height:90vh;
     overflow: auto;
 }
 

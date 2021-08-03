@@ -63,24 +63,56 @@ function Selector(props) {
 
               <Grid container item xs={11} lg={5}>
 
-                <Grid container component={Paper} xs={12} id="left-box">
-                  <Grid item xs={2}></Grid>
-                  <Grid spacing={0} item xs={8}>
+                <Grid container component={Paper} xs={12} spacing={0} justifyContent="center" id="left-box" style={{backgroundColor: "brown", paddingTop: "2vh"}}>
+                  <Grid spacing={0} item xs={12}>
                     <Grid container item>
                       <Grid container item xs={12} justifyContent="center"><Typography variant="h3">Preferences</Typography></Grid>
-                      <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
-                      <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
-                      <ContinentSelector stateSetter={setSelectedContinents} state={selectedContinents}/>
-                      <CountrySelector stateSetter={setSelectedCountries}/>
-                      <SchoolSelector stateSetter={setSelectedSchools}/>
+                      <Grid container item xs={12} component={Paper} justifyContent="center" style={{margin: "2% 6% 2% 6%", padding: "3%"}}>
+                        <Grid container item xs={12}><Typography variant="h4">Modules</Typography></Grid>
+                        <EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
+                        <OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
+                      </Grid>
+                      <Grid container item xs={12} component={Paper} justifyContent="center" style={{margin: "2% 6% 2% 6%", padding: "3%"}}>
+                        <Grid container item xs={12}><Typography variant="h4">Locations</Typography></Grid>
+                        <ContinentSelector stateSetter={setSelectedContinents} state={selectedContinents}/>
+                        <CountrySelector stateSetter={setSelectedCountries}/>
+                        <SchoolSelector stateSetter={setSelectedSchools}/>
+                      </Grid>
                     </Grid>
                   </Grid> 
-                  <Grid item xs={2}></Grid>
                 </Grid>
                 
               </Grid>
 
-              <Grid item xs={11} lg={5} style={{height:"100vh"}}>
+              <Grid container item xs={11} lg={5}>
+
+                <Grid container component={Paper} xs={12} spacing={0} justifyContent="center" id="right-box" style={{backgroundColor: "brown", paddingTop: "2vh"}}>
+                  <Grid spacing={0} item xs={12}>
+                    <Grid container item>
+
+
+                      <Grid container item xs={12} justifyContent="center"><Typography variant="h3">Results</Typography></Grid>
+                      <Grid container item xs={12} style={{paddingTop: "0%"}} justifyContent="center">
+                        {loading
+                          ? <Typography variant="h4">Loading...</Typography>
+                          : selectedEssentialModules.length + selectedOptionalModules.length === 0
+                          ? <Typography variant="h4">No Module Selected Yet</Typography>
+                          : Object.keys(result).length === 0 
+                          ? <h2>No mappings found :(</h2>
+                          : <Grid container justifyContent="center" xs={12} style={{marginTop: "2%"}}>
+                              <Results result={result}/>
+                            </Grid>}
+                      </Grid>
+
+
+
+                    </Grid>
+                  </Grid> 
+                </Grid>
+                
+              </Grid>
+
+              {/* <Grid item xs={11} lg={5} style={{height:"100vh"}}>
                 <Paper id="right-box">
                     <Grid container justifyContent="center" xs={12}>
                       <Typography variant="h3">Results</Typography>
@@ -98,7 +130,7 @@ function Selector(props) {
                       <Results result={result}/>
                     </Grid>
                 </Paper>
-              </Grid>
+              </Grid> */}
 
 
             </Grid>
