@@ -55,7 +55,6 @@ function Favourites(props) {
 
     // REQUIRE LOGIC FOR SHOWING HOW TO HANDLE ELEMENTS IN props.favoruites
     const [ schools, setSchools ] = useState(JSON.parse(localStorage.getItem("favouriteNames")))
-    const [ draggableSchools, setDraggableSchools ] = useState(schools);
 
     const classes = useStyles()
 
@@ -69,13 +68,14 @@ function Favourites(props) {
                 break
             }
         }
-        school = school.slice(0,endPoint)
+        const schoolName = school.slice(0,endPoint)
+        console.log(school)
         return (
             <Draggable key={school} draggableId={school} index={index}>
                 {provided => (
                     <Grid container item ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                         <School 
-                            schoolName={school} 
+                            schoolName={schoolName} 
                             result={result} 
                             useStyles={useStyles}
                             modulesCodeTitleMappings={modulesCodeTitleMappings}
@@ -89,12 +89,12 @@ function Favourites(props) {
 
     function handleOnDragEnd(result) {
         if (!result.destination) return;
-    
-        const items = Array.from(draggableSchools);
+        console.log(result)
+        const items = Array.from(schools);
         const [reorderedItem] = items.splice(result.source.index, 1);
         items.splice(result.destination.index, 0, reorderedItem);
-    
-        setDraggableSchools(items);
+        setSchools(items);
+        localStorage.setItem("favouriteNames",JSON.stringify(items))
       }
     
     return (
@@ -113,7 +113,7 @@ function Favourites(props) {
                         {...provided.droppableProps}
                         ref={provided.innerRef}
                     >
-                        {draggableSchools.map(func)}
+                        {schools.map(func)}
                         {provided.placeholder}
                     </Grid>
                     

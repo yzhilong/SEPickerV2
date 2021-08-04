@@ -11,7 +11,7 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Table from "@material-ui/core/Table"
-import { TableHead, TableRow, TableCell, TableContainer, Paper, TextField, Grid, Checkbox, FormControlLabel } from "@material-ui/core";
+import { TableHead, TableRow, TableCell, TableContainer, Paper, TextField, Grid, Checkbox, FormControlLabel, Tooltip } from "@material-ui/core";
 
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
@@ -99,22 +99,24 @@ function School(props) {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
                 >
-                    <FormControlLabel
-                        aria-label="Acknowledge"
-                        onClick={(event) => event.stopPropagation()}
-                        onFocus={(event) => event.stopPropagation()}
-                        control={<Checkbox 
-                            checkedIcon={<FavoriteIcon />} 
-                            icon={<FavoriteBorderIcon />}
-                            checked={favourited}
-                            onChange={onFavHandler}
-                            />}
-                        label=""
-                    />
-                    <div>
-                        <Typography>{schoolName}</Typography>
-                        <Typography>{result['num_mappable']} module(s) available!</Typography>
-                    </div>
+                    <Tooltip title={favourited ? "Remove from Favourites" : "Add to Favourites"}>
+                        <FormControlLabel
+                            aria-label="Acknowledge"
+                            onClick={(event) => event.stopPropagation()}
+                            onFocus={(event) => event.stopPropagation()}
+                            control={<Checkbox 
+                                checkedIcon={<FavoriteIcon />} 
+                                icon={<FavoriteBorderIcon />}
+                                checked={favourited}
+                                onChange={onFavHandler}
+                                />}
+                            label=""
+                        />
+                    </Tooltip>
+                    <Typography>
+                        <div>{schoolName}</div>
+                        <div>{result['num_mappable']} module(s) available!</div>
+                    </Typography>
                 </AccordionSummary>
 
                 <Grid container xs={12} spacing={0}>
