@@ -24,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
     },
     tmp: {
         padding: theme.spacing(1),
-        minWidth: 300
+        minWidth: 300,
+        maxWidth: 500
     },
     favourites: {
         padding: theme.spacing(1),
@@ -45,6 +46,12 @@ const useStyles = makeStyles((theme) => ({
     moduleMappingPaper: {
         width: "100%",
         background: "orange",
+        minWidth: 200,
+        padding: theme.spacing(1),
+    },
+    moduleMappingPaper1: {
+        width: "100%",
+        background: "white",
         minWidth: 200,
         padding: theme.spacing(1),
     },

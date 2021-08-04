@@ -98,29 +98,33 @@ function Favourites(props) {
       }
     
     return (
-        <Grid container xs={12} justifyContent="center" spacing={3}>
-            <DragDropContext onDragEnd={handleOnDragEnd}>
-                <Droppable droppableId="favs">
-                {(provided) => (
-                    <Grid 
-                        container 
-                        item xs={11} 
-                        justifyContent="center" 
-                        spacing={3} 
-                        component={Paper} 
-                        className={classes.favourites}
+        <div>
+            FAVOURITES PAGE
+            <Grid container xs={12} justifyContent="center" spacing={3}>
+                <DragDropContext onDragEnd={handleOnDragEnd}>
+                    <Droppable droppableId="favs">
+                    {(provided) => (
+                        <Grid 
+                            container 
+                            item 
+                            xs={11} 
+                            justifyContent="center" 
+                            spacing={3} 
+                            component={Paper} 
+                            className={classes.favourites}
 
-                        {...provided.droppableProps}
-                        ref={provided.innerRef}
-                    >
-                        {schools.map(func)}
-                        {provided.placeholder}
-                    </Grid>
-                    
-                )}
-                </Droppable>
-            </DragDropContext>
-        </Grid>
+                            {...provided.droppableProps}
+                            ref={provided.innerRef}
+                        >
+                            {schools.map(func)}
+                            {provided.placeholder}
+                        </Grid>
+                        
+                    )}
+                    </Droppable>
+                </DragDropContext>
+            </Grid>
+        </div>
     )
     
 }

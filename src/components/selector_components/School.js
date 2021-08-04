@@ -11,7 +11,7 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Table from "@material-ui/core/Table"
-import { TableHead, TableRow, TableCell, TableContainer, Paper, TextField, Grid, Checkbox, FormControlLabel, Tooltip } from "@material-ui/core";
+import { TableHead, TableRow, TableCell, TableContainer, Paper, TextField, Grid, Checkbox, FormControlLabel, Tooltip, Box } from "@material-ui/core";
 
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
@@ -84,9 +84,21 @@ function School(props) {
         modulesCodeTitleMappings={modulesCodeTitleMappings}/>)
 
     // console.log(favourited + " " + toString())
-    
+
+    function showModules() {
+        if (modules.length === 1) return modules[0]
+
+        let output = ""
+        for (let i = 0; i < modules.length - 1; i++) {
+            module = modules[i]
+            output += ", " + module
+        }
+        output += " and " + modules[modules.length - 1]
+        return output.slice(2,output.length)
+    }
+
     return (
-        <Grid item xs={12}>
+        <Grid container item xs={12}>
             <Accordion 
                 className={classes.school} 
                 TransitionProps={{ unmountOnExit: true }}
@@ -99,43 +111,57 @@ function School(props) {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
                 >
-                    <Tooltip title={favourited ? "Remove from Favourites" : "Add to Favourites"}>
-                        <FormControlLabel
-                            aria-label="Acknowledge"
-                            onClick={(event) => event.stopPropagation()}
-                            onFocus={(event) => event.stopPropagation()}
-                            control={<Checkbox 
-                                checkedIcon={<FavoriteIcon />} 
-                                icon={<FavoriteBorderIcon />}
-                                checked={favourited}
-                                onChange={onFavHandler}
-                                />}
-                            label=""
-                        />
-                    </Tooltip>
-                    <Typography>
-                        <div>{schoolName}</div>
-                        <div>{result['num_mappable']} module(s) available!</div>
-                    </Typography>
+                    <Grid container item xs={12} alignItems="center" justifyContent="center">
+                        <Grid item xs={1}>
+                            <Tooltip title={favourited ? "Remove from Favourites" : "Add to Favourites"}>
+                                <FormControlLabel
+                                    aria-label="Acknowledge"
+                                    onClick={(event) => event.stopPropagation()}
+                                    onFocus={(event) => event.stopPropagation()}
+                                    control={<Checkbox 
+                                        checkedIcon={<FavoriteIcon />} 
+                                        icon={<FavoriteBorderIcon />}
+                                        checked={favourited}
+                                        onChange={onFavHandler}
+                                        />}
+                                    label=""
+                                />
+                            </Tooltip>
+                        </Grid>
+                        <Grid item xs={10}>
+                            <Typography>
+                                <Box fontWeight="fontWeightBold" fontSize="large">{schoolName}</Box>
+                                <Box fontSize="small">{showModules()} available</Box>
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={1}>
+                            <Box bgcolor="orange" textAlign="center" component={Paper} square={false} width="auto" maxWidth={30}>
+                                {result['num_mappable']}
+                            </Box>
+                        </Grid>
+                    </Grid>
                 </AccordionSummary>
 
-                <Grid container xs={12} spacing={0}>
+                <Grid container item xs={12} spacing={0} justifyContent="center">
                     {moduleMappings}
                 </Grid>
+
                 <Grid container item xs={12} spacing={0} justifyContent="center" className={classes.tmp}>
-                    <TextField 
-                    style={{padding: 5}}
-                    label="Notes" 
-                    multiline={true}
-                    className={classes.innerRoot}
-                    maxRows={6}
-                    value={notes}
-                    component={Paper}
-                    onChange={event => {
-                        setNotes(event.target.value)
-                        localStorage.setItem(toString()+"notes", event.target.value)
-                    }}
-                    />
+                    <Grid item xs={12}>
+                        <TextField 
+                        style={{padding: 5}}
+                        label="Notes" 
+                        multiline={true}
+                        className={classes.innerRoot}
+                        maxRows={6}
+                        value={notes}
+                        component={Paper}
+                        onChange={event => {
+                            setNotes(event.target.value)
+                            localStorage.setItem(toString()+"notes", event.target.value)
+                        }}
+                        />
+                    </Grid>
                 </Grid>
             </Accordion>
         </Grid>

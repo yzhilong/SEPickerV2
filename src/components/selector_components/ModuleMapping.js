@@ -26,7 +26,7 @@ function ModuleMapping(props) {
     function getPUModules(equivModule) {
         return result[equivModule].map(mod => {
                 return (
-                    <React.Fragment>
+                    <Grid item>
                         <Typography>
                             <Box textAlign="left" fontWeight="fontWeightBold" style={{padding: 5}}>
                                 {mod["PU Module Code"]}
@@ -35,7 +35,7 @@ function ModuleMapping(props) {
                                 {mod["PU Module Title"]}
                             </Box>
                         </Typography>
-                    </React.Fragment>
+                    </Grid>
                 )
             }
         )
@@ -55,7 +55,7 @@ function ModuleMapping(props) {
                     </Grid>
                 </Grid>
 
-                <Grid item xs={6}>
+                <Grid container item xs={6} alignItems="center">
                     {getPUModules(moduleCode)}
                 </Grid>
 
@@ -70,7 +70,7 @@ function ModuleMapping(props) {
     return (
         <Grid container item xs={12} spacing={0} justifyContent="center" className={classes.tmp}>
             <Paper elevation={1}>
-                <Grid container item xs={12} justifyContent="center">
+                <Grid container item xs={12} justifyContent="center" className={classes.tmp}>
                     <Grid item xs={12}  style={{padding: 5}}>
                         <Typography style={{fontStyle: "italic"}}>Module(s) with similar content to {moduleName} {moduleTitle}</Typography>
                     </Grid>
