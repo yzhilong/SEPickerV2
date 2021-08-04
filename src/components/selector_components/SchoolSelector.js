@@ -28,6 +28,13 @@ function SchoolSelector(props) {
         props.stateSetter(val.map(school => school.school))
     }
 
+    const defaultValue = "selectedSchools" in localStorage
+        ? JSON.parse(localStorage.getItem("selectedSchools"))
+        : []
+    for (let i = 0; i < defaultValue.length; i++) {
+        defaultValue[i] = {school: defaultValue[i]}
+    }
+
     return (
         <Grid item xs={12} className={classes.root}>
             <Autocomplete
@@ -38,7 +45,7 @@ function SchoolSelector(props) {
                 id="multiple-limit-tags"
                 options={schools}
                 getOptionLabel={(option) => option.school}
-                defaultValue={[]}
+                defaultValue={defaultValue}
                 renderInput={(params) => (
                     <TextField {...params} variant="outlined" label="Schools" placeholder="Continuous Typing Supported" />
                 )}

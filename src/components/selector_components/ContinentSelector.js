@@ -15,8 +15,12 @@ function ContinentSelector(props) {
         {name: 'Oceania', label: 'Oceania', id: 5}, 
         {name: 'South America', label: 'S. America', id: 6}
     ]
+    
     // const [selectedContinents, setSelectedContinents] = useState([])
-    const selectedContinents = []
+    const selectedContinents = "selectedContinents" in localStorage
+        ? JSON.parse(localStorage.getItem("selectedContinents"))
+        : []
+    console.log(selectedContinents)
 
     function onClickContinentHandler(continent) {
         props.stateSetter(prevState => {

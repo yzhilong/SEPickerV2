@@ -28,6 +28,14 @@ function CountrySelector(props) {
         props.stateSetter(val.map(country => country.country))
     }
 
+    const defaultValue = "selectedCountries" in localStorage
+        ? JSON.parse(localStorage.getItem("selectedCountries"))
+        : []
+    for (let i = 0; i < defaultValue.length; i++) {
+        defaultValue[i] = {country: defaultValue[i]}
+    }
+
+
     return (
         <Grid item xs={12} className={classes.root}>
             <Autocomplete
@@ -38,7 +46,7 @@ function CountrySelector(props) {
             id="multiple-limit-tags"
             options={countries}
             getOptionLabel={(options) => options.country}
-            defaultValue={[]}
+            defaultValue={defaultValue}
             renderInput={(params) => (
                 <TextField {...params} variant="outlined" label="Countries" placeholder="Continuous Typing Supported" />
             )}
