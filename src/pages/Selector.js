@@ -107,11 +107,11 @@ function Selector(props) {
 									<Grid spacing={0} item xs={12}>
 										<Grid container item justifyContent="center">
 											<Grid container item xs={12} justifyContent="center">
-                        <Typography variant="h3">Preferences</Typography>
-                      </Grid>
+												<Typography variant="h4">Preferences</Typography>
+											</Grid>
 											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 2% 0%", padding: "3%"}}>
 												<Grid container item xs={12} alignItems="center">
-													<Typography variant="h4" style={{display: "inline-block", paddingRight: "2%"}}>Modules</Typography>
+													<Typography variant="h5" style={{display: "inline-block", paddingRight: "1%"}}>Modules</Typography>
 													<ClickAwayListener onClickAway={() => setModuleTooltipOpen(false)}>
 														<Tooltip
 														open={moduleTooltipOpen}
@@ -119,8 +119,8 @@ function Selector(props) {
 														onClick={() => setModuleTooltipOpen(true)}
 														title='Schools found will be able to fulfill all Essential Modules and all mappable Optional Modules will be shown too'
 														>
-															<IconButton style={{color: "grey"}}>
-																<HelpOutlineIcon />
+															<IconButton style={{color: "grey"}} size="small">
+																<HelpOutlineIcon/>
 															</IconButton>
 														</Tooltip>
 													</ClickAwayListener>
@@ -130,7 +130,7 @@ function Selector(props) {
 											</Grid>
 											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 10% 0%", padding: "3%"}}>
 												<Grid container item xs={12} alignItems="center">
-													<Typography variant="h4" style={{display: "inline-block", paddingRight: "2%"}}>
+													<Typography variant="h4" style={{display: "inline-block", paddingRight: "1%"}}>
 														Locations
 													</Typography>
 													<ClickAwayListener onClickAway={() => setLocationTooltipOpen(false)}>
@@ -140,7 +140,7 @@ function Selector(props) {
 														onClick={() => setLocationTooltipOpen(true)}
 														title='Any school which is in one of the following regions/has been selected will be considered in our search'
 														>
-															<IconButton style={{color: "grey"}}>
+															<IconButton style={{color: "grey"}} size="small">
 																<HelpOutlineIcon />
 															</IconButton>
 														</Tooltip>
@@ -163,7 +163,7 @@ function Selector(props) {
 										<Grid container item>
 
 
-											<Grid container item xs={12} justifyContent="center"><Typography variant="h3">Results</Typography></Grid>
+											<Grid container item xs={12} justifyContent="center"><Typography variant="h4">Results</Typography></Grid>
 											<Grid container item xs={12} style={{paddingTop: "0%"}} justifyContent="center">
 												{loading
 													? <Typography variant="h4">Loading...</Typography>

@@ -22,9 +22,9 @@ function NavBar(props) {
                             <li id="navbar-selector">
                                 <Link to='/'>Selector</Link>
                             </li>
-                            <li id="navbar-department">
+                            {/* <li id="navbar-department">
                                 <Link to='/department'>Department</Link>
-                            </li>
+                            </li> */}
                             <li id="navbar-favourites">
                                 <Link to='/favourites'>Favourites</Link>
                             </li>
