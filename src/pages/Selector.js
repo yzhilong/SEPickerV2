@@ -5,6 +5,13 @@ import ContinentSelector from "../components/selector_components/ContinentSelect
 import SchoolSelector from "../components/selector_components/SchoolSelector"
 import CountrySelector from "../components/selector_components/CountrySelector"
 import Results from "../components/selector_components/Results"
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import Tooltip from '@material-ui/core/Tooltip';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import IconButton from '@material-ui/core/IconButton';
+
+
+
 import './Selector.css'
 
 import { Collapse, Table, TableCell, Paper, Grid, Card, Typography, CircularProgress } from '@material-ui/core'
@@ -61,6 +68,10 @@ function Selector(props) {
 		localStorage.setItem("selectedContinents", JSON.stringify(selectedContinents))
 		localStorage.setItem("selectedCountries", JSON.stringify(selectedCountries))
 		localStorage.setItem("selectedSchools", JSON.stringify(selectedSchools))
+		
+		const [ moduleTooltipOpen, setModuleTooltipOpen ] = useState(false)
+		const [ locationTooltipOpen, setLocationTooltipOpen ] = useState(false)
+
 
 
 
@@ -99,12 +110,42 @@ function Selector(props) {
                         <Typography variant="h3">Preferences</Typography>
                       </Grid>
 											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 2% 0%", padding: "3%"}}>
-												<Grid container item xs={12}><Typography variant="h4">Modules</Typography></Grid>
+												<Grid container item xs={12} alignItems="center">
+													<Typography variant="h4" style={{display: "inline-block", paddingRight: "2%"}}>Modules</Typography>
+													<ClickAwayListener onClickAway={() => setModuleTooltipOpen(false)}>
+														<Tooltip
+														open={moduleTooltipOpen}
+														disableFocusListener
+														onClick={() => setModuleTooltipOpen(true)}
+														title='Schools found will be able to fulfill all Essential Modules and all mappable Optional Modules will be shown too'
+														>
+															<IconButton style={{color: "grey"}}>
+																<HelpOutlineIcon />
+															</IconButton>
+														</Tooltip>
+													</ClickAwayListener>
+												</Grid>
 												<EssentialModulesSelector stateSetter={setSelectedEssentialModules} state={selectedEssentialModules}/>
 												<OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
 											</Grid>
 											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 10% 0%", padding: "3%"}}>
-												<Grid container item xs={12}><Typography variant="h4">Locations</Typography></Grid>
+												<Grid container item xs={12} alignItems="center">
+													<Typography variant="h4" style={{display: "inline-block", paddingRight: "2%"}}>
+														Locations
+													</Typography>
+													<ClickAwayListener onClickAway={() => setLocationTooltipOpen(false)}>
+														<Tooltip
+														open={locationTooltipOpen}
+														disableFocusListener
+														onClick={() => setLocationTooltipOpen(true)}
+														title='Any school which is in one of the following regions/has been selected will be considered in our search'
+														>
+															<IconButton style={{color: "grey"}}>
+																<HelpOutlineIcon />
+															</IconButton>
+														</Tooltip>
+													</ClickAwayListener>
+												</Grid>
 												<ContinentSelector stateSetter={setSelectedContinents} state={selectedContinents}/>
 												<CountrySelector stateSetter={setSelectedCountries}/>
 												<SchoolSelector stateSetter={setSelectedSchools}/>

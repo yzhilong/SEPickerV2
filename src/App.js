@@ -84,7 +84,7 @@ function App() {
     const githubPage = "https://github.com/yzhilong/SEPickerV2"
 
     return (
-        <React.Fragment>
+        <div>
             <Grid className={classes.app}>
                 <NavBar />
                 <Route path="/" exact>
@@ -93,9 +93,9 @@ function App() {
                         setFavourites={setFavourites}
                     /> 
                 </Route>
-                <Route path ="/department" exact>
+                {/* <Route path ="/department" exact>
                     TODO
-                </Route>
+                </Route> */}
                 <Route path="/favourites" exact>
                     <Favourites
                         favourites={favourites}
@@ -116,14 +116,14 @@ function App() {
                     : null
                 } */}
             </Grid>
-            <footer align="center" style={{background: "#99e6ff"}}>
+            <footer align="center" style={{background: "#99e6ff", position: "relative", bottom: 0}}>
                 <Typography style={{fontSize: "80%"}}>
                     This website was created by <a href={BenjaminsLink}>Benjamin</a> and <a href={ZhiLongsLink}>Zhi Long</a>,
                     an overhaul of our <a href="https://github.com/tangboxuan/SEPicker">HackNRoll project</a>. 
                     Checkout our code <a href={githubPage}>here!</a>
                 </Typography>
             </footer>
-        </React.Fragment>
+        </div>
     )
 }
 
