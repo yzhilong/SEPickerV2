@@ -7,7 +7,7 @@ import Selector from "./pages/Selector"
 
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
-import { TableHead, TableRow, TableCell, TableContainer, Paper, TextField, Grid, Checkbox, FormControlLabel, Tooltip, Box } from "@material-ui/core";
+import { TableHead, TableRow, TableCell, TableContainer, Paper, TextField, Grid, Checkbox, FormControlLabel, Tooltip, Box, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     app: {
@@ -79,39 +79,51 @@ function App() {
 
     const classes = useStyles()
 
+    const BenjaminsLink = "https://www.linkedin.com/in/benjamin-lee-b7975819a/"
+    const ZhiLongsLink = "https://www.linkedin.com/in/zhi-long-yeo/"
+    const githubPage = "https://github.com/yzhilong/SEPickerV2"
+
     return (
-        <Grid className={classes.app}>
-            <NavBar />
-            <br></br>
-            <Route path="/" exact>
-                <Selector 
-                    favourites={favourites}
-                    setFavourites={setFavourites}
-                /> 
-            </Route>
-            <Route path ="/department" exact>
-                TODO
-            </Route>
-            <Route path="/favourites" exact>
-                <Favourites
-                    favourites={favourites}
-                    setFavourites={setFavourites}
-                />
-            </Route>
-            {/* {page === "Selector" 
-                ? <Selector 
-                    favourites={favourites}
-                    setFavourites={setFavourites}
+        <React.Fragment>
+            <Grid className={classes.app}>
+                <NavBar />
+                <Route path="/" exact>
+                    <Selector 
+                        favourites={favourites}
+                        setFavourites={setFavourites}
                     /> 
-                : page === "Favourites"
-                ? <Favourites
-                    favourites={favourites}
-                    setFavourites={setFavourites}/>
-                : page === "Department"
-                ? null
-                : null
-            } */}
-        </Grid>
+                </Route>
+                <Route path ="/department" exact>
+                    TODO
+                </Route>
+                <Route path="/favourites" exact>
+                    <Favourites
+                        favourites={favourites}
+                        setFavourites={setFavourites}
+                    />
+                </Route>
+                {/* {page === "Selector" 
+                    ? <Selector 
+                        favourites={favourites}
+                        setFavourites={setFavourites}
+                        /> 
+                    : page === "Favourites"
+                    ? <Favourites
+                        favourites={favourites}
+                        setFavourites={setFavourites}/>
+                    : page === "Department"
+                    ? null
+                    : null
+                } */}
+            </Grid>
+            <footer align="center" style={{background: "#99e6ff"}}>
+                <Typography style={{fontSize: "80%"}}>
+                    This website was created by <a href={BenjaminsLink}>Benjamin</a> and <a href={ZhiLongsLink}>Zhi Long</a>,
+                    an overhaul of our <a href="https://github.com/tangboxuan/SEPicker">HackNRoll project</a>. 
+                    Checkout our code <a href={githubPage}>here!</a>
+                </Typography>
+            </footer>
+        </React.Fragment>
     )
 }
 

@@ -159,19 +159,26 @@ function School(props) {
 
                 <Grid container item xs={12} spacing={0} justifyContent="center" className={classes.tmp}>
                     <Grid item xs={12}>
-                        <TextField 
-                        style={{padding: 5}}
-                        label="Notes" 
-                        multiline={true}
-                        className={classes.innerRoot}
-                        maxRows={6}
-                        value={notes}
-                        component={Paper}
-                        onChange={event => {
-                            setNotes(event.target.value)
-                            localStorage.setItem(toString()+"notes", event.target.value)
-                        }}
-                        />
+                        <Box 
+                            style={{
+                                paddingLeft: "5px",
+                                paddingRight: "5px",
+                                paddingBottom: "3px",
+                                backgroundColor: "white"}}
+                            component={Paper}
+                        >
+                            <TextField 
+                            label="Notes" 
+                            multiline={true}
+                            className={classes.innerRoot}
+                            maxRows={6}
+                            value={notes}
+                            onChange={event => {
+                                setNotes(event.target.value)
+                                localStorage.setItem(toString()+"notes", event.target.value)
+                            }}
+                            />
+                        </Box>
                     </Grid>
                 </Grid>
             </Accordion>
