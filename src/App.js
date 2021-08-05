@@ -84,7 +84,7 @@ function App() {
     const githubPage = "https://github.com/yzhilong/SEPickerV2"
 
     return (
-        <div>
+        <div style={{backgroundColor: "#222324"}}>
             <Grid className={classes.app}>
                 <NavBar />
                 <Route path="/" exact>
@@ -116,8 +116,8 @@ function App() {
                     : null
                 } */}
             </Grid>
-            <footer align="center" style={{background: "#99e6ff", position: "relative", bottom: 0}} className={classes.app}>
-                <Typography style={{fontSize: "80%"}}>
+            <footer align="center" style={{background: "black", color: "white", position: "relative", bottom: 0, padding: "0.4%"}} className={classes.app}>
+                <Typography style={{fontSize: "100%"}}>
                     This website was created by <a href={BenjaminsLink}>Benjamin</a> and <a href={ZhiLongsLink}>Zhi Long</a>,
                     an overhaul of our <a href="https://github.com/tangboxuan/SEPicker">HackNRoll project</a>. 
                     Checkout our code <a href={githubPage}>here!</a>

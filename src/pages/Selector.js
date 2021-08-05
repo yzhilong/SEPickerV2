@@ -103,13 +103,13 @@ function Selector(props) {
                 
 							<Grid container item xs={11} lg={5} justifyContent="center">
 
-								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="left-box" style={{backgroundColor: "brown", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw"}}>
+								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="left-box" style={{backgroundColor: "#8B7B5F", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw"}}>
 									<Grid spacing={0} item xs={12}>
 										<Grid container item justifyContent="center">
 											<Grid container item xs={12} justifyContent="center">
-												<Typography variant="h4">Preferences</Typography>
+												<Typography variant="h4" style={{color:"white"}}>Preferences</Typography>
 											</Grid>
-											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 2% 0%", padding: "3%"}}>
+											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 2% 0%", padding: "3%", backgroundColor: "#C5BDB1"}}>
 												<Grid container item xs={12} alignItems="center">
 													<Typography variant="h5" style={{display: "inline-block", paddingRight: "1%"}}>Modules</Typography>
 													<ClickAwayListener onClickAway={() => setModuleTooltipOpen(false)}>
@@ -128,7 +128,7 @@ function Selector(props) {
 												<EssentialModulesSelector stateSetter={setSelectedEssentialModules} state={selectedEssentialModules}/>
 												<OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
 											</Grid>
-											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 10% 0%", padding: "3%"}}>
+											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 10% 0%", padding: "3%", backgroundColor: "#C5BDB1"}}>
 												<Grid container item xs={12} alignItems="center">
 													<Typography variant="h4" style={{display: "inline-block", paddingRight: "1%"}}>
 														Locations
@@ -158,12 +158,12 @@ function Selector(props) {
 
 							<Grid container item xs={11} lg={5}>
 
-								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="right-box" style={{backgroundColor: "brown", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw"}}>
+								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="right-box" style={{backgroundColor: "#8B7B5F", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw"}}>
 									<Grid spacing={0} item xs={12}>
 										<Grid container item>
 
 
-											<Grid container item xs={12} justifyContent="center"><Typography variant="h4">Results</Typography></Grid>
+											<Grid container item xs={12} justifyContent="center"><Typography variant="h4" style={{color: "white"}}>Results</Typography></Grid>
 											<Grid container item xs={12} style={{paddingTop: "0%"}} justifyContent="center">
 												{loading
 													? <Typography variant="h4">Loading...</Typography>

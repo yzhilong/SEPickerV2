@@ -119,7 +119,7 @@ function School(props) {
                                     onClick={(event) => event.stopPropagation()}
                                     onFocus={(event) => event.stopPropagation()}
                                     control={<Checkbox 
-                                        checkedIcon={<FavoriteIcon />} 
+                                        checkedIcon={<FavoriteIcon style={{color: "#C69405"}}/>} 
                                         icon={<FavoriteBorderIcon />}
                                         checked={favourited}
                                         onChange={onFavHandler}
@@ -137,7 +137,8 @@ function School(props) {
                         </Grid>
                         <Grid item xs={1}>
                             <Box 
-                                bgcolor="orange" 
+                                fontWeight="bold"
+                                bgcolor="#C69405" 
                                 textAlign="center" 
                                 component={Paper} 
                                 square={false} 
@@ -164,6 +165,7 @@ function School(props) {
                                 paddingLeft: "5px",
                                 paddingRight: "5px",
                                 paddingBottom: "3px",
+                                border: "1px solid black",
                                 backgroundColor: "white"}}
                             component={Paper}
                         >
