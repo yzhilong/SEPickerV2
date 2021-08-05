@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import School from "../components/selector_components/School"
-import {makeStyles, Grid, Paper } from "@material-ui/core"
+import {makeStyles, Grid, Paper, Typography } from "@material-ui/core"
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd"
 
 const useStyles = makeStyles((theme) => ({
@@ -99,9 +99,16 @@ function Favourites(props) {
       }
     
     return (
-        // <div>
-            <Grid container xs={12} justifyContent="center" >
-                <Grid container item xs={12} style={{maxWidth: "80%"}} justifyContent="center">
+        <Grid container xs={12} justifyContent="center">
+            <Grid container justifyContent="center" component={Paper} style={{maxWidth: "80%", paddingTop: "1vh", backgroundColor: "yellow"}}>
+                <Grid container item xs={12} justifyContent="center">
+                    <Typography variant="h5" style={{fontWeight: "bold"}}>Drag and drop to rank!</Typography>
+                    <br></br>
+                </Grid>
+                <Grid container item xs={12} justifyContent="center">
+                    <br></br>
+                </Grid>
+                <Grid container item xs={12} style={{maxWidth: "100%"}} justifyContent="center">
                     <DragDropContext onDragEnd={handleOnDragEnd}>
                         <Droppable droppableId="favs">
                         {(provided) => (
@@ -126,7 +133,7 @@ function Favourites(props) {
                     </DragDropContext>
                 </Grid>
              </Grid>
-        // </div>
+        </Grid>
     )
     
 }
