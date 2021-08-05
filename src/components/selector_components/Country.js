@@ -10,6 +10,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid'
+import Box from '@material-ui/core/Box'
+
 
 
 
@@ -52,7 +54,7 @@ function Country(props) {
                 id="panel1a-header"
                 >
                     <div>
-                        <Typography>{countryName}</Typography>
+                        <Typography><Box fontWeight="fontWeightBold">{countryName}</Box></Typography>
                         <Typography>{schools.length} school(s) available!</Typography>
                     </div>
                 </AccordionSummary>
