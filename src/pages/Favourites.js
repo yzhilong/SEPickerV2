@@ -15,11 +15,12 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(1),
         minWidth: 300
     },
-    favourites: {
-        padding: theme.spacing(1),
-        minWidth: 600,
-        maxWidth: "70%"
-    },
+    // favourites: {
+    //     // padding: theme.spacing(1),
+    //     // minWidth: 600,
+    //     justifyContent: "center",
+    //     maxWidth: "80%"
+    // },
     school: {
         width: '100%',
         background: "#42f5a4",
@@ -98,9 +99,9 @@ function Favourites(props) {
       }
     
     return (
-        <div>
-            FAVOURITES PAGE
-            <Grid container xs={12} justifyContent="center" spacing={3}>
+        // <div>
+            <Grid container xs={12} justifyContent="center" >
+                <Grid container item xs={12} style={{maxWidth: "80%"}} justifyContent="center">
                 <DragDropContext onDragEnd={handleOnDragEnd}>
                     <Droppable droppableId="favs">
                     {(provided) => (
@@ -112,9 +113,9 @@ function Favourites(props) {
                             spacing={3} 
                             component={Paper} 
                             className={classes.favourites}
-
                             {...provided.droppableProps}
                             ref={provided.innerRef}
+                            style={{marginBottom:"2%"}}
                         >
                             {schools.map(func)}
                             {provided.placeholder}
@@ -123,8 +124,9 @@ function Favourites(props) {
                     )}
                     </Droppable>
                 </DragDropContext>
-            </Grid>
-        </div>
+                </Grid>
+             </Grid>
+        // </div>
     )
     
 }
