@@ -82,7 +82,6 @@ function App() {
     return (
         <Grid className={classes.app}>
             <NavBar />
-            <br></br>
             <Route path="/" exact>
                 <Selector 
                     favourites={favourites}
