@@ -128,14 +128,25 @@ function School(props) {
                                 />
                             </Tooltip>
                         </Grid>
-                        <Grid item xs={10}>
+                        <Grid item xs={1}></Grid>
+                        <Grid item xs={9}>
                             <Typography>
                                 <Box fontWeight="fontWeightBold" fontSize="large">{schoolName}</Box>
                                 <Box fontSize="small">{showModules()} available</Box>
                             </Typography>
                         </Grid>
                         <Grid item xs={1}>
-                            <Box bgcolor="orange" textAlign="center" component={Paper} square={false} width="auto" maxWidth={30}>
+                            <Box 
+                                bgcolor="orange" 
+                                textAlign="center" 
+                                component={Paper} 
+                                square={false} 
+                                width="auto" 
+                                maxWidth={25}
+                                minWidth={25}
+                                maxHeight={25}
+                                minHeight={25}
+                            >
                                 {result['num_mappable']}
                             </Box>
                         </Grid>
