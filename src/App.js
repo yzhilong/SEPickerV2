@@ -116,8 +116,8 @@ function App() {
                     : null
                 } */}
             </Grid>
-            <footer align="center" style={{background: "#99e6ff", position: "relative", bottom: 0}} className={classes.app}>
-                <Typography style={{fontSize: "80%"}}>
+            <footer align="center" style={{position: "relative", bottom: 0}} className={classes.app}>
+                <Typography style={{fontSize: "80%", fontStyle: "italic"}}>
                     This website was created by <a href={BenjaminsLink}>Benjamin</a> and <a href={ZhiLongsLink}>Zhi Long</a>,
                     an overhaul of our <a href="https://github.com/tangboxuan/SEPicker">HackNRoll project</a>. 
                     Checkout our code <a href={githubPage}>here!</a>

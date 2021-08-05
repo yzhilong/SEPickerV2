@@ -33,5 +33,10 @@ def hello():
 def serve():
     return send_from_directory(app.static_folder, 'index.html')
 
+@app.route('/favourites')
+@cross_origin()
+def serve2():
+    return send_from_directory(app.static_folder, 'index.html')
+
 if __name__ == "__main__":
     app.run()
