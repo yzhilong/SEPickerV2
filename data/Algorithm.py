@@ -12,7 +12,8 @@ with open('equivalentModuleMappings.json','r') as f:
 def get_equivalent_modules(modules, equivalent_module_mappings=equivalent_module_mappings):
     output = set()
     for module in modules:
-        output.update(set(equivalent_module_mappings[module]))
+        if module in equivalent_module_mappings:
+            output.update(set(equivalent_module_mappings[module]))
     return output
 
 def get_equivalent_modules_inverse(modules, equivalent_module_mappings=equivalent_module_mappings):
@@ -168,22 +169,25 @@ def algorithm(essential_modules,optional_modules=[],schools=[],countries=[],cont
             module_title = row['NUS Module 2 Title']
 
         uni_dict = country_dict[row['Partner University']]
-        if inverse_module_mappings[module_name] not in uni_dict:
-            uni_dict[inverse_module_mappings[module_name]] = {module_name: []}
-        elif module_name not in uni_dict[inverse_module_mappings[module_name]]:
-            uni_dict[inverse_module_mappings[module_name]][module_name] = [] # This array should be a list of mappings
+
+        #Some are not available
+        if module_name in inverse_module_mappings:
+            if inverse_module_mappings[module_name] not in uni_dict:
+                uni_dict[inverse_module_mappings[module_name]] = {module_name: []}
+            elif module_name not in uni_dict[inverse_module_mappings[module_name]]:
+                uni_dict[inverse_module_mappings[module_name]][module_name] = [] # This array should be a list of mappings
         
 
-        if row['PU Module 1'] is not np.nan:
-            relevant_dict = uni_dict[inverse_module_mappings[module_name]][module_name]
-            pu_module_name = row['PU Module 1']
-            pu_module_title = row['PU Module 1 Title']
-            relevant_dict.append({'PU Module Code': pu_module_name, 'PU Module Title': pu_module_title})
-        if row['PU Module 2'] is not np.nan:
-            relevant_dict = uni_dict[inverse_module_mappings[module_name]][module_name]
-            pu_module_name = row['PU Module 2']
-            pu_module_title = row['PU Module 2 Title']
-            relevant_dict.append({'PU Module Code': pu_module_name, 'PU Module Title': pu_module_title})
+            if row['PU Module 1'] is not np.nan:
+                relevant_dict = uni_dict[inverse_module_mappings[module_name]][module_name]
+                pu_module_name = row['PU Module 1']
+                pu_module_title = row['PU Module 1 Title']
+                relevant_dict.append({'PU Module Code': pu_module_name, 'PU Module Title': pu_module_title})
+            if row['PU Module 2'] is not np.nan:
+                relevant_dict = uni_dict[inverse_module_mappings[module_name]][module_name]
+                pu_module_name = row['PU Module 2']
+                pu_module_title = row['PU Module 2 Title']
+                relevant_dict.append({'PU Module Code': pu_module_name, 'PU Module Title': pu_module_title})
     
     tmp_dict = {}
     for continent in sorted(output_dict.keys()):
