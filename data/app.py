@@ -35,7 +35,7 @@ def serve():
 
 @app.route('/favourites')
 @cross_origin()
-def serve2():
+def serve_favourites():
     return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == "__main__":
