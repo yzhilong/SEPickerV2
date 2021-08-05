@@ -16,6 +16,12 @@
     overflow: auto;
 }
 
+@media (max-width: 1280px) {
+    #left-box {
+        height: auto;
+    }
+}
+
 /* .autocomplete-form {
     margin: 100px;
 } */

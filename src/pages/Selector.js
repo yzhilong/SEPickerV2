@@ -10,6 +10,7 @@ import './Selector.css'
 import { Collapse, Table, TableCell, Paper, Grid, Card, Typography, CircularProgress } from '@material-ui/core'
 import { sizing } from '@material-ui/system';
 import { makeStyles } from '@material-ui/core/styles';
+import HelpIcon from '@material-ui/icons/Help';
 	
 function Selector(props) {
 		// const [essentialModules, setEssentialModules] = useState(new Set())
@@ -94,13 +95,15 @@ function Selector(props) {
 								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="left-box" style={{backgroundColor: "brown", paddingTop: "2vh"}}>
 									<Grid spacing={0} item xs={12}>
 										<Grid container item justifyContent="center">
-											<Grid container item xs={12} justifyContent="center"><Typography variant="h3">Preferences</Typography></Grid>
+											<Grid container item xs={12} justifyContent="center">
+                        <Typography variant="h3">Preferences</Typography>
+                      </Grid>
 											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 2% 0%", padding: "3%"}}>
 												<Grid container item xs={12}><Typography variant="h4">Modules</Typography></Grid>
 												<EssentialModulesSelector stateSetter={setSelectedEssentialModules} state={selectedEssentialModules}/>
 												<OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
 											</Grid>
-											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 2% 0%", padding: "3%"}}>
+											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 10% 0%", padding: "3%"}}>
 												<Grid container item xs={12}><Typography variant="h4">Locations</Typography></Grid>
 												<ContinentSelector stateSetter={setSelectedContinents} state={selectedContinents}/>
 												<CountrySelector stateSetter={setSelectedCountries}/>
