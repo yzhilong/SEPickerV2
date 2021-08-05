@@ -100,7 +100,7 @@ function Favourites(props) {
     
     return (
         <Grid container xs={12} justifyContent="center">
-            <Grid container justifyContent="center" component={Paper} style={{maxWidth: "80%", paddingTop: "1vh", backgroundColor: "yellow"}}>
+            <Grid container justifyContent="center" component={Paper} style={{maxWidth: "80%", paddingTop: "1vh", backgroundColor: "brown"}}>
                 <Grid container item xs={12} justifyContent="center">
                     <Typography variant="h5" style={{fontWeight: "bold"}}>Drag and drop to rank!</Typography>
                     <br></br>
