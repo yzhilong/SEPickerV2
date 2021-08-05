@@ -91,13 +91,13 @@ function Selector(props) {
 
 							<Grid container item xs={11} lg={5}>
 
-								<Grid container component={Paper} xs={12} spacing={0} justifyContent="center" id="left-box" style={{backgroundColor: "brown", paddingTop: "2vh"}}>
+								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="left-box" style={{backgroundColor: "brown", paddingTop: "2vh"}}>
 									<Grid spacing={0} item xs={12}>
 										<Grid container item>
 											<Grid container item xs={12} justifyContent="center"><Typography variant="h3">Preferences</Typography></Grid>
 											<Grid container item xs={12} component={Paper} justifyContent="center" style={{margin: "2% 6% 2% 6%", padding: "3%"}}>
 												<Grid container item xs={12}><Typography variant="h4">Modules</Typography></Grid>
-												<EssentialModulesSelector stateSetter={setSelectedEssentialModules}/>
+												<EssentialModulesSelector stateSetter={setSelectedEssentialModules} state={selectedEssentialModules}/>
 												<OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
 											</Grid>
 											<Grid container item xs={12} component={Paper} justifyContent="center" style={{margin: "2% 6% 2% 6%", padding: "3%"}}>
@@ -114,7 +114,7 @@ function Selector(props) {
 
 							<Grid container item xs={11} lg={5}>
 
-								<Grid container component={Paper} xs={12} spacing={0} justifyContent="center" id="right-box" style={{backgroundColor: "brown", paddingTop: "2vh"}}>
+								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="right-box" style={{backgroundColor: "brown", paddingTop: "2vh"}}>
 									<Grid spacing={0} item xs={12}>
 										<Grid container item>
 

@@ -37,7 +37,7 @@ function App() {
                 /> 
             </Route>
             <Route path ="/department" exact>
-                
+                TODO
             </Route>
             <Route path="/favourites" exact>
                 <Favourites

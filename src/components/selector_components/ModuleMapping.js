@@ -26,7 +26,7 @@ function ModuleMapping(props) {
     function getPUModules(equivModule) {
         return result[equivModule].map(mod => {
                 return (
-                    <Grid item>
+                    <Grid item xs={12}>
                         <Typography>
                             <Box textAlign="left" fontWeight="fontWeightBold" style={{padding: 5}}>
                                 {mod["PU Module Code"]}
@@ -45,7 +45,7 @@ function ModuleMapping(props) {
         return (
             <Grid container item xs={12} spacing={0} component={Paper} className={classes.moduleMappingPaper} elevation={1}>
                 <Grid item container xs={6} alignItems="center">
-                    <Grid item>
+                    <Grid item xs={6}>
                         <div style={{padding: 5, textAlign: "left", fontWeight: "bold"}}>
                             {moduleCode}
                         </div>
@@ -69,20 +69,18 @@ function ModuleMapping(props) {
 
     return (
         <Grid container item xs={12} spacing={0} justifyContent="center" className={classes.tmp}>
-            <Paper elevation={1}>
-                <Grid container item xs={12} justifyContent="center" className={classes.tmp}>
-                    <Grid item xs={12}  style={{padding: 5}}>
-                        <Typography style={{fontStyle: "italic"}}>Module(s) with similar content to {moduleName} {moduleTitle}</Typography>
-                    </Grid>
-                    {equivalentNUSModules.map(mod => {
-                        return (
-                            <Grid container item xs={11} justifyContent="center" className={classes.tmp}>
-                                {getMapping(mod)}
-                            </Grid>
-                        )
-                    })}
+            <Grid container item xs={12} justifyContent="center" className={classes.tmp} component={Paper} elevation={1}>
+                <Grid item xs={12}  style={{padding: 5}}>
+                    <Typography style={{fontStyle: "italic"}}>Module(s) with similar content to {moduleName} {moduleTitle}</Typography>
                 </Grid>
-            </Paper>
+                {equivalentNUSModules.map(mod => {
+                    return (
+                        <Grid container item xs={11} justifyContent="center" className={classes.tmp}>
+                            {getMapping(mod)}
+                        </Grid>
+                    )
+                })}
+            </Grid>
         </Grid>
     )
 

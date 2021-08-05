@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
     tmp: {
         padding: theme.spacing(1),
-        minWidth: 300,
+        minWidth: 200,
         maxWidth: 500
     },
     favourites: {
