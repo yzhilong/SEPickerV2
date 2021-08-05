@@ -88,11 +88,11 @@ function Selector(props) {
 						<strong>Schools:</strong>{selectedSchools} <br/>
 						<strong>Continents:</strong>{selectedContinents} <br/> */}
 						{/* <div class="wrap"> */}
-						<Grid container xs={12} spacing={3} justifyContent="center">
+						<Grid container item xs={12} spacing={0} justifyContent="center">
+                
+							<Grid container item xs={11} lg={5} justifyContent="center">
 
-							<Grid container item xs={11} lg={5}>
-
-								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="left-box" style={{backgroundColor: "brown", paddingTop: "2vh"}}>
+								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="left-box" style={{backgroundColor: "brown", paddingTop: "2vh", margin: "2%"}}>
 									<Grid spacing={0} item xs={12}>
 										<Grid container item justifyContent="center">
 											<Grid container item xs={12} justifyContent="center">
@@ -117,7 +117,7 @@ function Selector(props) {
 
 							<Grid container item xs={11} lg={5}>
 
-								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="right-box" style={{backgroundColor: "brown", paddingTop: "2vh"}}>
+								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="right-box" style={{backgroundColor: "brown", paddingTop: "2vh", margin: "2%"}}>
 									<Grid spacing={0} item xs={12}>
 										<Grid container item>
 
