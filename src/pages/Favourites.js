@@ -102,28 +102,28 @@ function Favourites(props) {
         // <div>
             <Grid container xs={12} justifyContent="center" >
                 <Grid container item xs={12} style={{maxWidth: "80%"}} justifyContent="center">
-                <DragDropContext onDragEnd={handleOnDragEnd}>
-                    <Droppable droppableId="favs">
-                    {(provided) => (
-                        <Grid 
-                            container 
-                            item 
-                            xs={11} 
-                            justifyContent="center" 
-                            spacing={3} 
-                            component={Paper} 
-                            className={classes.favourites}
-                            {...provided.droppableProps}
-                            ref={provided.innerRef}
-                            style={{marginBottom:"2%"}}
-                        >
-                            {schools.map(func)}
-                            {provided.placeholder}
-                        </Grid>
-                        
-                    )}
-                    </Droppable>
-                </DragDropContext>
+                    <DragDropContext onDragEnd={handleOnDragEnd}>
+                        <Droppable droppableId="favs">
+                        {(provided) => (
+                            <Grid 
+                                container 
+                                item 
+                                xs={11} 
+                                justifyContent="center" 
+                                spacing={3} 
+                                component={Paper} 
+                                className={classes.favourites}
+                                {...provided.droppableProps}
+                                ref={provided.innerRef}
+                                style={{marginBottom:"2%"}}
+                            >
+                                {schools.map(func)}
+                                {provided.placeholder}
+                            </Grid>
+                            
+                        )}
+                        </Droppable>
+                    </DragDropContext>
                 </Grid>
              </Grid>
         // </div>
