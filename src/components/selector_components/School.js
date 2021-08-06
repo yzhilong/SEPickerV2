@@ -17,6 +17,8 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { LocalSeeOutlined } from "@material-ui/icons";
 
+const schoolCityMappings = require("../../data/cities.json")
+
 function School(props) {
     const { schoolName, result, useStyles, modulesCodeTitleMappings, setSchools } = props
     // result = {"mappings": {...}, "num_mappable": int}
@@ -131,14 +133,14 @@ function School(props) {
                         <Grid item xs={1}></Grid>
                         <Grid item xs={9}>
                             <Typography>
-                                <Box fontWeight="fontWeightBold" fontSize="large">{schoolName}</Box>
-                                <Box fontSize="small">{showModules()} available</Box>
+                                <Box fontWeight="fontWeightBold" fontSize="18px">{schoolName}</Box>
+                                <Box fontSize="14px">{schoolCityMappings[schoolName]}</Box>
+                                <Box fontSize="12px">{showModules()} available</Box>
                             </Typography>
                         </Grid>
                         <Grid item xs={1}>
                             <Box 
-                                fontWeight="bold"
-                                bgcolor="#C69405" 
+                                style={{backgroundColor: "#fcbd2f", fontWeight: "bold"}}
                                 textAlign="center" 
                                 component={Paper} 
                                 square={false} 
@@ -165,8 +167,7 @@ function School(props) {
                                 paddingLeft: "5px",
                                 paddingRight: "5px",
                                 paddingBottom: "3px",
-                                border: "1px solid black",
-                                backgroundColor: "white"}}
+                                backgroundColor: "#fee8b4"}}
                             component={Paper}
                         >
                             <TextField 

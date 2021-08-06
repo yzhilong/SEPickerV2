@@ -100,7 +100,7 @@ function Favourites(props) {
     
     return (
         <Grid container xs={12} justifyContent="center">
-            <Grid container justifyContent="center" component={Paper} style={{maxWidth: "80%", paddingTop: "1vh", backgroundColor: "brown"}}>
+            <Grid container justifyContent="center" style={{maxWidth: "80%", paddingTop: "1vh"}}>
                 <Grid container item xs={12} justifyContent="center">
                     <Typography variant="h5" style={{fontWeight: "bold"}}>Drag and drop to rank!</Typography>
                     <br></br>
@@ -122,10 +122,14 @@ function Favourites(props) {
                                 className={classes.favourites}
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
-                                style={{marginBottom:"2%"}}
+                                style={{marginBottom:"2%", backgroundColor: "brown", padding: "2%"}}
                             >
-                                {schools.map(func)}
-                                {provided.placeholder}
+                                {schools.length == 0 
+                                    ? <Typography variant="h5" style={{fontWeight: "bold"}}>No school favourited yet</Typography>
+                                    : <React.Fragment>
+                                       {schools.map(func)}
+                                       {provided.placeholder}
+                                      </React.Fragment>}
                             </Grid>
                             
                         )}

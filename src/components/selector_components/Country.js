@@ -54,8 +54,12 @@ function Country(props) {
                 id="panel1a-header"
                 >
                     <div>
-                        <Typography><Box fontWeight="fontWeightBold">{countryName}</Box></Typography>
-                        <Typography>{schools.length} school(s) available!</Typography>
+                            <Typography>
+                                <Box fontWeight="fontWeightBold" fontSize="18px">{countryName}</Box>
+                                <Box fontSize="12px">{schools.length} school(s) available!</Box>
+                            </Typography>
+                        {/* <Typography><Box fontWeight="fontWeightBold">{countryName}</Box></Typography>
+                        <Typography>{schools.length} school(s) available!</Typography> */}
                     </div>
                 </AccordionSummary>
                     <Grid item container justifyContent="center" spacing={1} xs={12}>

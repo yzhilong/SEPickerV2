@@ -1,7 +1,7 @@
 .navbar {
   width: 100%;
-  height: 4rem;
-  background-color: black;
+  height: 3rem;
+  background-color: rgb(15, 32, 129);
   /* padding: 0 8.33%; */
   margin-bottom: 2rem;
   box-shadow: 0 3px 10px 0 rgb(155, 155, 155);
@@ -16,7 +16,7 @@
 }
 
 #navbar-sepicker {
-  color: white;
+  color: #fdca52;
   left: 0;
   padding-left: 2%;
   /* border: solid red 1px; */

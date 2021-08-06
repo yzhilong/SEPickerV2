@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
     school: {
         width: '100%',
-        background: "#EEE6DA",
+        background: "#9ebfe0",
         minWidth: 100,
         padding: theme.spacing(1),
     },
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     },
     moduleMappingPaper: {
         width: "100%",
-        background: "#ADADAD",
+        background: "#fcbd2f",
         // minWidth: 200,
         padding: theme.spacing(1),
     },
