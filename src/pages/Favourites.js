@@ -8,34 +8,35 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         justifyContent: "center",
         padding: theme.spacing(2),
-        minWidth: 400,
-        background: "#42a7f5",
+        minWidth: 100,
+        background: "#DDDDDF",
     },
     tmp: {
         padding: theme.spacing(1),
-        minWidth: 300
+        // minWidth: 200,
+        // maxWidth: 500
     },
-    // favourites: {
-    //     // padding: theme.spacing(1),
-    //     // minWidth: 600,
-    //     justifyContent: "center",
-    //     maxWidth: "80%"
-    // },
+    favourites: {
+        padding: theme.spacing(1),
+        minWidth: 300,
+        maxWidth: 720
+    },
     school: {
         width: '100%',
-        background: "#42f5a4",
-        minWidth: 350,
+        background: "#9A9A9A",
+        minWidth: 100,
         padding: theme.spacing(1),
+        // boxShadow: "0 0 6px 1px rgb(150,150,150)"
     },
     moduleMappingTitle: {
         width: '100%',
-        minWidth: 200,
+        // minWidth: 200,
         background: "red"
     },
     moduleMappingPaper: {
         width: "100%",
-        background: "orange",
-        minWidth: 200,
+        background: "#edbb3d",
+        // minWidth: 200,
         padding: theme.spacing(1),
     },
     root: {
@@ -122,7 +123,7 @@ function Favourites(props) {
                                 className={classes.favourites}
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
-                                style={{marginBottom:"2%", backgroundColor: "brown", padding: "2%"}}
+                                style={{marginBottom:"2%", backgroundColor: "#29648A", padding: "2%"}}
                             >
                                 {schools.length == 0 
                                     ? <Typography variant="h5" style={{fontWeight: "bold"}}>No school favourited yet</Typography>

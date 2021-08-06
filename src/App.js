@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     app: {
         width: "100%",
         minWidth: 550,
-        backgroundColor: "rgb(130,130,130)"
+        backgroundColor: "#F6F6F6"
     },
     country: {
         width: '80%',
@@ -85,7 +85,7 @@ function App() {
     const githubPage = "https://github.com/yzhilong/SEPickerV2"
 
     return (
-        <div style={{height: "100vh", backgroundColor: "#fee8b4"}}>
+        <div style={{height: "100vh", backgroundColor:"#DDDDDF"}}>
             <Grid className={classes.app} >
                 <NavBar />
                 <Route path="/" exact>
@@ -117,7 +117,9 @@ function App() {
                     : null
                 } */}
             </Grid>
+            <div style={{backgroundColor: "#DDDDDF"}}><br></br></div>
             <footer align="center" style={{position: "fixed", bottom: 0}} className={classes.app}>
+               
                 <Typography style={{fontSize: "80%", fontStyle: "italic"}}>
                     This website was created by <a href={BenjaminsLink}>Benjamin</a> and <a href={ZhiLongsLink}>Zhi Long</a>,
                     an overhaul of our <a href="https://github.com/tangboxuan/SEPicker">HackNRoll project</a>. 

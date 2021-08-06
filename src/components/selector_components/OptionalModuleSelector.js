@@ -3,7 +3,7 @@ import './OptionalModuleSelector.css'
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import { Grid, Typography } from '@material-ui/core'
+import { Chip, Grid, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -49,8 +49,20 @@ function OptionalModulesSelector(props) {
                 id="multiple-limit-tags"
                 options={modules}
                 getOptionLabel={(options) => options.module}
-                // renderOption={o => <div style={{fontFamily: "Courier New"}}>{o.module}</div>}
                 defaultValue={defaultValue}
+                
+                renderTags={(value, getTagProps) =>
+                    value.map((option, index) => (
+                        <Chip
+                            style={{backgroundColor: "#F6F6F6"}}
+                            variant="outlined"
+                            label={option.module}
+                            {...getTagProps({index})}    
+                        />
+                    ))
+                }
+                
+
                 renderInput={(params) => (
                     <TextField 
                         {...params} 
