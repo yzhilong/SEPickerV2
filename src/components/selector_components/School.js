@@ -137,7 +137,7 @@ function School(props) {
                         </Grid>
                         <Grid item xs={1}>
                             <Box 
-                                style={{backgroundColor: "#fcbd2f"}}
+                                style={{backgroundColor: "#fcbd2f", fontWeight: "bold"}}
                                 textAlign="center" 
                                 component={Paper} 
                                 square={false} 
