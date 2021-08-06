@@ -100,11 +100,11 @@ function Selector(props) {
 									<Grid spacing={0} item xs={12}>
 										<Grid container item justifyContent="center">
 											<Grid container item xs={12} justifyContent="center" style={{color: "white"}}>
-												<Typography variant="h4">Preferences</Typography>
+												<Typography variant="h4" style={{fontFamily: "Georgia, sans-serif"}}>Preferences</Typography>
 											</Grid>
 											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 2% 0%", padding: "3%", backgroundColor: "#C5BDB1"}}>
 												<Grid container item xs={12} alignItems="center">
-													<Typography variant="h5" style={{display: "inline-block", paddingRight: "1%"}}>Modules</Typography>
+													<Typography variant="h5" style={{display: "inline-block", paddingRight: "1%", fontFamily: "Georgia, sans-serif"}}>Modules</Typography>
 													<ClickAwayListener onClickAway={() => setModuleTooltipOpen(false)}>
 														<Tooltip
 														open={moduleTooltipOpen}
@@ -123,7 +123,7 @@ function Selector(props) {
 											</Grid>
 											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 10% 0%", padding: "3%", backgroundColor: "#C5BDB1"}}>
 												<Grid container item xs={12} alignItems="center">
-													<Typography variant="h5" style={{display: "inline-block", paddingRight: "1%"}}>
+													<Typography variant="h5" style={{display: "inline-block", paddingRight: "1%", fontFamily: "Georgia, sans-serif"}}>
 														Locations
 													</Typography>
 													<ClickAwayListener onClickAway={() => setLocationTooltipOpen(false)}>
@@ -155,17 +155,17 @@ function Selector(props) {
 									<Grid spacing={0} item xs={12}>
 										<Grid container item>
 											<Grid container item xs={12} justifyContent="center" style={{color: "white"}}>
-												<Typography variant="h4">
+												<Typography variant="h4" style={{fontFamily: "Georgia, sans-serif"}}>
 													Results
 												</Typography>
 											</Grid>
-											<Grid container item xs={12} style={{paddingTop: "0%"}} justifyContent="center">
+											<Grid container item xs={12} style={{paddingTop: "0%"}} justifyContent="center" alignItems="center">
 												{loading
-													? <Typography variant="h4">Loading...</Typography>
+													? <div><br></br><Typography variant="h6" style={{fontFamily: "Courier New"}}>Loading...</Typography></div>
 													: selectedEssentialModules.length + selectedOptionalModules.length === 0
-													? <Typography variant="h4">No Module Selected Yet</Typography>
+													? <div><br></br><Typography variant="h6" style={{fontFamily: "Courier New"}}>No module selected yet</Typography></div>
 													: Object.keys(result).length === 0 
-													? <h2>No mappings found :(</h2>
+													? <div><br></br><Typography variant="h6" style={{fontFamily: "Courier New"}}>No mappings found :(</Typography></div>
 													: <Grid container justifyContent="center" xs={12} style={{marginTop: "2%"}}>
 															<Results result={result}/>
 														</Grid>}

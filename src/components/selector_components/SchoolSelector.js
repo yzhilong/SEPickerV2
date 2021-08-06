@@ -47,7 +47,7 @@ function SchoolSelector(props) {
                 getOptionLabel={(option) => option.school}
                 defaultValue={defaultValue}
                 renderInput={(params) => (
-                    <TextField {...params} variant="outlined" label="Schools" placeholder="Continuous Typing Supported" />
+                    <TextField {...params} variant="outlined" label={<div style={{fontFamily: "Courier New"}}>{"Schools"}</div>}  placeholder="Hit enter to select" />
                 )}
             />
         </Grid>

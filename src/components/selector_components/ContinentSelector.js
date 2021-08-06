@@ -38,7 +38,7 @@ function ContinentSelector(props) {
                 <Grid item xs={4}>
                     <FormControlLabel
                         control={<Checkbox checked={props.state.includes(continent.name)} onChange={(event)=>(onClickContinentHandler(event.target.name))} name={continent.name} />}
-                        label={continent.label}
+                        label={<div style={{fontFamily: "Courier New"}}>{continent.label}</div>}
                     />
                 </Grid>
             )}

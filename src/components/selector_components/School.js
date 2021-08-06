@@ -132,15 +132,15 @@ function School(props) {
                         </Grid>
                         <Grid item xs={1}></Grid>
                         <Grid item xs={9}>
-                            <Typography>
-                                <Box fontWeight="fontWeightBold" fontSize="18px">{schoolName}</Box>
-                                <Box fontSize="14px">{schoolCityMappings[schoolName]}</Box>
-                                <Box fontSize="12px">{showModules()} available</Box>
+                            <Typography >
+                                <Box fontWeight="fontWeightBold" fontSize="18px" style={{fontFamily: "Georgia, sans-serif"}}>{schoolName}</Box>
+                                <Box fontSize="12px" style={{fontFamily: "Courier New"}}>{schoolCityMappings[schoolName]}</Box>
+                                <Box fontSize="12px" style={{fontFamily: "Courier New"}}>{showModules()} available</Box>
                             </Typography>
                         </Grid>
                         <Grid item xs={1}>
                             <Box 
-                                style={{backgroundColor: "#fcbd2f", fontWeight: "bold"}}
+                                style={{backgroundColor: "#fcbd2f", fontWeight: "bold", fontFamily: "Georgia, sans-serif"}}
                                 textAlign="center" 
                                 component={Paper} 
                                 square={false} 

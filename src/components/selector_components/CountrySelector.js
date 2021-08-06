@@ -48,7 +48,7 @@ function CountrySelector(props) {
             getOptionLabel={(options) => options.country}
             defaultValue={defaultValue}
             renderInput={(params) => (
-                <TextField {...params} variant="outlined" label="Countries" placeholder="Continuous Typing Supported" />
+                <TextField {...params} variant="outlined" label={<div style={{fontFamily: "Courier New"}}>{"Countries"}</div>}  placeholder="Hit enter to select" />
             )}
             />
         </Grid>

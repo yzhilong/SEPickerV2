@@ -49,7 +49,12 @@ function EssentialModulesSelector(props) {
                 getOptionLabel={(options) => options.module}
                 defaultValue={defaultValue}
                 renderInput={(params) => (
-                    <TextField {...params} variant="outlined" label="Essential Modules" placeholder="Continuous Typing Supported" />
+                    <TextField 
+                        {...params} 
+                        variant="outlined" 
+                        label={<div style={{fontFamily: "Courier New"}}>{"Essential Modules"}</div>} 
+                        placeholder="Hit enter to select"
+                    />
                 )}
             />
         </Grid>

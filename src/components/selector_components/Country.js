@@ -55,8 +55,8 @@ function Country(props) {
                 >
                     <div>
                             <Typography>
-                                <Box fontWeight="fontWeightBold" fontSize="18px">{countryName}</Box>
-                                <Box fontSize="12px">{schools.length} school(s) available!</Box>
+                                <Box style={{fontFamily: "Georgia, sans-serif", fontWeight:"bold", fontSize:"18px" }}>{countryName}</Box>
+                                <Box fontSize="12px" style={{fontFamily: "Courier New"}}>{schools.length} school(s) available!</Box>
                             </Typography>
                         {/* <Typography><Box fontWeight="fontWeightBold">{countryName}</Box></Typography>
                         <Typography>{schools.length} school(s) available!</Typography> */}

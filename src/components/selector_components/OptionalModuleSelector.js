@@ -3,7 +3,7 @@ import './OptionalModuleSelector.css'
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import { Grid } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -40,16 +40,25 @@ function OptionalModulesSelector(props) {
     return (
         <Grid item xs={12} className={classes.root}>
             <Autocomplete
+                fontFamily="Courier New"
                 autoHighlight={true}
+                // style={{label: {fontFamily: "Courier New"}}}
                 onChange={onClickModule}
                 multiple
                 limitTags={2}
                 id="multiple-limit-tags"
                 options={modules}
                 getOptionLabel={(options) => options.module}
+                // renderOption={o => <div style={{fontFamily: "Courier New"}}>{o.module}</div>}
                 defaultValue={defaultValue}
                 renderInput={(params) => (
-                    <TextField {...params} variant="outlined" label="Optional Modules" placeholder="Continuous Typing Supported" />
+                    <TextField 
+                        {...params} 
+                        // style={{fontFamily: "Courier New"}}
+                        variant="outlined" 
+                        label={<div style={{fontFamily: "Courier New"}}>{"Optional Modules"}</div>} 
+                        placeholder="Hit enter to select"
+                    />
                 )}
             />
         </Grid>
