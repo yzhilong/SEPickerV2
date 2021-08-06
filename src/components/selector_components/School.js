@@ -17,6 +17,8 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { LocalSeeOutlined } from "@material-ui/icons";
 
+const schoolCityMappings = require("../../data/cities.json")
+
 function School(props) {
     const { schoolName, result, useStyles, modulesCodeTitleMappings, setSchools } = props
     // result = {"mappings": {...}, "num_mappable": int}
@@ -132,6 +134,7 @@ function School(props) {
                         <Grid item xs={9}>
                             <Typography>
                                 <Box fontWeight="fontWeightBold" fontSize="18px">{schoolName}</Box>
+                                <Box fontSize="14px">{schoolCityMappings[schoolName]}</Box>
                                 <Box fontSize="12px">{showModules()} available</Box>
                             </Typography>
                         </Grid>

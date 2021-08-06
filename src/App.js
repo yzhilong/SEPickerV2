@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     app: {
         width: "100%",
         minWidth: 550,
-        backgroundColor: "#fee8b4"
+        backgroundColor: "rgb(130,130,130)"
     },
     country: {
         width: '80%',

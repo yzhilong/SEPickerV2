@@ -5,21 +5,21 @@ Aalto University,Finland,Europe,Espoo
 Aarhus School of Business,Denmark,Europe,Aarhus
 Aarhus University,Denmark,Europe,Aarhus
 Amsterdam University College,Netherlands,Europe,Amsterdam
-Arizona State University,United States of America,North America,Tempe
+Arizona State University,United States of America,North America,"Tempe, Arizona"
 Athens University of Economics & Business,Greece,Europe,Athens
 BI Norwegian Business School,Norway,Europe,Oslo
 Beihang University,China,Asia,Beijing
 Bilkent University,Turkey,Asia,Ankara
 "Bogazici University, Turkey",Turkey,Asia,Istanbul
-"Boston College, Massachusetts",United States of America,North America,Boston
-Boston University,United States of America,North America,Boston
-Brandeis University,United States of America,North America,Waltham
+"Boston College, Massachusetts",United States of America,North America,"Boston, Massachusetts"
+Boston University,United States of America,North America,"Boston, Massachusetts"
+Brandeis University,United States of America,North America,"Waltham, Massachusetts"
 Bremen University of Applied Sciences,Germany,Europe,Bremen
 Budapest University of Technology and Economics,Hungary,Europe,Budapest
-"California Poly State Uni, SLO",United States of America,North America,San Luis Obispo
-California State University East bay,United States of America,North America,Hayward
-Carnegie Mellon University,United States of America,North America,Pittsburgh
-Case Western Reserve University,United States of America,North America,Cleveland
+"California Poly State Uni, SLO",United States of America,North America,"San Luis Obispo, California"
+California State University East bay,United States of America,North America,"Hayward, California"
+Carnegie Mellon University,United States of America,North America,"Pittsburgh, Pennsylvania"
+Case Western Reserve University,United States of America,North America,"Cleveland, Ohio"
 Catholic University of Portugal,Portugal,Europe,Lisbon
 Central University of Finance & Economics,China,Asia,Beijing
 CentraleSupelec - Ecole Centrale Paris,France,Europe,Paris
@@ -30,30 +30,30 @@ Chongqing University,China,Asia,Chongqing
 Chulalongkorn University,Thailand,Asia,Pathum Wan
 City University of Hong Kong,Hong Kong,Asia,Kowloon
 "City, University of London",United Kingdom,Europe,London
-Clarkson University,United States of America,North America,Potsdam
-Colgate University,United States of America,North America,Hamilton Village
-Columbia University,United States of America,North America,New York City
+Clarkson University,United States of America,North America,"Potsdam, New York"
+Colgate University,United States of America,North America,"Hamilton Village, New York"
+Columbia University,United States of America,North America,"New York City, New York"
 Concordia University,Canada,North America,Montreal
 Copenhagen Business School,Denmark,Europe,Frederiksberg
-Cornell University,United States of America,North America,Ithaca
-Cornell Univ Coll of Agriculture & Life Sciences,United States of America,North America,Ithaca
-Cornell Univ Coll of Human Ecology,United States of America,North America,Ithaca
+Cornell University,United States of America,North America,"Ithaca, New York"
+Cornell Univ Coll of Agriculture & Life Sciences,United States of America,North America,"Ithaca, New York"
+Cornell Univ Coll of Human Ecology,United States of America,North America,"Ithaca, New York"
 Corvinus University of Budapest,Hungary,Europe,Budapest
 Cracow University of Technology,Poland,Europe,Kraków
 Czech Technical University,Czech Republic,Europe,Prague
 Dalhousie University,Canada,North America,Halifax
 Delft University of Technology,Netherlands,Europe,Delft
 Dresden University of Technology,Germany,Europe,Dresden
-Duke University,United States of America,North America,Durham
+Duke University,United States of America,North America,"Durham, North Carolina"
 Durham University,United Kingdom,Europe,Durham
 ESSEC Business School,Singapore,Asia,Paris
 ETH Zurich,Switzerland,Europe,Zurich
-Eckerd College,United States of America,North America,St. Petersburg
+Eckerd College,United States of America,North America,"St. Petersburg, Florida"
 "Ecole Centrale Des Arts Et Manufactures, Paris",France,Europe,Paris
 Ecole Polytechnique Federale de Lausanne,Switzerland,Europe,Lausanne
 "Ecole Speciale D'Architecture, Paris",France,Europe,Paris
 Eindhoven University of Technology,Netherlands,Europe,Eindhoven
-Emory University,United States of America,North America,Atlanta
+Emory University,United States of America,North America,"Atlanta, Georgia"
 Erasmus University,Netherlands,Europe,Rotterdam
 Esc. Sup. De Admin. Y Dir. De Empresas,Spain,Europe,Barcelona
 European Business School,UNKNOWN,Europe,CITY UNKNOWN
@@ -65,7 +65,7 @@ Georg-August-University,Germany,Europe,Göttingen
 Georgetown University,United States of America,North America,"Washington, D.C."
 Georgetown University Law Center,United States of America,North America,"Washington, D.C."
 "Georgetown University, Washington D.C.",United States of America,North America,"Washington, D.C."
-Georgia Institute of Technology,United States of America,North America,Atlanta
+Georgia Institute of Technology,United States of America,North America,"Atlanta, Georgia"
 Gottingen University,Germany,Europe,Göttingen
 Grenoble Institute of Technology (Grenoble INP),France,Europe,Grenoble
 HEC Montreal,Canada,North America,Montreal
@@ -82,14 +82,14 @@ Humboldt-Universitaet zu Berlin,Germany,Europe,Berlin
 IE Business School,Spain,Europe,Madrid
 Imperial College Business School,United Kingdom,Europe,London
 Imperial College London,United Kingdom,Europe,London
-"Indiana University, Bloomington",United States of America,North America,Bloomington
+"Indiana University, Bloomington",United States of America,North America,"Bloomington, Indiana"
 Inst Tech y de Estudios Superiores de Monterrey,Mexico,North America,Monterrey
 Institut d'Etudes Politiques de Grenoble,France,Europe,Grenoble
 Instituto Technologico Autonomo de Mexico,Mexico,North America,Mexico City
 Interdisciplinary Center Herzliya (IDC),Israel,Asia,Herzliya
-Iowa State University,United States of America,North America,Ames
+Iowa State University,United States of America,North America,"Ames, Iowa"
 "Jagiellonian University, Poland",Poland,Europe,Kraków
-Johns Hopkins University,United States of America,North America,Baltimore
+Johns Hopkins University,United States of America,North America,"Baltimore, Maryland"
 "Justus Liebig University, Giessen",Germany,Europe,Gießen
 KTH Royal Institute of Technology,Sweden,Europe,Stockholm
 Karlsruhe Institute of Technology,Germany,Europe,Karlsruhe
@@ -125,7 +125,7 @@ NOC Israel,Israel,Asia,Israel
 NOC Munich,Germany,Europe,Munich
 NOC Shanghai,China,Asia,Shanghai
 NOC Shenzhen,China,Asia,Shenzhen
-NOC Silicon Valley,United States of America,North America,San Francisco
+NOC Silicon Valley,United States of America,North America,"San Francisco, California"
 NOC Stockholm,Sweden,Europe,Stockholm
 NOC Toronto,Canada,North America,Toronto
 Nanjing University,China,Asia,Nanjing
@@ -137,9 +137,9 @@ National Chiao Tung University,Taiwan,Asia,Hsinchu City
 National Taiwan University,Taiwan,Asia,Taipei City
 National Taiwan University of Science & Technology,Taiwan,Asia,Taipei
 National Tsing Hua University,Taiwan,Asia,Hsinchu City
-New York University,United States of America,North America,New York City
-North Carolina State University,United States of America,North America,Raleigh
-Northwestern University,United States of America,North America,Evanston
+New York University,United States of America,North America,"New York City, New York"
+North Carolina State University,United States of America,North America,"Raleigh, North Carolina"
+Northwestern University,United States of America,North America,"Evanston, Illinois"
 Norwegian Sch of Veterinary Science,Norway,Europe,Oslo
 Norwegian School of Economics,Norway,Europe,Bergen
 Norwegian University of Science & Technology,Norway,Europe,Trondheim
@@ -147,15 +147,15 @@ Osaka University,Japan,Asia,Osaka
 Oulu University,Finland,Europe,Oulu
 Oxford Brookes University,United Kingdom,Europe,Oxford
 Peking University,China,Asia,Beijing
-Pennsylvania State University,United States of America,North America,University Park
+Pennsylvania State University,United States of America,North America,"University Park, Pennsylvania"
 Pohang University of Science & Technology,South Korea,Asia,Pohang
-Purdue University,United States of America,North America,West Lafayette
+Purdue University,United States of America,North America,"West Lafayette, Indiana"
 Queen's University at Kingston,Canada,North America,Kingston
 RWTH Aachen University,Germany,Europe,Aachen
 Radboud University Nijmegen,Netherlands,Europe,Nijmegen
 Renmin University of China,China,Asia,Beijing
 Rheinisch Friedrich-Wilhelms University of Bonn,Germany,Europe,Bonn
-Rice University,United States of America,North America,Houston
+Rice University,United States of America,North America,"Houston, Texas"
 "Richard Ivey Sch of Biz, Univ of Western Ontario",Canada,North America,"London, Ontario"
 "Ritsumeikan University,Kyoto",Japan,Asia,Kyoto 
 Rotterdam School of Management,Netherlands,Europe,Rotterdam
@@ -168,7 +168,7 @@ Shanghai Jiao Tong University,China,Asia,Shanghai
 Simon Fraser University,Canada,North America,Burnaby
 Singapore Management University,Singapore,Asia,Bras Basah
 Singapore University of Technology and Design,Singapore,Asia,Tampines
-Stanford University,United States of America,North America,Stanford
+Stanford University,United States of America,North America,"Stanford, California"
 Stockholm School of Economics,Sweden,Europe,Stockholm
 Sun Yat Sen University,China,Asia,Guangzhou
 Sungkyunkwan University,South Korea,Asia,Seoul
@@ -181,17 +181,17 @@ Technical University of Darmstadt,Germany,Europe,Darmstadt
 Technical University of Denmark,Denmark,Europe,Kgs. Lyngby
 Technical University of Munich,Germany,Europe,Munich
 Tel Aviv University,Israel,Asia,Tel Aviv
-"Texas A & M University,College Station,Texas",United States of America,North America,College Station
+"Texas A & M University,College Station,Texas",United States of America,North America,"College Station, Texas"
 Thammasat University,Thailand,Asia,Bangkok
 The Australian National University,Australia,Oceania,Acton
 The Chinese University of Hong Kong,Hong Kong,Asia,Central Ave
-The College of William & Mary,United States of America,North America,Williamsburg
+The College of William & Mary,United States of America,North America,"Williamsburg, New York"
 The George Washington University,United States of America,North America,"Washington, D.C."
 The Hebrew University of Jerusalem,Israel,Asia,Jerusalem
 The Hong Kong Polytechnic University,Hong Kong,Asia,Hung Hom
 The LNM Institute of Information Technology,India,Asia,Jaipur
 The University of Adelaide,Australia,Oceania,Adelaide
-The University of Arizona,United States of America,North America,Tucson
+The University of Arizona,United States of America,North America,"Tucson, Arizona"
 The University of Auckland,New Zealand,Oceania,Auckland
 The University of British Columbia,Canada,North America,Vancouver
 The University of British Columbia (Okanagan),Canada,North America,"Kelowna, British Columbia"
@@ -204,7 +204,7 @@ The University of Nottingham,United Kingdom,Europe,Nottingham
 The University of Queensland,Australia,Oceania,Brisbane
 The University of Sheffield,United Kingdom,Europe,Sheffield
 The University of Sydney,Australia,Oceania,Sydney
-The University of Texas at Austin,United States of America,North America,Austin
+The University of Texas at Austin,United States of America,North America,"Austin, Texas"
 The University of Tokyo,Japan,Asia,Bunkyō
 The University of Western Australia,Australia,Oceania,Perth
 Tianjin University,China,Asia,Tianjin
@@ -217,7 +217,7 @@ Tokyo University of Marine Science and Technology,Japan,Asia,Koto
 Tongji University,China,Asia,Shanghai
 Trinity College Dublin,Ireland,Europe,Dublin 
 Tsinghua University,China,Asia,Beijing
-Tulane University,United States of America,North America,New Orleans
+Tulane University,United States of America,North America,"New Orleans, Louisiana"
 Tunghai University,Taiwan,Asia,Taichung
 Universidad Autonoma de Madrid,Spain,Europe,Madrid
 Universidad Catolica De Honduras,Honduras,North America,Honduras
@@ -242,33 +242,33 @@ University of Bordeaux,France,Europe,Bordeaux
 University of Bristol,United Kingdom,Europe,Bristol
 "University of Brussels, Solvay Business School",Belgium,Europe,Brussels
 University of Calgary,Canada,North America,Calgary
-University of California,United States of America,North America,Oakland
-"University of California, Berkeley",United States of America,North America,Berkeley
-"University of California, Davis",United States of America,North America,Davis
-"University of California, Irvine",United States of America,North America,Irvine
-"University of California, Los Angeles",United States of America,North America,Los Angeles
-"University of California, Merced",United States of America,North America,Merced
-"University of California, Riverside",United States of America,North America,Riverside
-"University of California, San Diego",United States of America,North America,San Diego
-"University of California, Santa Barbara",United States of America,North America,Santa Barbara
-"University of California, Santa Cruz",United States of America,North America,Santa Cruz
+University of California,United States of America,North America,"Oakland, California"
+"University of California, Berkeley",United States of America,North America,"Berkeley, California"
+"University of California, Davis",United States of America,North America,"Davis, California"
+"University of California, Irvine",United States of America,North America,"Irvine, California"
+"University of California, Los Angeles",United States of America,North America,"Los Angeles, California"
+"University of California, Merced",United States of America,North America,"Merced, California"
+"University of California, Riverside",United States of America,North America,"Riverside, California"
+"University of California, San Diego",United States of America,North America,"San Diego, California"
+"University of California, Santa Barbara",United States of America,North America,"Santa Barbara, California"
+"University of California, Santa Cruz",United States of America,North America,"Santa Cruz, California"
 University of Cambridge,United Kingdom,Europe,Cambridge
 University of Canterbury,New Zealand,Oceania,Christchurch
 University of Cologne,Germany,Europe,Cologne
-University of Colorado Boulder,United States of America,North America,Boulder
+University of Colorado Boulder,United States of America,North America,"Boulder, Colorado"
 University of Commerce 'Luigi Bocconi' Milan,Italy,Europe,Milan
-University of Connecticut,United States of America,North America,Storrs
+University of Connecticut,United States of America,North America,"Storrs, Connecticut"
 University of Copenhagen,Denmark,Europe,Copenhagen
-University of Delaware,United States of America,North America,Newark
+University of Delaware,United States of America,North America,"Newark, Delaware"
 University of Dundee,United Kingdom,Europe,Dundee
-University of Florida,United States of America,North America,Gainesville
+University of Florida,United States of America,North America,"Gainesville, Florida"
 University of Geneva,Switzerland,Europe,Geneva
-University of Georgia,United States of America,North America,Athens
+University of Georgia,United States of America,North America,"Athens, Georgia"
 University of Glasgow,United Kingdom,Europe,Glasgow
 University of Goteborg,Sweden,Europe,Gothenburg
 University of Gothenburg,Sweden,Europe,Gothenburg
 University of Guelph,Canada,North America,Guelph
-"University of Hawaii, Manoa",United States of America,North America,Honolulu
+"University of Hawaii, Manoa",United States of America,North America,"Honolulu, Hawaii"
 University of Helsinki,Finland,Europe,Helsinki
 University of Hohenheim,Germany,Europe,Stuttgart
 "University of Illinois, Urbana-Champaign",United States of America,North America,"Urbana and Champaign, Illinois"
@@ -280,27 +280,27 @@ University of Leeds,United Kingdom,Europe,Leeds
 University of Liverpool,United Kingdom,Europe,Liverpool
 University of Ljubljana,Slovenia,Europe,Ljubljana
 University of Mannheim,Germany,Europe,Mannheim
-University of Maryland,United States of America,North America,College Park
-University of Miami,United States of America,North America,Coral Gables
-"University of Michigan, Ann Arbor",United States of America,North America,Ann Arbor
-University of Minnesota,United States of America,North America,Minneapolis
+University of Maryland,United States of America,North America,"College Park, Maryland"
+University of Miami,United States of America,North America,"Coral Gables, Florida"
+"University of Michigan, Ann Arbor",United States of America,North America,"Ann Arbor, Michigan"
+University of Minnesota,United States of America,North America,"Minneapolis, Minnesota"
 University of Newcastle,Australia,Oceania,"Newcastle, New South Wales"
 University of Newcastle upon Tyne,United Kingdom,Europe,Newcastle upon Tyne
-"University of North Carolina, Chapel Hill",United States of America,North America,Chapel Hill
-"University of North Carolina, Kenan-Flagler",United States of America,North America,Chapel Hill
-University of Notre Dame,United States of America,North America,Notre Dame
+"University of North Carolina, Chapel Hill",United States of America,North America,"Chapel Hill, North Carolina"
+"University of North Carolina, Kenan-Flagler",United States of America,North America,"Chapel Hill, North Carolina"
+University of Notre Dame,United States of America,North America,"Notre Dame, Indiana"
 University of Nottingham Malaysia Campus,Malaysia,Asia,Semenyih
-University of Oregon,United States of America,North America,Eugene
+University of Oregon,United States of America,North America,"Eugene, Oregon"
 University of Oslo,Norway,Europe,Oslo
 University of Otago,New Zealand,Oceania,Dunedin
 University of Ottawa,Canada,North America,Ottawa
 University of Oxford,United Kingdom,Europe,Oxford
-University of Pennsylvania,United States of America,North America,Philadelphia
-University of Pittsburgh,United States of America,North America,Pittsburgh
-University of San Diego,United States of America,North America,San Diego
+University of Pennsylvania,United States of America,North America,"Philadelphia, Pennsylvania"
+University of Pittsburgh,United States of America,North America,"Pittsburgh, Pennsylvania"
+University of San Diego,United States of America,North America,"San Diego, California"
 University of Seoul,South Korea,Asia,Seoul
 University of Southampton,United Kingdom,Europe,Southampton
-University of Southern California,United States of America,North America,Los Angeles
+University of Southern California,United States of America,North America,"Los Angeles, California"
 University of St Andrews,United Kingdom,Europe,St Andrews
 University of St Gallen,Switzerland,Europe,St. Gallen
 University of Stockholm,Sweden,Europe,Stockholm
@@ -311,11 +311,11 @@ University of Technology of Troyes,France,Europe,Troyes
 University of Toronto,Canada,North America,Toronto
 University of Toronto (Mississauga),Canada,North America,Mississauga
 "University of Victoria, British Columbia",Canada,North America,"Greater Victoria, British Columbia"
-University of Virginia,United States of America,North America,Charlottesville
+University of Virginia,United States of America,North America,"Charlottesville, Virginia"
 University of Warwick,United Kingdom,Europe,Coventry
-"University of Washington, Seattle",United States of America,North America,Seattle
+"University of Washington, Seattle",United States of America,North America,"Seattle, Washington"
 University of Waterloo,Canada,North America,Waterloo
-University of Wisconsin-Madison,United States of America,North America,Madison
+University of Wisconsin-Madison,United States of America,North America,"Madison, Wisconsin"
 University of Wurzburg,Germany,Europe,Würzburg
 University of York,United Kingdom,Europe,York
 University of Zagreb,Croatia,Europe,Zagreb
@@ -323,7 +323,7 @@ University of Zurich,Switzerland,Europe,Zürich
 "University of the Republic, Uruguay",Uruguay,South America,Montevideo
 Uppsala University,Sweden,Europe,Uppsala
 Utrecht University,Netherlands,Europe,Utrecht
-Vanderbilt University,United States of America,North America,Nashville
+Vanderbilt University,United States of America,North America,"Nashville, Tennessee"
 Victoria University,Australia,Oceania,Melbourne
 Victoria University of Wellington,New Zealand,Oceania,Wellington
 Vienna University of Economics and Business,Austria,Europe,Vienna
@@ -334,7 +334,7 @@ Waseda University,Japan,Asia,Shinjuku
 Western University,Canada,North America,Ontario
 Xi'an Jiaotong University,China,Asia,Xi'an
 Xiamen University,China,Asia,Xiamen
-Yale University,United States of America,North America,New Haven
+Yale University,United States of America,North America,"New Haven, Connecticut"
 Yonsei University,South Korea,Asia,Seoul
 York University,Canada,North America,Toronto
 Zhejiang University,China,Asia,Xihu District
