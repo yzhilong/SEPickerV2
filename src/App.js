@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     app: {
         width: "100%",
         minWidth: 550,
+        backgroundColor: "#fee8b4"
     },
     country: {
         width: '80%',
@@ -116,7 +117,7 @@ function App() {
                     : null
                 } */}
             </Grid>
-            <footer align="center" style={{position: "relative", bottom: 0}} className={classes.app}>
+            <footer align="center" style={{position: "fixed", bottom: 0}} className={classes.app}>
                 <Typography style={{fontSize: "80%", fontStyle: "italic"}}>
                     This website was created by <a href={BenjaminsLink}>Benjamin</a> and <a href={ZhiLongsLink}>Zhi Long</a>,
                     an overhaul of our <a href="https://github.com/tangboxuan/SEPicker">HackNRoll project</a>. 

@@ -131,13 +131,13 @@ function School(props) {
                         <Grid item xs={1}></Grid>
                         <Grid item xs={9}>
                             <Typography>
-                                <Box fontWeight="fontWeightBold" fontSize="large">{schoolName}</Box>
-                                <Box fontSize="small">{showModules()} available</Box>
+                                <Box fontWeight="fontWeightBold" fontSize="18px">{schoolName}</Box>
+                                <Box fontSize="12px">{showModules()} available</Box>
                             </Typography>
                         </Grid>
                         <Grid item xs={1}>
                             <Box 
-                                style={{backgroundColor: "orange"}}
+                                style={{backgroundColor: "#fcbd2f"}}
                                 textAlign="center" 
                                 component={Paper} 
                                 square={false} 
@@ -164,7 +164,7 @@ function School(props) {
                                 paddingLeft: "5px",
                                 paddingRight: "5px",
                                 paddingBottom: "3px",
-                                backgroundColor: "white"}}
+                                backgroundColor: "#fee8b4"}}
                             component={Paper}
                         >
                             <TextField 

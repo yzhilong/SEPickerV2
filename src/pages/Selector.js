@@ -92,18 +92,11 @@ function Selector(props) {
 
 		return (
 				<div className="Selector">
-						{/* <h2>Delete these arrays later</h2>
-						<strong>EM:</strong>{selectedEssentialModules} <br/>
-						<strong>OM:</strong>{selectedOptionalModules} <br/> 
-						<strong>Countries:</strong>{selectedCountries} <br/>
-						<strong>Schools:</strong>{selectedSchools} <br/>
-						<strong>Continents:</strong>{selectedContinents} <br/> */}
-						{/* <div class="wrap"> */}
 						<Grid container item xs={12} spacing={0} justifyContent="center">
                 
 							<Grid container item xs={11} lg={5} justifyContent="center">
 
-								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="left-box" style={{backgroundColor: "brown", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw"}}>
+								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="left-box" style={{backgroundColor: "#4786c3", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw"}}>
 									<Grid spacing={0} item xs={12}>
 										<Grid container item justifyContent="center">
 											<Grid container item xs={12} justifyContent="center">
@@ -130,7 +123,7 @@ function Selector(props) {
 											</Grid>
 											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 10% 0%", padding: "3%"}}>
 												<Grid container item xs={12} alignItems="center">
-													<Typography variant="h4" style={{display: "inline-block", paddingRight: "1%"}}>
+													<Typography variant="h5" style={{display: "inline-block", paddingRight: "1%"}}>
 														Locations
 													</Typography>
 													<ClickAwayListener onClickAway={() => setLocationTooltipOpen(false)}>
@@ -158,12 +151,14 @@ function Selector(props) {
 
 							<Grid container item xs={11} lg={5}>
 
-								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="right-box" style={{backgroundColor: "brown", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw", paddingBottom: "9%"}}>
+								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="right-box" style={{backgroundColor: "#4786c3", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw", paddingBottom: "9%"}}>
 									<Grid spacing={0} item xs={12}>
 										<Grid container item>
-
-
-											<Grid container item xs={12} justifyContent="center"><Typography variant="h4">Results</Typography></Grid>
+											<Grid container item xs={12} justifyContent="center">
+												<Typography variant="h4">
+													Results
+												</Typography>
+											</Grid>
 											<Grid container item xs={12} style={{paddingTop: "0%"}} justifyContent="center">
 												{loading
 													? <Typography variant="h4">Loading...</Typography>
