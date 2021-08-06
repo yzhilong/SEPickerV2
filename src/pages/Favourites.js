@@ -124,8 +124,12 @@ function Favourites(props) {
                                 ref={provided.innerRef}
                                 style={{marginBottom:"2%", backgroundColor: "brown", padding: "2%"}}
                             >
-                                {schools.map(func)}
-                                {provided.placeholder}
+                                {schools.length == 0 
+                                    ? <Typography variant="h5" style={{fontWeight: "bold"}}>No school favourited yet</Typography>
+                                    : <React.Fragment>
+                                       {schools.map(func)}
+                                       {provided.placeholder}
+                                      </React.Fragment>}
                             </Grid>
                             
                         )}

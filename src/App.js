@@ -85,8 +85,8 @@ function App() {
     const githubPage = "https://github.com/yzhilong/SEPickerV2"
 
     return (
-        <div>
-            <Grid className={classes.app} style={{height: "100vh"}}>
+        <div style={{height: "100vh", backgroundColor: "#fee8b4"}}>
+            <Grid className={classes.app} >
                 <NavBar />
                 <Route path="/" exact>
                     <Selector 
