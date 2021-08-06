@@ -99,7 +99,7 @@ function Selector(props) {
 								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="left-box" style={{backgroundColor: "#4786c3", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw"}}>
 									<Grid spacing={0} item xs={12}>
 										<Grid container item justifyContent="center">
-											<Grid container item xs={12} justifyContent="center">
+											<Grid container item xs={12} justifyContent="center" style={{color: "white"}}>
 												<Typography variant="h4">Preferences</Typography>
 											</Grid>
 											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 2% 0%", padding: "3%"}}>
@@ -154,7 +154,7 @@ function Selector(props) {
 								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="right-box" style={{backgroundColor: "#4786c3", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw", paddingBottom: "9%"}}>
 									<Grid spacing={0} item xs={12}>
 										<Grid container item>
-											<Grid container item xs={12} justifyContent="center">
+											<Grid container item xs={12} justifyContent="center" style={{color: "white"}}>
 												<Typography variant="h4">
 													Results
 												</Typography>
