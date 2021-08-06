@@ -86,7 +86,7 @@ function App() {
 
     return (
         <div>
-            <Grid className={classes.app}>
+            <Grid className={classes.app} style={{height: "100vh"}}>
                 <NavBar />
                 <Route path="/" exact>
                     <Selector 
