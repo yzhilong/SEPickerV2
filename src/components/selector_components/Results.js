@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         padding: theme.spacing(2),
         minWidth: 100,
-        background: "white",
+        background: "#C5BDB1",
     },
     tmp: {
         padding: theme.spacing(1),

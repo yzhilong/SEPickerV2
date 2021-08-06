@@ -121,7 +121,7 @@ function School(props) {
                                     onClick={(event) => event.stopPropagation()}
                                     onFocus={(event) => event.stopPropagation()}
                                     control={<Checkbox 
-                                        checkedIcon={<FavoriteIcon />} 
+                                        checkedIcon={<FavoriteIcon style={{color: "#C69405"}}/>} 
                                         icon={<FavoriteBorderIcon />}
                                         checked={favourited}
                                         onChange={onFavHandler}

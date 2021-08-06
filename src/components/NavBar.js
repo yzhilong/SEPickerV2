@@ -11,7 +11,7 @@ function NavBar(props) {
             <Grid container xs={12} justifyContent="center">
                 <Grid container item xs={11} lg={10} style={{height: "100%", position: "relative"}}>
                     <span id="navbar-icon-title">
-                        <PublicIcon style={{color:"white", fontSize: "2rem"}}/>
+                        <PublicIcon style={{color:"white", fontSize: "2.5rem"}}/>
                         <Typography id="navbar-sepicker">
                             SEPicker
                         </Typography>

@@ -102,7 +102,7 @@ function Selector(props) {
 											<Grid container item xs={12} justifyContent="center" style={{color: "white"}}>
 												<Typography variant="h4">Preferences</Typography>
 											</Grid>
-											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 2% 0%", padding: "3%"}}>
+											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 2% 0%", padding: "3%", backgroundColor: "#C5BDB1"}}>
 												<Grid container item xs={12} alignItems="center">
 													<Typography variant="h5" style={{display: "inline-block", paddingRight: "1%"}}>Modules</Typography>
 													<ClickAwayListener onClickAway={() => setModuleTooltipOpen(false)}>
@@ -121,7 +121,7 @@ function Selector(props) {
 												<EssentialModulesSelector stateSetter={setSelectedEssentialModules} state={selectedEssentialModules}/>
 												<OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
 											</Grid>
-											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 10% 0%", padding: "3%"}}>
+											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 10% 0%", padding: "3%", backgroundColor: "#C5BDB1"}}>
 												<Grid container item xs={12} alignItems="center">
 													<Typography variant="h5" style={{display: "inline-block", paddingRight: "1%"}}>
 														Locations
