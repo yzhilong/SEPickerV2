@@ -122,7 +122,7 @@ function Favourites(props) {
                                 className={classes.favourites}
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
-                                style={{marginBottom:"2%", backgroundColor: "brown"}}
+                                style={{marginBottom:"2%", backgroundColor: "brown", padding: "2%"}}
                             >
                                 {schools.map(func)}
                                 {provided.placeholder}

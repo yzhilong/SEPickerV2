@@ -158,7 +158,7 @@ function Selector(props) {
 
 							<Grid container item xs={11} lg={5}>
 
-								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="right-box" style={{backgroundColor: "brown", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw"}}>
+								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="right-box" style={{backgroundColor: "brown", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw", paddingBottom: "9%"}}>
 									<Grid spacing={0} item xs={12}>
 										<Grid container item>
 
