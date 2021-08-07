@@ -1,5 +1,6 @@
 import React, { Component, useState } from "react"
 import { Route, Switch } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import Favourites from "./pages/Favourites"
 import NavBar from "./components/NavBar"
 import Selector from "./pages/Selector"
@@ -59,10 +60,12 @@ const useStyles = makeStyles((theme) => ({
     },
     }));
 
+const scale = visualViewport.width < 550 ? visualViewport.width/550 : 1
+const metaContent = "width=device-width,initial-scale=" + scale
+
 function App() {
 
     const [ page, setPage ] = useState("Selector")
-
     // favourites should be a set of strings, where each element is "uni_name, MOD1, MOD2, ..., MODn"
     // modules must be in sorted order
 
@@ -85,6 +88,9 @@ function App() {
 
     return (
         <div style={{height: "100vh", backgroundColor:"#F6F6F6"}}>
+            <Helmet>
+                <meta name="viewport" content={`${metaContent}`}/>
+            </Helmet>
             <Grid className={classes.app} >
                 <NavBar />
                 <Route path="/" exact>
