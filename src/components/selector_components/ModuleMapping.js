@@ -28,10 +28,10 @@ function ModuleMapping(props) {
                 return (
                     <Grid item xs={12}>
                         <Typography>
-                            <Box textAlign="left" style={{padding: 5, fontSize: "16px", fontWeight: "bold", fontFamily: "Bebas, sans-serif"}}>
+                            <Box textAlign="left" style={{padding: 5, fontSize: "16px", fontWeight: "bold", fontFamily: "Georgia, sans-serif"}}>
                                 {mod["PU Module Code"]}
                             </Box>
-                            <Box textAlign="left" style={{padding: 5, fontSize: "16px", fontFamily: "Bebas, sans-serif"}}>
+                            <Box textAlign="left" style={{padding: 5, fontSize: "16px", fontFamily: "Georgia, sans-serif"}}>
                                 {mod["PU Module Title"]}
                             </Box>
                         </Typography>
@@ -46,10 +46,10 @@ function ModuleMapping(props) {
             <Grid container item xs={12} spacing={0} component={Paper} className={classes.moduleMappingPaper} elevation={1}>
                 <Grid item container xs={6} alignItems="center">
                     <Grid item xs={6}>
-                        <div style={{padding: 5, textAlign: "left", fontWeight: "bold", fontSize: "16px", fontFamily: "Bebas, sans-serif"}}>
+                        <div style={{padding: 5, textAlign: "left", fontWeight: "bold", fontSize: "16px", fontFamily: "Georgia, sans-serif"}}>
                             {moduleCode}
                         </div>
-                        <div style={{padding: 5, textAlign: "left", fontSize: "16px", fontFamily: "Bebas, sans-serif"}}>
+                        <div style={{padding: 5, textAlign: "left", fontSize: "16px", fontFamily: "Georgia, sans-serif"}}>
                             {modulesCodeTitleMappings[moduleCode]}
                         </div>
                     </Grid>

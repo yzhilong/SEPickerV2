@@ -20,7 +20,6 @@ function ContinentSelector(props) {
     const selectedContinents = "selectedContinents" in localStorage
         ? JSON.parse(localStorage.getItem("selectedContinents"))
         : []
-    console.log(selectedContinents)
 
     function onClickContinentHandler(continent) {
         props.stateSetter(prevState => {

@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import Favourites from "./pages/Favourites"
 import NavBar from "./components/NavBar"
 import Selector from "./pages/Selector"
-// import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap
 
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
@@ -66,7 +66,6 @@ function App() {
     // favourites should be a set of strings, where each element is "uni_name, MOD1, MOD2, ..., MODn"
     // modules must be in sorted order
 
-
     let favouriteNames = null
     if ("favouriteNames" in localStorage) {
         favouriteNames = JSON.parse(localStorage.getItem("favouriteNames"))
@@ -85,7 +84,7 @@ function App() {
     const githubPage = "https://github.com/yzhilong/SEPickerV2"
 
     return (
-        <div style={{height: "100vh", backgroundColor:"#DDDDDF"}}>
+        <div style={{height: "100vh", backgroundColor:"#F6F6F6"}}>
             <Grid className={classes.app} >
                 <NavBar />
                 <Route path="/" exact>
@@ -94,36 +93,19 @@ function App() {
                         setFavourites={setFavourites}
                     /> 
                 </Route>
-                {/* <Route path ="/department" exact>
-                    TODO
-                </Route> */}
                 <Route path="/favourites" exact>
                     <Favourites
                         favourites={favourites}
                         setFavourites={setFavourites}
                     />
                 </Route>
-                {/* {page === "Selector" 
-                    ? <Selector 
-                        favourites={favourites}
-                        setFavourites={setFavourites}
-                        /> 
-                    : page === "Favourites"
-                    ? <Favourites
-                        favourites={favourites}
-                        setFavourites={setFavourites}/>
-                    : page === "Department"
-                    ? null
-                    : null
-                } */}
             </Grid>
-            <div style={{backgroundColor: "#DDDDDF"}}><br></br></div>
-            <footer align="center" style={{position: "fixed", bottom: 0}} className={classes.app}>
-               
-                <Typography style={{fontSize: "80%", fontStyle: "italic"}}>
+            <div style={{backgroundColor: "#F6F6F6"}}><br></br></div>
+            <footer align="center" style={{position: "fixed", bottom: 0, borderTop: "1px solid rgb(150,150,150)"}} className={classes.app}>
+                <Typography style={{fontSize: "80%", fontStyle: "italic", fontFamily: "Courier New", opacity: "100%"}}>
                     This website was created by <a href={BenjaminsLink}>Benjamin</a> and <a href={ZhiLongsLink}>Zhi Long</a>,
                     an overhaul of our <a href="https://github.com/tangboxuan/SEPicker">HackNRoll project</a>. 
-                    Checkout our code <a href={githubPage}>here!</a>
+                    {/* Checkout our code <a href={githubPage}>here!</a> */}
                 </Typography>
             </footer>
         </div>

@@ -21,6 +21,7 @@
   padding-left: 2%;
   /* border: solid red 1px; */
   font-size: 2rem;
+  font-family: "Georgia, sans-serif";
 }
 
 .navbar nav {
@@ -54,6 +55,7 @@
   width: fit-content;
   display: flex;
   justify-content: center;
+  font-family: "Georgia, sans-serif";
   /* border: red solid 1px; */
 }
 

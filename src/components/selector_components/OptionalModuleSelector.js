@@ -50,26 +50,21 @@ function OptionalModulesSelector(props) {
                 options={modules}
                 getOptionLabel={(options) => options.module}
                 defaultValue={defaultValue}
-                
                 renderTags={(value, getTagProps) =>
                     value.map((option, index) => (
                         <Chip
-                            style={{backgroundColor: "#F6F6F6"}}
+                            style={{backgroundColor: "#F6F6F6", fontFamily: "Courier New"}}
                             variant="outlined"
                             label={option.module}
                             {...getTagProps({index})}    
                         />
                     ))
                 }
-                
-
                 renderInput={(params) => (
                     <TextField 
                         {...params} 
-                        // style={{fontFamily: "Courier New"}}
                         variant="outlined" 
                         label={<div style={{fontFamily: "Courier New"}}>{"Optional Modules"}</div>} 
-                        placeholder="Hit enter to select"
                     />
                 )}
             />

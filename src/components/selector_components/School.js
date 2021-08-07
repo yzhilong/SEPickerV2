@@ -140,7 +140,7 @@ function School(props) {
                         </Grid>
                         <Grid item xs={1}>
                             <Box 
-                                style={{backgroundColor: "#DDDDDF", fontWeight: "bold", fontFamily: "Georgia, sans-serif"}}
+                                style={{backgroundColor: "#edbb3d", fontWeight: "bold", fontFamily: "Georgia, sans-serif"}}
                                 textAlign="center" 
                                 component={Paper} 
                                 square={false} 
@@ -171,7 +171,8 @@ function School(props) {
                             component={Paper}
                         >
                             <TextField 
-                            label="Notes" 
+                            label={<div style={{fontFamily: "Georgia, sans-serif"}}>Notes</div>}
+                            InputProps={{style: {fontFamily: "Georgia, sans-serif"}}}
                             multiline={true}
                             className={classes.innerRoot}
                             maxRows={6}
