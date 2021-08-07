@@ -96,21 +96,23 @@ function Selector(props) {
                 
 							<Grid container item xs={11} lg={5} justifyContent="center">
 
-								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="left-box" style={{backgroundColor: "#4786c3", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw", border: "2px white solid"}}>
+								<Grid container item component={Paper} elevation={5} xs={12} spacing={0} justifyContent="center" id="left-box" style={{backgroundColor: "#29648A", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw"}}>
 									<Grid spacing={0} item xs={12}>
 										<Grid container item justifyContent="center">
 											<Grid container item xs={12} justifyContent="center" style={{color: "white"}}>
 												<Typography variant="h4" style={{fontFamily: "Georgia, sans-serif"}}>Preferences</Typography>
 											</Grid>
-											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 2% 0%", padding: "3%", backgroundColor: "#C5BDB1"}}>
+											<Grid container item xs={11} component={Paper} justifyContent="center" style={{backgroundColor: "#DDDDDF", margin: "2% 0% 2% 0%", padding: "3%"}}>
 												<Grid container item xs={12} alignItems="center">
-													<Typography variant="h5" style={{display: "inline-block", paddingRight: "1%", fontFamily: "Georgia, sans-serif"}}>Modules</Typography>
+													<Typography variant="h5" style={{display: "inline-block", paddingRight: "1%", fontFamily: "Georgia, sans-serif", fontWeight: "bold"}}
+														>Modules
+													</Typography>
 													<ClickAwayListener onClickAway={() => setModuleTooltipOpen(false)}>
 														<Tooltip
 														open={moduleTooltipOpen}
 														disableFocusListener
 														onClick={() => setModuleTooltipOpen(true)}
-														title='Schools found will be able to fulfill all Essential Modules and all mappable Optional Modules will be shown too'
+														title='Only schools that fulfill ALL essential modules will be shown. Mappings for optional modules will be shown if the school contains them. You can select optional modules without essential modules.'
 														>
 															<IconButton style={{color: "grey"}} size="small">
 																<HelpOutlineIcon/>
@@ -121,9 +123,9 @@ function Selector(props) {
 												<EssentialModulesSelector stateSetter={setSelectedEssentialModules} state={selectedEssentialModules}/>
 												<OptionalModulesSelector stateSetter={setSelectedOptionalModules}/>
 											</Grid>
-											<Grid container item xs={11} component={Paper} justifyContent="center" style={{margin: "2% 0% 10% 0%", padding: "3%", backgroundColor: "#C5BDB1"}}>
+											<Grid container item xs={11} component={Paper} justifyContent="center" style={{backgroundColor: "#DDDDDF", margin: "2% 0% 2% 0%", padding: "3%"}}>
 												<Grid container item xs={12} alignItems="center">
-													<Typography variant="h5" style={{display: "inline-block", paddingRight: "1%", fontFamily: "Georgia, sans-serif"}}>
+													<Typography variant="h5" style={{display: "inline-block", paddingRight: "1%", fontFamily: "Georgia, sans-serif", fontWeight: "bold"}}>
 														Locations
 													</Typography>
 													<ClickAwayListener onClickAway={() => setLocationTooltipOpen(false)}>
@@ -131,7 +133,7 @@ function Selector(props) {
 														open={locationTooltipOpen}
 														disableFocusListener
 														onClick={() => setLocationTooltipOpen(true)}
-														title='Any school which is in one of the following regions/has been selected will be considered in our search'
+														title='All schools in selected regions will be considered. If nothing is selected, all schools will be considered.'
 														>
 															<IconButton style={{color: "grey"}} size="small">
 																<HelpOutlineIcon />
@@ -151,7 +153,7 @@ function Selector(props) {
 
 							<Grid container item xs={11} lg={5}>
 
-								<Grid container item component={Paper} xs={12} spacing={0} justifyContent="center" id="right-box" style={{backgroundColor: "#4786c3", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw", paddingBottom: "9%"}}>
+								<Grid container item component={Paper} xs={12} elevation={5} spacing={0} justifyContent="center" id="right-box" style={{backgroundColor: "#29648A", paddingTop: "2vh", margin: "0vw 1vw 2vw 1vw", paddingBottom: "9%"}}>
 									<Grid spacing={0} item xs={12}>
 										<Grid container item>
 											<Grid container item xs={12} justifyContent="center" style={{color: "white"}}>
@@ -161,11 +163,11 @@ function Selector(props) {
 											</Grid>
 											<Grid container item xs={12} style={{paddingTop: "0%"}} justifyContent="center" alignItems="center">
 												{loading
-													? <div><br></br><Typography variant="h6" style={{fontFamily: "Courier New"}}>Loading...</Typography></div>
+													? <div><br></br><Typography variant="h6" style={{fontFamily: "Courier New", color: "white"}}>Loading...</Typography></div>
 													: selectedEssentialModules.length + selectedOptionalModules.length === 0
-													? <div><br></br><Typography variant="h6" style={{fontFamily: "Courier New"}}>No module selected yet</Typography></div>
+													? <div><br></br><Typography variant="h6" style={{fontFamily: "Courier New", color: "white"}}>No module selected yet</Typography></div>
 													: Object.keys(result).length === 0 
-													? <div><br></br><Typography variant="h6" style={{fontFamily: "Courier New"}}>No mappings found :(</Typography></div>
+													? <div><br></br><Typography variant="h6" style={{fontFamily: "Courier New", color: "white"}}>No mappings found</Typography></div>
 													: <Grid container justifyContent="center" xs={12} style={{marginTop: "2%"}}>
 															<Results result={result}/>
 														</Grid>}

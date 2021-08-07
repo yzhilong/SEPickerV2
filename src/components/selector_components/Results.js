@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         padding: theme.spacing(2),
         minWidth: 100,
-        background: "#C5BDB1",
+        background: "#DDDDDF",
     },
     tmp: {
         padding: theme.spacing(1),
@@ -34,9 +34,10 @@ const useStyles = makeStyles((theme) => ({
     },
     school: {
         width: '100%',
-        background: "#9ebfe0",
+        background: "rgb(247,247,247)",
         minWidth: 100,
         padding: theme.spacing(1),
+        // boxShadow: "0 0 6px 1px rgb(150,150,150)"
     },
     moduleMappingTitle: {
         width: '100%',
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     },
     moduleMappingPaper: {
         width: "100%",
-        background: "#fcbd2f",
+        background: "#edbb3d",
         // minWidth: 200,
         padding: theme.spacing(1),
     },

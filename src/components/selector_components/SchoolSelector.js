@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import { Grid } from '@material-ui/core'
+import { Grid, Chip } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -46,8 +46,22 @@ function SchoolSelector(props) {
                 options={schools}
                 getOptionLabel={(option) => option.school}
                 defaultValue={defaultValue}
+                renderTags={(value, getTagProps) =>
+                    value.map((option, index) => (
+                        <Chip
+                            style={{backgroundColor: "#F6F6F6", fontFamily: "Courier New"}}
+                            variant="outlined"
+                            label={option.school}
+                            {...getTagProps({index})}    
+                        />
+                    ))
+                }
                 renderInput={(params) => (
-                    <TextField {...params} variant="outlined" label={<div style={{fontFamily: "Courier New"}}>{"Schools"}</div>}  placeholder="Hit enter to select" />
+                    <TextField 
+                        {...params} 
+                        variant="outlined" 
+                        label={<div style={{fontFamily: "Courier New"}}>{"Schools"}</div>} 
+                    />
                 )}
             />
         </Grid>
