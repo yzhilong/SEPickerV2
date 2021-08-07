@@ -104,7 +104,7 @@ function Favourites(props) {
         <Grid container xs={12} justifyContent="center">
             <Grid container justifyContent="center" style={{maxWidth: "80%", paddingTop: "1vh"}}>
                 <Grid container item xs={12} justifyContent="center">
-                    <Typography variant="h5" style={{fontWeight: "bold"}}>Drag and drop to rank!</Typography>
+                    <Typography variant="h5" style={{fontWeight: "bold", fontFamily: "Georgia, sans-serif"}}>Drag and drop to rank!</Typography>
                     <br></br>
                 </Grid>
                 <Grid container item xs={12} justifyContent="center">
@@ -127,7 +127,7 @@ function Favourites(props) {
                                 style={{marginBottom:"2%", backgroundColor: "#29648A", padding: "2%"}}
                             >
                                 {schools.length == 0 
-                                    ? <Typography variant="h5" style={{fontWeight: "bold"}}>No school favourited yet</Typography>
+                                    ? <Typography variant="h5" style={{fontSize:"1.4rem", color:"white", fontFamily: "Courier New"}}>No school favourited yet</Typography>
                                     : <React.Fragment>
                                        {schools.map(func)}
                                        {provided.placeholder}

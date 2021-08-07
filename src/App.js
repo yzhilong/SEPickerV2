@@ -110,7 +110,7 @@ function App() {
                     />
                 </Route>
             </Grid>
-            <div style={{backgroundColor: "#F6F6F6"}}><br></br></div>
+            <div style={{backgroundColor: "#F6F6F6", paddingTop:"10px"}}><br/></div>
             <footer align="center" style={{position: "fixed", bottom: 0, borderTop: "1px solid rgb(150,150,150)"}} className={classes.app}>
                 <Typography style={{fontSize: "80%", fontStyle: "italic", fontFamily: "Courier New", opacity: "100%"}}>
                     This website was created by <a href={BenjaminsLink}>Benjamin</a> and <a href={ZhiLongsLink}>Zhi Long</a>,
