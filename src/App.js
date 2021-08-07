@@ -79,6 +79,8 @@ function App() {
     }
 
     const [ favourites, setFavourites ] = useState(favouriteNames)
+    const [ title, setTitle ] = useState("SEPicker")
+    document.title = title
 
     const classes = useStyles()
 
@@ -97,12 +99,14 @@ function App() {
                     <Selector 
                         favourites={favourites}
                         setFavourites={setFavourites}
+                        setTitle={setTitle}
                     /> 
                 </Route>
                 <Route path="/favourites" exact>
                     <Favourites
                         favourites={favourites}
                         setFavourites={setFavourites}
+                        setTitle={setTitle}
                     />
                 </Route>
             </Grid>

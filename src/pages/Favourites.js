@@ -57,6 +57,7 @@ function Favourites(props) {
 
     // REQUIRE LOGIC FOR SHOWING HOW TO HANDLE ELEMENTS IN props.favoruites
     const [ schools, setSchools ] = useState(JSON.parse(localStorage.getItem("favouriteNames")))
+    props.setTitle("SEPicker - Favourites")
 
     const classes = useStyles()
 
