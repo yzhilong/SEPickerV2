@@ -80,7 +80,7 @@ function Selector(props) {
 
 		useEffect(() => {
 			setLoading(true)
-			fetch('https://sepicker.herokuapp.com/backend', {
+			fetch('https://sepickerv2.herokuapp.com/backend', {
 					method: "POST",
 					headers: {
 						'Content-Type': 'application/json'
