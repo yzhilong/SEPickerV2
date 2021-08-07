@@ -72,6 +72,8 @@ function Selector(props) {
 		const [ moduleTooltipOpen, setModuleTooltipOpen ] = useState(false)
 		const [ locationTooltipOpen, setLocationTooltipOpen ] = useState(false)
 
+		props.setTitle("SEPicker - Selector")
+
 
 
 
