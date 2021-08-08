@@ -80,7 +80,7 @@ function Selector(props) {
 
 		useEffect(() => {
 			setLoading(true)
-			fetch('https://sepickerv2.herokuapp.com/backend', {
+			fetch('https://sepicker.herokuapp.com/backend', {
 					method: "POST",
 					headers: {
 						'Content-Type': 'application/json'
@@ -169,7 +169,7 @@ function Selector(props) {
 													: selectedEssentialModules.length + selectedOptionalModules.length === 0
 													? <div><br></br><Typography variant="h6" style={{fontFamily: "Courier New", color: "white"}}>No module selected yet</Typography></div>
 													: Object.keys(result).length === 0 
-													? <div><br></br><Typography variant="h6" style={{fontFamily: "Courier New", color: "white"}}>No mappings found</Typography></div>
+													? <div><br></br><Typography variant="h6" style={{fontFamily: "Courier New", color: "white"}}>No pre-approved mappings found</Typography></div>
 													: <Grid container justifyContent="center" xs={12} style={{marginTop: "2%"}}>
 															<Results result={result}/>
 														</Grid>}
