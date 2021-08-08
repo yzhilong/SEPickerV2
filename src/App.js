@@ -1,6 +1,7 @@
-import React, { Component, useState } from "react"
+import React, { Component, useState, useEffect } from "react"
 import { Route, Switch } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import ReactGa from 'react-ga'
 import Favourites from "./pages/Favourites"
 import NavBar from "./components/NavBar"
 import Selector from "./pages/Selector"
@@ -87,7 +88,13 @@ function App() {
     const BenjaminsLink = "https://www.linkedin.com/in/benjamin-lee-b7975819a/"
     const ZhiLongsLink = "https://www.linkedin.com/in/zhi-long-yeo/"
     const githubPage = "https://github.com/yzhilong/SEPickerV2"
+    
 
+    useEffect(() => {
+        ReactGa.initialize('UA-204358478-1')
+        ReactGa.pageview('/')
+        // console.log("GA")
+    }, [])
     return (
         <div style={{height: "100vh", backgroundColor:"#F6F6F6"}}>
             <Helmet>
