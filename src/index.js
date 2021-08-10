@@ -1,33 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createTheme, ThemeProvider } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/core';
+import theme from './theme.js'
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#F6F6F6' // silver-white, used for background
-    },
-    secondary: {
-      main: "#29648A" // bluish-green
-    },
-    tertiary: {
-      main: "#DDDDDF" // gray
-    },
-    quarternary: {
-      main: "f7f7f7" // off-white
-    },
-    quinary: {
-      main: "F1F1F1" // light gray
-    },
-    senary: {
-      main: "#edbb3d" // Orange
-    }
-  }
-})
 
 ReactDOM.render(
   <BrowserRouter>
