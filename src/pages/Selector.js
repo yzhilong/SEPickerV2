@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import ReactGa from 'react-ga'
 import EssentialModulesSelector from "../components/selector_components/EssentialModuleSelector"
 import OptionalModulesSelector from "../components/selector_components/OptionalModuleSelector"
 import ContinentSelector from "../components/selector_components/ContinentSelector"
@@ -20,6 +21,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import HelpIcon from '@material-ui/icons/Help';
 	
 function Selector(props) {
+		useEffect(() => {
+			ReactGa.initialize('UA-204358478-1')
+			ReactGa.pageview(window.location.pathname)
+		}, [])
 		// const [essentialModules, setEssentialModules] = useState(new Set())
 		// const [optionalModules, setOptionalModules] = useState(new Set())
 		// const [continents, setContinents] = useState(new Set())

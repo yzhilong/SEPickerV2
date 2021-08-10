@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     app: {
         width: "100%",
         minWidth: 550,
-        backgroundColor: "#F6F6F6"
+        backgroundColor: theme.palette.primary.main,
     },
     country: {
         width: '80%',
@@ -89,12 +89,6 @@ function App() {
     const ZhiLongsLink = "https://www.linkedin.com/in/zhi-long-yeo/"
     const githubPage = "https://github.com/yzhilong/SEPickerV2"
     
-
-    useEffect(() => {
-        ReactGa.initialize('UA-204358478-1')
-        ReactGa.pageview('/')
-        // console.log("GA")
-    }, [])
     return (
         <div style={{height: "100vh", backgroundColor:"#F6F6F6"}}>
             <Helmet>

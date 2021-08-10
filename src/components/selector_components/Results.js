@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
     school: {
         width: '100%',
-        background: "rgb(247,247,247)",
+        background: "#f7f7f7",
         minWidth: 100,
         padding: theme.spacing(1),
         // boxShadow: "0 0 6px 1px rgb(150,150,150)"

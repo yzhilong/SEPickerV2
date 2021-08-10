@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
+import ReactGa from 'react-ga'
 import School from "../components/selector_components/School"
 import {makeStyles, Grid, Paper, Typography } from "@material-ui/core"
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd"
@@ -54,6 +55,10 @@ const modulesCodeTitleMappings = require("../data/moduleCodeTitleMappings.json")
 
 
 function Favourites(props) {
+    useEffect(() => {
+        ReactGa.initialize('UA-204358478-1')
+        ReactGa.pageview(window.location.pathname)
+    }, [])
 
     // REQUIRE LOGIC FOR SHOWING HOW TO HANDLE ELEMENTS IN props.favoruites
     const [ schools, setSchools ] = useState(JSON.parse(localStorage.getItem("favouriteNames")))
