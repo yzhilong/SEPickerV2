@@ -1,7 +1,7 @@
 # SEPickerV2
 Overhaul of https://github.com/tangboxuan/SEPicker using React
 
-Website available here: https://sepickerv2.herokuapp.com/
+Website available here: https://sepicker.herokuapp.com/
 WORK IN PROGRESS
 
 
